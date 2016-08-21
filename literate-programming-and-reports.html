@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
+  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the complementary manual for QFAB’s Introduction to R workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to R" />
+  
+  <meta name="twitter:description" content="This is the complementary manual for QFAB’s Introduction to R workshop" />
+  
+
+<meta name="author" content="QFAB">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="the-r-workspace.html">
+<link rel="next" href="data-objects-variables-in-r.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css\style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a><ul>
+<li class="chapter" data-level="1.1" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i><b>1.1</b> How to read this book</a></li>
+<li class="chapter" data-level="1.2" data-path="rstudio-ide.html"><a href="rstudio-ide.html"><i class="fa fa-check"></i><b>1.2</b> RStudio IDE</a></li>
+<li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
+<li class="chapter" data-level="1.5" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming and Reports</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#literate-programming"><i class="fa fa-check"></i><b>1.5.1</b> Literate programming</a></li>
+<li class="chapter" data-level="1.5.2" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#knitr"><i class="fa fa-check"></i><b>1.5.2</b> KnitR</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-objects-variables-in-r.html"><a href="data-objects-variables-in-r.html"><i class="fa fa-check"></i><b>2</b> Data objects (variables) in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="declaring-objects.html"><a href="declaring-objects.html"><i class="fa fa-check"></i><b>2.1</b> Declaring objects</a></li>
+<li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
+<li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
+<li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
+<li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a></li>
+<li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
+<li class="chapter" data-level="2.4.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.4.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.4.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.4.4</b> Factors</a></li>
+<li class="chapter" data-level="2.4.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.4.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
+<li class="chapter" data-level="2.6" data-path="best-practise-and-object-naming-conventions.html"><a href="best-practise-and-object-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and object naming conventions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
+<li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
+<li class="chapter" data-level="3.2" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>3.2</b> Extending R with packages</a></li>
+<li class="chapter" data-level="3.3" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>3.3</b> Vignettes</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="vignettes.html"><a href="vignettes.html#citations"><i class="fa fa-check"></i><b>3.3.1</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="sessioninfo.html"><a href="sessioninfo.html"><i class="fa fa-check"></i><b>3.4</b> SessionInfo</a></li>
+<li class="chapter" data-level="3.5" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html"><i class="fa fa-check"></i><b>3.5</b> Other ways of running R</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#preparing-an-r-script"><i class="fa fa-check"></i><b>3.5.1</b> Preparing an R script</a></li>
+<li class="chapter" data-level="3.5.2" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#running-an-r-script"><i class="fa fa-check"></i><b>3.5.2</b> Running an R script</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
+<li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
+<li class="chapter" data-level="4.2" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.2</b> Reading and writing tabular data</a></li>
+<li class="chapter" data-level="4.3" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.3</b> Scan</a></li>
+<li class="chapter" data-level="4.4" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.4</b> Reading from a web connection</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
+<li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
+<li class="chapter" data-level="5.2" data-path="for-loops-while-loops-and-vectorisation.html"><a href="for-loops-while-loops-and-vectorisation.html"><i class="fa fa-check"></i><b>5.2</b> For loops, While loops and Vectorisation</a></li>
+<li class="chapter" data-level="5.3" data-path="apply-lapply.html"><a href="apply-lapply.html"><i class="fa fa-check"></i><b>5.3</b> Apply, Lapply</a></li>
+<li class="chapter" data-level="5.4" data-path="basic-data-analysis-methods.html"><a href="basic-data-analysis-methods.html"><i class="fa fa-check"></i><b>5.4</b> Basic data analysis methods</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-presentation-and-reporting.html"><a href="data-presentation-and-reporting.html"><i class="fa fa-check"></i><b>6</b> Data presentation and reporting</a><ul>
+<li class="chapter" data-level="6.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>6.1</b> Boxplots</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="boxplots.html"><a href="boxplots.html#native"><i class="fa fa-check"></i><b>6.1.1</b> Native</a></li>
+<li class="chapter" data-level="6.1.2" data-path="boxplots.html"><a href="boxplots.html#ggplot2geom_boxplot"><i class="fa fa-check"></i><b>6.1.2</b> ggplot2::geom_boxplot()</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>6.2</b> Histograms</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="histograms.html"><a href="histograms.html#native-1"><i class="fa fa-check"></i><b>6.2.1</b> Native</a></li>
+<li class="chapter" data-level="6.2.2" data-path="histograms.html"><a href="histograms.html#ggplot2---geom_histogram"><i class="fa fa-check"></i><b>6.2.2</b> ggplot2 - geom_histogram()</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>6.3</b> Bar charts</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="bar-charts.html"><a href="bar-charts.html#native-2"><i class="fa fa-check"></i><b>6.3.1</b> Native</a></li>
+<li class="chapter" data-level="6.3.2" data-path="bar-charts.html"><a href="bar-charts.html#ggplot2geom_bar"><i class="fa fa-check"></i><b>6.3.2</b> ggplot2::geom_bar()</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>6.4</b> Scatterplots</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="scatterplots.html"><a href="scatterplots.html#native-3"><i class="fa fa-check"></i><b>6.4.1</b> Native</a></li>
+<li class="chapter" data-level="6.4.2" data-path="scatterplots.html"><a href="scatterplots.html#ggplot2geom_point"><i class="fa fa-check"></i><b>6.4.2</b> ggplot2::geom_point()</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="venn-diagrams.html"><a href="venn-diagrams.html"><i class="fa fa-check"></i><b>6.5</b> Venn Diagrams</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
+<li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
+<li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-2-solutions-to-exercises.html"><a href="appendix-2-solutions-to-exercises.html"><i class="fa fa-check"></i>Appendix 2 - Solutions to exercises</a><ul>
+<li class="chapter" data-level="" data-path="using-vectors.html"><a href="using-vectors.html"><i class="fa fa-check"></i>2.4.1 Using vectors</a></li>
+<li class="chapter" data-level="" data-path="using-lists.html"><a href="using-lists.html"><i class="fa fa-check"></i>2.4.3 Using lists</a></li>
+<li class="chapter" data-level="" data-path="adding-factor-values.html"><a href="adding-factor-values.html"><i class="fa fa-check"></i>2.4.4 Adding factor values</a></li>
+<li class="chapter" data-level="" data-path="creating-a-data-frame.html"><a href="creating-a-data-frame.html"><i class="fa fa-check"></i>2.4.6 Creating a data frame</a></li>
+<li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
+<li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
+<li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
+<li class="chapter" data-level="" data-path="venn-diagram.html"><a href="venn-diagram.html"><i class="fa fa-check"></i>6.5 Venn diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="literate-programming-and-reports" class="section level2">
+<h2><span class="header-section-number">1.5</span> Literate programming and Reports</h2>
+<div id="literate-programming" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Literate programming</h3>
+<p>One of the most important things in scientific data analysis is to keep a record of what analyses have been performed on data, why those analyses were chosen, what settings were used, and what the output was. Sometimes it is also necessary to write reports and summarise research data to convince our supervisors, peers and students that we have a solid handle on our science. Not only can R aid in the analysis of data but it can also keep these records and/or write the research report for you at the same time. There are a couple of different ways through which this can be managed, and RStudio provides a number of simple ways to automate the process of running R code, collecting the results of the analysis and preparing a report in HTML or PDF format.</p>
+<div class="rmdexercise">
+<p>
+<strong>Literate programming</strong>
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Try some basic functions in the <strong>Console</strong> window (the large panel to the left)
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+Type <code>1 + 1</code> and hit enter, what is the output and where is it shown?
+</li>
+<li>
+Type <code>print(“HELLO WORLD”)</code> command in the console and hit hit.
+</li>
+<li>
+Try some other functions, e.g.: <code>3^2</code> which is three squared or <code>11%%2</code> is the modulo function (the remainder left after the first number is divided by the second).
+</li>
+</ol>
+</li>
+<li>
+<p>
+Now go to <strong>File</strong> menu and select <strong>New File</strong> &gt; <strong>R Script</strong> and type the same commands in the <strong>editor</strong> window.
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+highlight line [1] and click on the <strong>Run</strong> button at the top right of the editor window (or hit <strong>[Ctrl]+[Enter]</strong> on the keyboard)
+</li>
+<li>
+where is the output shown?
+</li>
+<li>
+highlight all three lines and click on the <strong>Run</strong> or <strong>[Ctrl]+[Enter]</strong>
+</li>
+</ol>
+</li>
+<li>
+<p>
+Create a New Project that we will use for this course.
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+Under the <strong>File</strong> menu, select <strong>New Project</strong>
+</li>
+<li>
+Click on <strong>New Directory</strong>, then <strong>Empty Project</strong>
+</li>
+<li>
+Select a name for your project. Generally this should reflect the analysis that you will be performing. Remember, you may want to come back to your projects months or even years in the future.
+</li>
+<li>
+You should now see an <code>.Rproj</code> file in your <strong>Files</strong> tab, with the name of the project you have just chosen. This file will contain your R session.
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="knitr" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> KnitR</h3>
+<p>KnitR is a recent framework addition to the RStudio environment and one that we encourage you to use as the basis for this workshop. KnitR is a Markdown language that allows us to combine free text and R code into a single document, and automatically generate documents that include both these and the outputs of the R code. To start, let’s open a new document in RStudio of type <strong>RMarkdown</strong>. We will create a document and discover how great R markdown is.</p>
+<div class="rmdexercise">
+<p>
+<strong>Create a new knitR document</strong>
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Under the <strong>File</strong> menu select <strong>New File</strong> &gt; <strong>R Markdown</strong>. A window will appear in the top left of your RStudio interface containing your markdown code
+</p>
+</li>
+<li>
+<p>
+Click on the question mark character and select <strong>Markdown Quick Reference</strong> for an guide to knitR formatting. This opens up in the <em>Help</em> tab on the bottom-right window.
+</p>
+</li>
+<li>
+<p>
+Change some of the free text that are denoted by the <em>white background</em>.
+</p>
+<ul>
+<li>
+The white free text sections contains subject titles and descriptions that will be included in your output document directly as they are written.
+</li>
+</ul>
+<ol style="list-style-type: lower-alpha">
+<li>
+Replace line [1] ’Title’ with something more meaningful.
+</li>
+<li>
+Save the file.
+</li>
+<li>
+Click on the <strong>Knit HTML</strong> button next to the question mark. You should see your rendered report in a new browser.
+<ul>
+<li>
+If a popup appears, click on “Try again”.
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>
+On a new line in the grey blocks, include one of the numerical calculations that you tried before. You can include multiple calculations if you like, but each one should be on a new line.
+</p>
+</li>
+<li>
+<p>
+Click on <strong>Knit HTML</strong> to run your R code and produce an HTML format output of your knitR code
+</p>
+</li>
+</ol>
+</div>
+<p>The white sections of an R Markdown document is the descriptive part of your report. The grey blocks are referred to as <strong>chunks</strong> and consists of <code>R code</code> that will be evaluated at run time and the results included in the generated document. Chunks must following the following syntax:</p>
+<p><img src="images/Rchunk.png" /><!-- --></p>
+<p>The <strong>backquote</strong> or <strong>backtick</strong> (`) character is the one immediately to the left of ‘1’ on your keyboard.</p>
+<div class="rmdtip">
+<p>
+<strong>Using knitR</strong>
+</p>
+<ul>
+<li>
+Save your knitR document regularly, to protect your code again the possibility of the software crashing. It will also be saved automatically when you click <strong>Knit HTML</strong>
+</li>
+<li>
+Create a separate <em>chunk</em> (or code block) for each subsection of the analysis. This makes troubleshooting and bug fixing much simpler.
+</li>
+<li>
+You can run a <em>chunk</em> (or code block) on its own by putting the cursor anywhere in that block and selecting <strong>Chunks</strong> &gt; <strong>Run Current Chunk</strong> (top right of knitR window). Or you can run a single line by putting the cursor in that line and clicking the <strong>Run</strong> button (next to <strong>Chunks</strong>)
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-r-workspace.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-objects-variables-in-r.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["intro-to-r.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
