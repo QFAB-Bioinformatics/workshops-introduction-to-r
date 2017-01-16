@@ -8,7 +8,7 @@
   <title>Introduction to R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -26,11 +26,6 @@
 <meta name="author" content="QFAB">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,20 +109,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.2" data-path="rstudio-ide.html"><a href="rstudio-ide.html"><i class="fa fa-check"></i><b>1.2</b> RStudio IDE</a></li>
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
-<li class="chapter" data-level="1.5" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming and Reports</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#literate-programming"><i class="fa fa-check"></i><b>1.5.1</b> Literate programming</a></li>
-<li class="chapter" data-level="1.5.2" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#knitr"><i class="fa fa-check"></i><b>1.5.2</b> KnitR</a></li>
+<li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="data-objects-variables-in-r.html"><a href="data-objects-variables-in-r.html"><i class="fa fa-check"></i><b>2</b> Data objects (variables) in R</a><ul>
-<li class="chapter" data-level="2.1" data-path="declaring-objects.html"><a href="declaring-objects.html"><i class="fa fa-check"></i><b>2.1</b> Declaring objects</a></li>
+<li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
 <li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
 <li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
 <li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 <li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+</ul></li>
 <li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
 <li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
@@ -137,7 +131,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-object-naming-conventions.html"><a href="best-practise-and-object-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and object naming conventions</a></li>
+<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
 <li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
@@ -153,9 +147,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
-<li class="chapter" data-level="4.2" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.2</b> Reading and writing tabular data</a></li>
-<li class="chapter" data-level="4.3" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.3</b> Scan</a></li>
-<li class="chapter" data-level="4.4" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.4</b> Reading from a web connection</a></li>
+<li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.3</b> Reading and writing tabular data</a></li>
+<li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
+<li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
 <li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
@@ -180,7 +177,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.4.1" data-path="scatterplots.html"><a href="scatterplots.html#native-3"><i class="fa fa-check"></i><b>6.4.1</b> Native</a></li>
 <li class="chapter" data-level="6.4.2" data-path="scatterplots.html"><a href="scatterplots.html#ggplot2geom_point"><i class="fa fa-check"></i><b>6.4.2</b> ggplot2::geom_point()</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="venn-diagrams.html"><a href="venn-diagrams.html"><i class="fa fa-check"></i><b>6.5</b> Venn Diagrams</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
@@ -194,7 +190,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
 <li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
 <li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
-<li class="chapter" data-level="" data-path="venn-diagram.html"><a href="venn-diagram.html"><i class="fa fa-check"></i>6.5 Venn diagram</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
@@ -219,19 +214,72 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="other-ways-of-running-r" class="section level2">
 <h2><span class="header-section-number">3.5</span> Other ways of running R</h2>
-<p>Today we are using RStudio, but R can be run in a number of different ways; for example, you could embed some R functionality in a computer program written in Python or Java. As discussed in section 1.3 both R and RStudio provide an interactive environment where you are prompted to enter a single command at the time. In this training course we are providing you with snippets of information that could be used within a data analysis workflow. These are intended to be run interactively.</p>
-<p>In a bioinformatics laboratory the scientists who use R craft a mixture of packages and workflow scripts into analytical pipelines. R may be even be called by other software environments. Bioinformaticians will typically use the R console for refining, tuning and modifying existing scripts that they have written. The workflow is run through master scripts. In this section we will look at a simple R script that will create a table of information and write it out to file. We will be having a more complete look at the process of writing data to file in a later section (Section <a href="reading-and-writing-tabular-data.html#reading-and-writing-tabular-data">4.2</a>).</p>
+<p>Today we are using RStudio, but R can be run in a number of different ways; for example, you could embed some R functionality in a computer program written in Python or Java. As discussed in sections <a href="rstudio-ide.html#rstudio-ide">1.2</a> and <a href="alternatives-to-rstudio.html#alternatives-to-rstudio">1.3</a>, both R and RStudio provide an interactive environment where you are prompted to enter a single command at the time. In this training course we are providing you with snippets of information that could be used within a data analysis workflow. These are intended to be run interactively.</p>
+<p>In a bioinformatics laboratory the scientists who use R craft a mixture of packages and workflow scripts into analytical pipelines. R may be even be called by other software environments. Bioinformaticians will typically use the R console for refining, tuning and modifying existing scripts that they have written. The workflow is run through master scripts. In this section we will look at a simple R script that will create a table of information and write it out to file. We will be having a more complete look at the process of writing data to file in a later section (Section <a href="reading-and-writing-tabular-data.html#reading-and-writing-tabular-data">4.3</a>).</p>
 <p>The advantage of running R scripts as a batch analysis is that larger and more complex analyses (such as the mapping of short DNA sequence reads) can be run overnight and each of the commands will run successively as prior commands complete.</p>
 <div id="preparing-an-r-script" class="section level3">
 <h3><span class="header-section-number">3.5.1</span> Preparing an R script</h3>
 <p>An R script is a container for multiple R commands. It is intended to be run largely hands-off.</p>
-<p>The RStudio software provides us with a very convenient way to create an R script - in the file dialog there is the option to create file and an R Script is a primary file type. R scripts typically have the extension .R. The file is a plain text file and needs to know the packages that should be loaded, the objects that should be set and the working environment where we should be working.</p>
+<p>The RStudio software provides us with a very convenient way to create an R script - in the file dialog there is the option to create file and an R Script is a primary file type. R scripts typically have the extension <code>.R</code>. The file is a plain text file and needs to know the packages that should be loaded, the objects that should be set and the working environment where we should be working.</p>
 </div>
 <div id="running-an-r-script" class="section level3">
 <h3><span class="header-section-number">3.5.2</span> Running an R script</h3>
+<p>The following command is how you run an R script from a terminal window. This is outside of RStudio.</p>
 <pre><code>R CMD BATCH [options] my_script.R [outfile]
 R.exe&quot; CMD BATCH
 --vanilla --slave &quot;c:\my projects\my_script.R&quot;</code></pre>
+<p>We will demonstrate the next exercise to show you the method to run a script file using RStudio. You can repeat this exercise in your own time.</p>
+<div class="rmdexercise">
+<p>
+<strong>Running a script in RStudio</strong>
+</p>
+<ul>
+<li>
+Create a new script file by going to <strong>File</strong> &gt; <strong>New File</strong> &gt; <strong>R Script</strong>.
+</li>
+<li>
+Enter some commands in the editor window, for example the code chunk below.
+</li>
+<li>
+Save the script with a file name e.g. “area-rectangle.R”
+</li>
+<li>
+<p>
+In RStudio, there are 3 ways you can run this script from top to bottom:
+</p>
+<ol style="list-style-type: decimal">
+<li>
+In the <strong>console</strong> window, type in the command: <code>source(“area-rectangle.R”)</code>. What is the output?
+</li>
+<li>
+In the <strong>editor</strong> window, top right corner click on the <strong>arrow</strong> next to the <strong>Source</strong> button, select <strong>Source</strong>. What is the output?
+</li>
+<li>
+Repeat step 2 but this time select <strong>Source with Echo</strong>. What is the difference between step 2 and 3?
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(<span class="kw">date</span>())
+<span class="kw">print</span>(<span class="st">&quot;This is an R script!&quot;</span>)
+length &lt;-<span class="st"> </span><span class="fl">10.25</span>
+width &lt;-<span class="st"> </span><span class="fl">4.35</span>
+area.of.rectangle &lt;-<span class="st"> </span>length *<span class="st"> </span>width
+<span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;The area of a rectangle with length=&quot;</span>,
+              length, 
+              <span class="st">&quot;cm by width=&quot;</span>,
+              width,
+              <span class="st">&quot;cm is&quot;</span>,
+              area.of.rectangle,<span class="st">&quot;square cm.&quot;</span>))</code></pre></div>
+<div class="rmdtip">
+<p>
+<strong>Use [Tab] to autocomplete</strong>
+</p>
+<p>
+You can use the tab key to autocomplete a variable name, a function name or a filename (if the file is in the working directory). This will save you a lot of time and prevent typing errors when you are analysing your data.
+</p>
+</div>
 
 </div>
 </div>
@@ -255,6 +303,7 @@ R.exe&quot; CMD BATCH
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,

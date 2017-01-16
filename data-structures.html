@@ -8,7 +8,7 @@
   <title>Introduction to R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -26,11 +26,6 @@
 <meta name="author" content="QFAB">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,20 +109,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.2" data-path="rstudio-ide.html"><a href="rstudio-ide.html"><i class="fa fa-check"></i><b>1.2</b> RStudio IDE</a></li>
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
-<li class="chapter" data-level="1.5" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming and Reports</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#literate-programming"><i class="fa fa-check"></i><b>1.5.1</b> Literate programming</a></li>
-<li class="chapter" data-level="1.5.2" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#knitr"><i class="fa fa-check"></i><b>1.5.2</b> KnitR</a></li>
+<li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="data-objects-variables-in-r.html"><a href="data-objects-variables-in-r.html"><i class="fa fa-check"></i><b>2</b> Data objects (variables) in R</a><ul>
-<li class="chapter" data-level="2.1" data-path="declaring-objects.html"><a href="declaring-objects.html"><i class="fa fa-check"></i><b>2.1</b> Declaring objects</a></li>
+<li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
 <li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
 <li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
 <li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 <li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+</ul></li>
 <li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
 <li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
@@ -137,7 +131,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-object-naming-conventions.html"><a href="best-practise-and-object-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and object naming conventions</a></li>
+<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
 <li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
@@ -153,9 +147,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
-<li class="chapter" data-level="4.2" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.2</b> Reading and writing tabular data</a></li>
-<li class="chapter" data-level="4.3" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.3</b> Scan</a></li>
-<li class="chapter" data-level="4.4" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.4</b> Reading from a web connection</a></li>
+<li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.3</b> Reading and writing tabular data</a></li>
+<li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
+<li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
 <li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
@@ -180,7 +177,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.4.1" data-path="scatterplots.html"><a href="scatterplots.html#native-3"><i class="fa fa-check"></i><b>6.4.1</b> Native</a></li>
 <li class="chapter" data-level="6.4.2" data-path="scatterplots.html"><a href="scatterplots.html#ggplot2geom_point"><i class="fa fa-check"></i><b>6.4.2</b> ggplot2::geom_point()</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="venn-diagrams.html"><a href="venn-diagrams.html"><i class="fa fa-check"></i><b>6.5</b> Venn Diagrams</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
@@ -194,7 +190,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
 <li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
 <li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
-<li class="chapter" data-level="" data-path="venn-diagram.html"><a href="venn-diagram.html"><i class="fa fa-check"></i>6.5 Venn diagram</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
@@ -219,59 +214,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="data-structures" class="section level2">
 <h2><span class="header-section-number">2.4</span> Data structures</h2>
-<p>We do not typically expect to work with atomic objects during an <em>-omics</em> analysis. To make the best use of R we want to use hundreds, thousands and millions of data points. We arrange these in one of a number of different data structures: vectors, lists, matrices and data frames.</p>
+<p>We do not typically expect to work with atomic variables during an <em>-omics</em> analysis. To make the best use of R we want to use hundreds, thousands and millions of data points. We arrange these in one of a number of different data structures: vectors, lists, matrices and data frames.</p>
 <div id="vectors" class="section level3">
 <h3><span class="header-section-number">2.4.1</span> Vectors</h3>
-<p>A <strong>vector</strong> is a group of components of the <em>same</em> type. Elements of a vector can be accessed by their numeric position (referred to as <strong>indexing</strong>) starting at position 1. They can also be named so that we can access the object component using the namespace. The <code>c()</code> function (for <em>combine</em>) is used to join a number of single values together into a vector.</p>
+<p>A <strong>vector</strong> is a group of components of the <em>same</em> type. Elements of a vector can be accessed by their numeric position (referred to as <strong>indexing</strong>) starting at position 1. They can also be named so that we can access the variable component using the namespace. The <code>c()</code> function (for <em>combine</em>) is used to join a number of single values together into a vector.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
 <span class="kw">is.vector</span>(l)</code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>Access the second element of the vector:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l[<span class="dv">2</span>]</code></pre></div>
 <pre><code>## [1] 2</code></pre>
-<p>What happens if we try to mix data types in a vector? <code>str()</code> is a function that describes the structure of an object.</p>
+<p>What happens if we try to mix data types in a vector? <code>str()</code> is a function that describes the structure of an variable.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedVector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">animal=</span><span class="st">&quot;sheep&quot;</span>, <span class="dt">meaningOfLife=</span><span class="kw">as.integer</span>(<span class="dv">42</span>), <span class="dt">pi=</span><span class="fl">3.1415</span>)
 <span class="kw">str</span>(mixedVector)</code></pre></div>
 <pre><code>##  Named chr [1:3] &quot;sheep&quot; &quot;42&quot; &quot;3.1415&quot;
 ##  - attr(*, &quot;names&quot;)= chr [1:3] &quot;animal&quot; &quot;meaningOfLife&quot; &quot;pi&quot;</code></pre>
-<p><code>c()</code> can be used to combine vectors, not just individual values:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(l, mixedVector)</code></pre></div>
-<pre><code>##                                                  animal meaningOfLife 
-##           &quot;1&quot;           &quot;2&quot;           &quot;3&quot;       &quot;sheep&quot;          &quot;42&quot; 
-##            pi 
-##      &quot;3.1415&quot;</code></pre>
-<div class="rmdexercise">
-<p>
-<strong>Using vectors</strong>
-</p>
-<ol style="list-style-type: decimal">
-<li>
-<p>
-Enter the code block above into your RStudio interface and review the output.
-</p>
-</li>
-<li>
-<p>
-Now enter the next code block below and review the output.
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-Can you determine the difference between <code>mixedVector[2]</code> and <code>mixedVector[[2]]</code>?
-</li>
-</ol>
-</li>
-<li>
-<p>
-What would the equivalent command to <code>mixedVector[[2]]</code> be if you were accessing the vector by name?
-</p>
-</li>
-</ol>
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Access some elements of mixedVector by position or name</span>
-mixedVector[<span class="dv">2</span>]
-mixedVector[[<span class="dv">2</span>]]
-mixedVector[<span class="st">&#39;animal&#39;</span>]
-<span class="kw">names</span>(mixedVector)</code></pre></div>
 <div class="rmdtip">
 <p>
 <strong>Vectors and Collections of data</strong>
@@ -285,10 +242,74 @@ Because elements of a vector must be the same type, when we investigate the cont
 </li>
 </ul>
 </div>
+<p><code>c()</code> can be used to combine vectors, not just individual values:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(l, mixedVector)</code></pre></div>
+<pre><code>##                                                  animal meaningOfLife 
+##           &quot;1&quot;           &quot;2&quot;           &quot;3&quot;       &quot;sheep&quot;          &quot;42&quot; 
+##            pi 
+##      &quot;3.1415&quot;</code></pre>
+<div class="rmdexercise">
+<p>
+<strong>Using vectors</strong>
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Enter the chunks above into your RStudio interface and review the output.
+</p>
+</li>
+<li>
+<p>
+After executing the last code block, check on the values that are in variables <code>l</code> and <code>mixedVector</code> again.
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+How many elements does each variable hold? _______
+</li>
+<li>
+Do any of them hold 6 elements? ______
+</li>
+<li>
+What do you need to do to retain the combined vector with 6 elements?
+</li>
+</ol>
+</li>
+<li>
+<p>
+Access the <code>mixedVector</code> element by name using <code>mixedVector[‘animal’]</code>. What is the output? _______
+</p>
+</li>
+</ol>
+<p>
+<strong>Challenge</strong>, continue if you are ahead
+</p>
+<ol start="4" style="list-style-type: decimal">
+<li>
+<p>
+Now enter the next chunk of code below and review the output.
+</p>
+<ol style="list-style-type: lower-alpha">
+<li>
+Can you determine the difference between <code>mixedVector[2]</code> and <code>mixedVector[[2]]</code>?
+</li>
+</ol>
+</li>
+<li>
+<p>
+What would the equivalent command to <code>mixedVector[[2]]</code> be, if you were accessing the vector by name?
+</p>
+</li>
+</ol>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Access some elements of mixedVector by position or name</span>
+mixedVector[<span class="dv">2</span>]
+mixedVector[[<span class="dv">2</span>]]
+mixedVector[<span class="st">&#39;animal&#39;</span>]
+<span class="kw">names</span>(mixedVector)</code></pre></div>
 </div>
 <div id="lists" class="section level3">
 <h3><span class="header-section-number">2.4.2</span> Lists</h3>
-<p><strong>Lists</strong> are similar to vectors in that the are one-dimensional structures for storing data, and like vectors can be accessed by position or namespace. They differ from vectors in that they can contain multiple <em>different</em> data types. This makes them more flexible for storing data but more limited in the analyses that can be performed on them. Lists are created using the <code>list()</code> command, which has a similar format to <code>c()</code>.</p>
+<p><strong>Lists</strong> are similar to vectors in that they are one-dimensional structures for storing data and like vectors can be accessed by position or namespace. They differ from vectors in that they can contain multiple <em>different</em> data types. This makes them more flexible for storing data but more limited in the analyses that can be performed on them. Lists are created using the <code>list()</code> command, which has a similar format to <code>c()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedList &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">animal=</span><span class="st">&quot;sheep&quot;</span>, <span class="dt">meaningOfLife=</span><span class="kw">as.integer</span>(<span class="dv">42</span>), <span class="dt">pi=</span><span class="fl">3.1415</span>)
 <span class="kw">str</span>(mixedList)</code></pre></div>
 <pre><code>## List of 3
@@ -299,11 +320,9 @@ Because elements of a vector must be the same type, when we investigate the cont
 <p>
 <strong>Checking for membership</strong>
 </p>
-<ul>
-<li>
+<p>
 <code>%in%</code> is a way to test the membership of a single element in a list or vector of items. For example, try typing in the command: <code>“sheep” %in% mixedList</code>
-</li>
-</ul>
+</p>
 </div>
 </div>
 <div id="changing-vectors-and-lists" class="section level3">
@@ -344,7 +363,7 @@ mixedList$papers &lt;-<span class="st"> </span><span class="ot">NULL</span></cod
 <ol style="list-style-type: decimal">
 <li>
 <p>
-Enter the two <code>mixedList</code> code blocks into RStudio and review the output.
+Enter the two <code>mixedList</code> code chunks into RStudio and review the output.
 </p>
 </li>
 <li>
@@ -353,30 +372,27 @@ Try and retrieve different elements of the list
 </p>
 <ol style="list-style-type: lower-alpha">
 <li>
-Can you get the second <strong>and</strong> fourth elements? (<em>Hint:</em> <code>c()</code>)
+Can you get the second <strong>and</strong> fourth elements? <em>Hint:</em> use the combine <code>c()</code> function when indexing
 </li>
 <li>
-What about everything BUT the second <strong>and</strong> fourth?
+What about everything <strong>BUT</strong> the second and fourth?
 </li>
 </ol>
 </li>
 <li>
 <p>
-[<strong>Optional</strong>] If you are ahead, now try to getting a range of values, that is get the third to the forth elements. <em>Hint:</em> colon (:) symbol.
+[<strong>Optional</strong>] If you are ahead, now try to getting a range of values, that is get the second to the forth elements. <em>Hint:</em> try using the colon (:) symbol to specify a range.
 </p>
 </li>
 </ol>
 </div>
-<p>Now let us imagine that QFAB is actually performing a study on the course participants. To perform subsequent statistical testing we will need to know a little something about each of our consenting subjects, and we are going to build a data structure to store this information.</p>
+<p>Now let us imagine that QFAB is actually performing a study on the course participants. To perform subsequent statistical testing we will need to know a little something about each of our consenting subjects and we are going to build a data structure to store this information.</p>
 <div class="rmdexercise">
 <ol start="3" style="list-style-type: decimal">
 <li>
 <p>
-Create three vectors that contain, respectively, the names, sex and age of the research cohort on this course.
+Create three vectors that contain, respectively, the names, sex and age of the research cohort on this course. Let’s have the vectors of type:
 </p>
-<ul>
-<li>
-Let’s have the vectors of type:
 <ul>
 <li>
 character for <code>name</code>
@@ -388,11 +404,9 @@ logical for <code>sex</code> (e.g. have female be TRUE) and
 integer for <code>age</code>
 </li>
 </ul>
-</li>
-</ul>
 <ol style="list-style-type: lower-alpha">
 <li>
-When you have these vectors created, place them all in a single list called <code>subject</code>
+When you have these vectors created, place them all in a single list variable called <code>subject</code>.
 </li>
 </ol>
 </li>
@@ -411,7 +425,7 @@ When you have these vectors created, place them all in a single list called <cod
 Use the code below to create a factorised <code>mandm</code> vector containing 1 million M&amp;Ms of various colours.
 </p>
 <p>
-<em>Note</em>, the output is again grouped together at the end for readability. The table below explains the new functions and what they mean.
+<strong>Note</strong>, the output is again grouped together at the end for readability. The table below explains the new functions and what they mean.
 </p>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">colours &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;orange&quot;</span>)
@@ -427,14 +441,14 @@ mandm &lt;-<span class="st"> </span><span class="kw">as.factor</span>(mandm)
 <span class="kw">length</span>(<span class="kw">which</span>(mandm ==<span class="st"> &quot;blue&quot;</span>))</code></pre></div>
 <pre><code>## 8000280 bytes
 ## [1] 1000000
-##  Factor w/ 5 levels &quot;blue&quot;,&quot;green&quot;,..: 4 1 1 5 5 3 1 1 3 1 ...
+##  Factor w/ 5 levels &quot;blue&quot;,&quot;green&quot;,..: 3 3 4 3 4 2 1 3 5 5 ...
 ## 4000688 bytes
 ## mandm
 ##   blue  green orange    red yellow 
-## 199904 199645 199630 200176 200645 
-##  [1] FALSE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE
+## 199778 200040 200535 200283 199364 
+##  [1] FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE
 ## integer(0)
-## [1] 199904</code></pre>
+## [1] 199778</code></pre>
 <p><strong>What is happening here?</strong></p>
 <table>
 <colgroup>
@@ -478,7 +492,7 @@ mandm &lt;-<span class="st"> </span><span class="kw">as.factor</span>(mandm)
 </tr>
 </tbody>
 </table>
-<p>The real challenge with factors is not creating them or using them but adding novel content to them, at least in terms of new categories. If we find an M&amp;M that is not one of our five original colours, we can’t just change the colour of that entry in our vector, we need to specifically add that colour to our factor list first. As a result, factors are suited more for <em>immutable</em> or static content. Other data containers provide simpler mechanisms for data manipulation.</p>
+<p>The real challenge with factors is not creating them or using them but adding novel content to them, at least in terms of new categories. If we find an M&amp;M that is not one of our five original colours, we can’t just change the colour of that entry in our vector, we need to specifically add that colour to our factor list first. As a result, factors are suited more for <em>immutable</em> or static content. Other data structures provide simpler mechanisms for data manipulation.</p>
 <div class="rmdexercise">
 <p>
 <strong>Adding factor values</strong>
@@ -486,17 +500,17 @@ mandm &lt;-<span class="st"> </span><span class="kw">as.factor</span>(mandm)
 <ol style="list-style-type: decimal">
 <li>
 <p>
-Follow the code below to try to change the colour of the first M&amp;M to white. The comments explain what each line is doing.
+Follow the code chunk below to try to change the colour of the first M&amp;M to the value “white”. The comments explain what each line is doing. You may find it best entering these commands directly in the console rather than the editor window, so you can see what is happening at each stage.
 </p>
-<ul>
-<li>
-You may find it best entering these commands directly in the console rather than the knitR document at first, so you can see what is happening at each stage.
-</li>
-</ul>
 </li>
 <li>
 <p>
-Add another colour option and change one or more of the vector values to that new colour.
+Add another colour option (e.g. brown) and change one or more of the vector elements to that new colour (e.g. elements from position 100 to 200)
+</p>
+</li>
+<li>
+<p>
+<strong>Challenge</strong> add yet another colour (“purple”) and this time <em>randomly</em> change 20 elements to the new colour purple.
 </p>
 </li>
 </ol>
@@ -505,7 +519,7 @@ Add another colour option and change one or more of the vector values to that ne
 mandm[<span class="dv">1</span>] &lt;-<span class="st"> &quot;white&quot;</span></code></pre></div>
 <pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, 1, value = &quot;white&quot;): invalid factor level,
 ## NA generated</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Check the factor values - have we successfully added white?</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Check the factor values, have we successfully added white?</span>
 <span class="kw">levels</span>(mandm)
 
 <span class="co"># Now explicitly add white as a factor value</span>
@@ -526,22 +540,21 @@ mandm[<span class="dv">1</span>] &lt;-<span class="st"> &quot;white&quot;</span>
 <p>
 <strong>Creating a matrix</strong>
 </p>
-<ol style="list-style-type: decimal">
-<li>
-Enter the code below to generate a variety of matrices.
-</li>
-</ol>
-<p>
-<em>Hint:</em> Use the <strong>Help</strong> tab to search for <code>matrix</code> to find out more about the function and what the <code>nrow</code> and <code>byrow</code> options are doing.
-</p>
-<ol start="2" style="list-style-type: decimal">
-<li>
-Rather than printing the output directly to screen, store the matrix in an object e.g. <code>testMatrix</code>.
-</li>
-</ol>
 <p>
 <em>Note</em>, this time the output follows <em>immediately</em> after each command, so that you can compare with what you get.
 </p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Enter the code below to generate a variety of matrices. <em>Hint:</em> Use the <strong>Help</strong> tab to search for <code>matrix</code> to find out more about the function and what the <code>nrow</code> and <code>byrow</code> options do.
+</p>
+</li>
+<li>
+<p>
+Rather than printing the output directly to screen, store the matrix into a variable named <code>testMatrix</code>.
+</p>
+</li>
+</ol>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>))</code></pre></div>
 <pre><code>##       [,1]
@@ -569,51 +582,48 @@ Rather than printing the output directly to screen, store the matrix in an objec
 ## [2,]    4    5    6
 ## [3,]    7    8    9
 ## [4,]   10   11   12</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;G&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;J&quot;</span>,<span class="st">&quot;K&quot;</span>,<span class="st">&quot;L&quot;</span>),<span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
-<pre><code>##      [,1] [,2] [,3]
-## [1,] &quot;A&quot;  &quot;B&quot;  &quot;C&quot; 
-## [2,] &quot;D&quot;  &quot;E&quot;  &quot;F&quot; 
-## [3,] &quot;G&quot;  &quot;H&quot;  &quot;I&quot; 
-## [4,] &quot;J&quot;  &quot;K&quot;  &quot;L&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letter.mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;G&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;J&quot;</span>,<span class="st">&quot;K&quot;</span>,<span class="st">&quot;L&quot;</span>),<span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
 <div class="rmdtip">
 <ul>
 <li>
 <p>
-Instead of typing out the letters above, look at the built in variable <code>LETTERS</code> in R. You can simply type this in the console and see what is returned. Use <code>class(LETTERS)</code> to find out the datatype.
+Instead of typing out the letters above, look at the built in variable <code>LETTERS</code> in R (all caps). You can simply type this in the console and see what is returned. Use <code>class(LETTERS)</code> to find out the datatype.
 </p>
 </li>
 <li>
 <p>
-Also try the following command: <code>LETTERS[1:8]</code>.
+Also try the following command: <code>LETTERS[1:8]</code>, what do you get? ________
 </p>
 </li>
 <li>
 <p>
-You can also specify a list of sequence numbers in a similar manner, try typing <code>1:10</code> on the console and see what you get. Assign this to a object named <code>range</code>.
+You can also specify a list of sequence numbers in a similar manner, try executing the command <code>1:10</code>. What did you get?
 </p>
+<ul>
+<li>
+Assign this to a variable named <code>numRange</code>.
 </li>
 </ul>
+</li>
+</ul>
+</div>
+<div id="indexing-a-matrix" class="section level4">
+<h4><span class="header-section-number">2.4.5.1</span> Indexing a matrix</h4>
+<p>To access the elements of a matrix you use the following methods:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letter.mat[<span class="dv">2</span>,]   <span class="co"># returns the 2nd row</span>
+letter.mat[,<span class="dv">3</span>]   <span class="co"># returns the 3rd column</span>
+letter.mat[<span class="dv">2</span>,<span class="dv">3</span>]  <span class="co"># returns the element at row=2 and column=3</span>
+letter.mat[,-<span class="dv">2</span>]  <span class="co"># returns all but the 2nd column</span>
+letter.mat[<span class="dv">3</span>:<span class="dv">4</span>,] <span class="co"># returns rows 3 to 4</span></code></pre></div>
 </div>
 </div>
 <div id="data-frame" class="section level3">
 <h3><span class="header-section-number">2.4.6</span> Data frame</h3>
-<p>The <strong>data frame</strong> is to a matrix what a list is to a vector. Like a matrix it is a two dimensional table for storing data and is made up of equal length rows and columns, but like a list, the columns can contain data of <em>different</em> data types. Although within a column the data must all be of the <em>same</em> type.</p>
+<p>The <strong>data frame</strong> is to a matrix what a list is to a vector. Like a matrix it is a two dimensional table for storing data and is made up of equal length rows and columns, but like a list, the columns can contain data of <em>different</em> data types. Although within a column, the data must all be of the <em>same</em> type.</p>
 <div class="rmdexercise">
 <p>
-<strong>Creating a data frame</strong>
+Follow the code chunk below to start exploring data frames. The comments explain what is happening in each stage. The first step tries creating a data frame using the same format as creating a matrix. This doesn’t work though, see if you can work out what is actually happening here.
 </p>
-<ol style="list-style-type: decimal">
-<li>
-<p>
-Follow the code below to start exploring data frames. The comments explain what is happening at each stage.
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-The first step tries creating a data frame using the same format as creating a matrix. This doesn’t work though, see if you can work out what is actually happening here.
-</li>
-</ol>
-</li>
-</ol>
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Try creating a data frame using the same terminology as a matrix</span>
 <span class="kw">data.frame</span>(<span class="kw">c</span>(LETTERS[<span class="dv">1</span>:<span class="dv">12</span>]),<span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)
@@ -623,14 +633,14 @@ The first step tries creating a data frame using the same format as creating a m
 exampleDf &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(LETTERS[<span class="dv">1</span>:<span class="dv">12</span>]),<span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>))
 
 <span class="co"># It&#39;s often useful to name the columns and rows of a data frame (or matrix)</span>
-<span class="kw">colnames</span>(exampleDf) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Col1&quot;</span>, <span class="st">&quot;Col2&quot;</span>, <span class="st">&quot;Col3&quot;</span>)
+<span class="kw">colnames</span>(exampleDf) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>)
 <span class="kw">rownames</span>(exampleDf)
 
 <span class="co"># What is the size and structure of our data frame</span>
-<span class="kw">dim</span>(exampleDf) <span class="co"># Dimensions</span>
+<span class="kw">dim</span>(exampleDf) <span class="co"># Dimension of the data frame</span>
 <span class="kw">ncol</span>(exampleDf) <span class="co"># Number of columns</span>
 <span class="kw">nrow</span>(exampleDf) <span class="co"># Number of rows</span>
-<span class="kw">str</span>(exampleDf) <span class="co"># Structure</span>
+<span class="kw">str</span>(exampleDf) <span class="co"># Structure information</span>
 
 <span class="co"># Retrieve a &#39;data slice&#39; from the data frame</span>
 <span class="co"># First, get the contents of the first column</span>
@@ -646,9 +656,12 @@ exampleDf
 <span class="kw">class</span>(exampleDf[,<span class="dv">4</span>])</code></pre></div>
 <div class="rmdexercise">
 <p>
-In the previous exercise we created a list that described the subjects within this group. A data.frame would be more convenient to use.
+<strong>Creating a data frame</strong>
 </p>
-<ol start="2" style="list-style-type: decimal">
+<p>
+Previously, we created a list variable called <code>subject</code> that described the subjects within this group. A data.frame would be more convenient to use.
+</p>
+<ol style="list-style-type: decimal">
 <li>
 <p>
 Convert the earlier list of vectors into a data frame.
@@ -660,6 +673,14 @@ If you gave names to the elements of your list earlier, the columns of your data
 </p>
 </li>
 </ol>
+</div>
+<div class="rmdtip">
+<p>
+<strong>Accessing data.frame columns by name</strong>
+</p>
+<p>
+An easier way to access data.frame columns by name is to use the <code><span class="math inline">\(&lt;/code&gt; annotation. In the example code chunk about, you can access &#39;x&#39; by using &lt;code&gt;exampleDf\)</span>x</code>.
+</p>
 </div>
 </div>
 </div>
@@ -682,6 +703,7 @@ If you gave names to the elements of your list earlier, the columns of your data
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,

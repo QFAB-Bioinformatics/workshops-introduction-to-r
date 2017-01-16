@@ -8,7 +8,7 @@
   <title>Introduction to R</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -26,11 +26,6 @@
 <meta name="author" content="QFAB">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -114,20 +109,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.2" data-path="rstudio-ide.html"><a href="rstudio-ide.html"><i class="fa fa-check"></i><b>1.2</b> RStudio IDE</a></li>
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
-<li class="chapter" data-level="1.5" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming and Reports</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#literate-programming"><i class="fa fa-check"></i><b>1.5.1</b> Literate programming</a></li>
-<li class="chapter" data-level="1.5.2" data-path="literate-programming-and-reports.html"><a href="literate-programming-and-reports.html#knitr"><i class="fa fa-check"></i><b>1.5.2</b> KnitR</a></li>
+<li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="data-objects-variables-in-r.html"><a href="data-objects-variables-in-r.html"><i class="fa fa-check"></i><b>2</b> Data objects (variables) in R</a><ul>
-<li class="chapter" data-level="2.1" data-path="declaring-objects.html"><a href="declaring-objects.html"><i class="fa fa-check"></i><b>2.1</b> Declaring objects</a></li>
+<li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
 <li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
 <li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
 <li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 <li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a></li>
+<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+</ul></li>
 <li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
 <li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
@@ -137,7 +131,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
 </ul></li>
 <li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-object-naming-conventions.html"><a href="best-practise-and-object-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and object naming conventions</a></li>
+<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
 <li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
@@ -153,9 +147,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
-<li class="chapter" data-level="4.2" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.2</b> Reading and writing tabular data</a></li>
-<li class="chapter" data-level="4.3" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.3</b> Scan</a></li>
-<li class="chapter" data-level="4.4" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.4</b> Reading from a web connection</a></li>
+<li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.3</b> Reading and writing tabular data</a></li>
+<li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
+<li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
 <li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
@@ -180,7 +177,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.4.1" data-path="scatterplots.html"><a href="scatterplots.html#native-3"><i class="fa fa-check"></i><b>6.4.1</b> Native</a></li>
 <li class="chapter" data-level="6.4.2" data-path="scatterplots.html"><a href="scatterplots.html#ggplot2geom_point"><i class="fa fa-check"></i><b>6.4.2</b> ggplot2::geom_point()</a></li>
 </ul></li>
-<li class="chapter" data-level="6.5" data-path="venn-diagrams.html"><a href="venn-diagrams.html"><i class="fa fa-check"></i><b>6.5</b> Venn Diagrams</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
@@ -194,7 +190,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
 <li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
 <li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
-<li class="chapter" data-level="" data-path="venn-diagram.html"><a href="venn-diagram.html"><i class="fa fa-check"></i>6.5 Venn diagram</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
@@ -223,12 +218,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="native" class="section level3">
 <h3><span class="header-section-number">6.1.1</span> Native</h3>
 <p>In this example we will prepare a boxplot for signal intensity across different arrays in our gene.atlas data set. The simplest way is to call the native <code>boxplot()</code> function. This produces a reasonable summary view of the data, but not one that would be suitable for publication purposes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># The native way would simply be:</span>
-<span class="kw">boxplot</span>(<span class="kw">log2</span>(gene.atlas[<span class="kw">sample</span>(<span class="kw">nrow</span>(gene.atlas), <span class="dv">1000</span>), <span class="kw">seq</span>(<span class="dv">15</span>)]))</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This generates a boxplot of 1000 gene expression values for the first</span>
-<span class="co"># 15 samples. Remember, gene.atlas contains over 22,000 expression values</span>
-<span class="co"># and 158 samples</span></code></pre></div>
+<p>The command below generates a boxplot of 1000 gene expression values for the first 15 samples. Remember, gene.atlas contains over 22,000 expression values and 158 samples</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(<span class="kw">log2</span>(gene.atlas[<span class="kw">sample</span>(<span class="kw">nrow</span>(gene.atlas), <span class="dv">1000</span>), <span class="kw">seq</span>(<span class="dv">15</span>)]))</code></pre></div>
+<p><img src="intro-to-r_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p>There are other arguments you can use to add to the plot for example:</p>
+<ul>
+<li><code>main='Expr distribution'</code> to add a title to the plot</li>
+<li><code>las=2</code> will rotate the x-axis labels to 90 degrees. (0=parallel, 1=horizontal, 2=perpendicular to the axis, 3=vertical)</li>
+<li><code>cex.axis = 0.8</code> to change the font size of the tick labels</li>
+<li><code>xlab='sample'</code> to label x-axes</li>
+<li><code>col=rainbow(15)</code> to add colours to the bars. <code>rainbow(15)</code> is a builtin colours palette in R, this returns 15 colours.</li>
+<li>and more, use <code>?barplot</code> to use Help to find out more about the function.</li>
+</ul>
 </div>
 <div id="ggplot2geom_boxplot" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> ggplot2::geom_boxplot()</h3>
@@ -237,7 +238,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(reshape2)
 
-<span class="co"># Once again, get 1000 values for 15 samples</span>
+<span class="co"># Once again, get 1000 values for 15 samples. We need to transpose t() the</span>
+<span class="co"># dataset so that we have samples as rows and genes as columns.</span>
 atlas.subset &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">t</span>(<span class="kw">log2</span>(gene.atlas[<span class="kw">sample</span>(<span class="kw">nrow</span>(gene.atlas), <span class="dv">1000</span>),
                                                 <span class="kw">seq</span>(<span class="dv">15</span>)])))
 
@@ -258,7 +260,7 @@ p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(atlas.melt, <span
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;boxplot summarising signal intensity&quot;</span>, <span class="dt">x=</span><span class="st">&quot;array&quot;</span>, <span class="dt">y=</span><span class="st">&quot;log2 signal&quot;</span>) +<span class="st"> </span>
 <span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x=</span><span class="kw">element_text</span>(<span class="dt">angle=</span><span class="dv">90</span>))
 <span class="kw">print</span>(p)</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p><img src="intro-to-r_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
 </div>
 </div>
             </section>
@@ -280,6 +282,7 @@ p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(atlas.melt, <span
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,
