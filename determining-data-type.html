@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="data-variables-objects-in-r.html">
-<link rel="next" href="data-types.html">
+<link rel="prev" href="data-types.html">
+<link rel="next" href="functions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -187,80 +187,95 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="declaring-variables" class="section level2">
-<h2><span class="header-section-number">2.1</span> Declaring variables</h2>
-<p>Declaring a variable (or object) is simple in R, we just need to give it a name and the content for that variable. This can be done either directly in the console or in the editor window and saved as a script.</p>
-<p>Remember that code entered into the console window will be executed immediately when you press the [Enter] key. But do not expect output for every line you enter, many R commands do not print anything to the screen. Code in the editor document will only be executed when you run the lines of commands or run the entire script.</p>
+<div id="determining-data-type" class="section level2">
+<h2><span class="header-section-number">2.3</span> Determining data type</h2>
+<p>Sometimes during a long session of analysing data, we might forget to which data type a variable belongs. We can find out the data type directly by using the <code>class()</code> function. Alternatively, we test whether a variable is a <code>numeric</code>, <code>integer</code>, <code>character</code> or <code>logical</code> using the <code>is.XXXXX()</code> function, e.g. <code>is.numeric(x)</code>. See the following example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">42</span>
+y &lt;-<span class="st"> </span><span class="fl">423.2332</span>
+h &lt;-<span class="st"> &quot;Hello world&quot;</span>
+is.even &lt;-<span class="st"> </span>x %%<span class="st"> </span><span class="dv">2</span>
+
+<span class="kw">class</span>(is.even)
+
+<span class="kw">is.numeric</span>(x)
+<span class="kw">is.integer</span>(y)
+<span class="kw">is.character</span>(h)
+<span class="kw">is.character</span>(y)
+<span class="kw">is.logical</span>(x)
+<span class="kw">is.logical</span>(is.even)</code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;
+## [1] TRUE
+## [1] FALSE
+## [1] TRUE
+## [1] FALSE
+## [1] FALSE
+## [1] FALSE</code></pre>
+<div id="typecasting" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Typecasting</h3>
+<p>If we want to perform integer functions on <code>x</code>, we can force it from one type to another, in this case using the <code>as.integer()</code> function. This is known as <strong>typecasting</strong>. The <code>as.integer()</code> function also forces non-whole numbers into integers by rounding them down to the nearest whole number.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">xInt &lt;-<span class="st"> </span><span class="kw">as.integer</span>(x)
+<span class="kw">is.integer</span>(xInt)
+<span class="kw">class</span>(xInt)
+
+<span class="kw">as.integer</span>(is.even)</code></pre></div>
+<pre><code>## [1] TRUE
+## [1] &quot;integer&quot;
+## [1] 0</code></pre>
+<p>However, there are times when type casting will fail.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">age &lt;-<span class="st"> &quot;54 years old&quot;</span>
+age &lt;-<span class="st"> </span><span class="kw">as.integer</span>(age)</code></pre></div>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">age</code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>Since the variable <code>age</code> holds the characters “years old” it cannot be type cast to a number. Instead, R will provide a warning message as seen above, and assign the value <code>NA</code> to the variable <code>age</code>.</p>
 <div class="rmdexercise">
 <p>
-<strong>Declare an variable</strong>
+<strong>Simple datatypes</strong>
 </p>
 <ol style="list-style-type: decimal">
 <li>
 <p>
-Enter the example code below into your RStudio interface. You can type it directly into the console and pressing the <strong>[Enter] key</strong> after each line or in the editor window.
+Now try typecasting <code>FALSE</code> to an integer.
 </p>
-<ol style="list-style-type: lower-alpha">
-<li>
-Which method are you using? console or editor?
-</li>
-<li>
-Did you get any output after executing line [1]?
-</li>
-</ol>
 </li>
 <li>
 <p>
-If you entered above code in the console, click on the <strong>Environment</strong> tab in the top-right corner window. Do you see the value <code>x</code> listed? If you do not then try again (or select the <code>x &lt;- 42</code> line in your editor window and click on <strong>Run</strong>).
+Next try typecasting in the reverse, that is, converting the digits (1, 0) into TRUE or FALSE. <em>Hint</em>: <code>as.logical()</code>
 </p>
-<ol style="list-style-type: lower-alpha">
-<li>
-Try other commands, e.g. <code>y &lt;- 555</code>, do you see a new variable <code>y</code> listed in the <em>Environment</em> tab?
 </li>
-</ol>
+<li>
+<p>
+[<strong>Optional</strong>] If you are ahead, have a look at typecasting other values (e.g. &gt;1 and &lt;0) into logical types. Can you see what is happening?
+</p>
 </li>
 </ol>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">42</span>
-x</code></pre></div>
-<pre><code>## [1] 42</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(x)</code></pre></div>
-<pre><code>## [1] 42</code></pre>
-<p><strong>Setting variable values and viewing variable contents</strong></p>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="86%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>&lt;-</code></td>
-<td>This marker is used to set a variable’s value. The more standard <code>=</code> operator will also work but they have different levels of precedence. As best practice it is better to use <code>&lt;-</code> in R.</td>
-</tr>
-<tr class="even">
-<td><code>#</code></td>
-<td>The hashmark at the start of a line is a way to comment your code. This directs R to ignore the rest of the current line. Commenting your good is very good practice and is also used lots to remove commands that you may use in debugging a more complex workflow.</td>
-</tr>
-<tr class="odd">
-<td><code>print()</code></td>
-<td>Is the print function which writes out the value of the variable. Simply typing the name of the variable will also write out the value contained within, as seen in the examples above: <code>x</code> and <code>print(x)</code></td>
-</tr>
-</tbody>
-</table>
+<div class="rmdtip">
+<p>
+<strong>Writing to variables or the screen</strong>
+</p>
+<ul>
+<li>
+<p>
+In the example above, you will notice that the line <code>y &lt;- as.integer(x)</code> generates no output, while <code>as.integer(3.1415)</code> prints a result to screen. This is because in the first case, the output of <code>as.integer()</code> is passed into the variable <code>y</code>, while in the second case, no destination is given so by default it prints to screen.
+</p>
+</li>
+<li>
+<p>
+This also means that the output from the first command can be accessed and used again later by calling <code>y</code> but the output from the second is lost and cannot be used by future R commands.
+</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-variables-objects-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

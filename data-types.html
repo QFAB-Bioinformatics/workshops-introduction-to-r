@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="data-variables-objects-in-r.html">
-<link rel="next" href="data-types.html">
+<link rel="prev" href="declaring-variables.html">
+<link rel="next" href="determining-data-type.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -187,80 +187,212 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="declaring-variables" class="section level2">
-<h2><span class="header-section-number">2.1</span> Declaring variables</h2>
-<p>Declaring a variable (or object) is simple in R, we just need to give it a name and the content for that variable. This can be done either directly in the console or in the editor window and saved as a script.</p>
-<p>Remember that code entered into the console window will be executed immediately when you press the [Enter] key. But do not expect output for every line you enter, many R commands do not print anything to the screen. Code in the editor document will only be executed when you run the lines of commands or run the entire script.</p>
-<div class="rmdexercise">
-<p>
-<strong>Declare an variable</strong>
-</p>
-<ol style="list-style-type: decimal">
-<li>
-<p>
-Enter the example code below into your RStudio interface. You can type it directly into the console and pressing the <strong>[Enter] key</strong> after each line or in the editor window.
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-Which method are you using? console or editor?
-</li>
-<li>
-Did you get any output after executing line [1]?
-</li>
-</ol>
-</li>
-<li>
-<p>
-If you entered above code in the console, click on the <strong>Environment</strong> tab in the top-right corner window. Do you see the value <code>x</code> listed? If you do not then try again (or select the <code>x &lt;- 42</code> line in your editor window and click on <strong>Run</strong>).
-</p>
-<ol style="list-style-type: lower-alpha">
-<li>
-Try other commands, e.g. <code>y &lt;- 555</code>, do you see a new variable <code>y</code> listed in the <em>Environment</em> tab?
-</li>
-</ol>
-</li>
-</ol>
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">42</span>
-x</code></pre></div>
-<pre><code>## [1] 42</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">print</span>(x)</code></pre></div>
-<pre><code>## [1] 42</code></pre>
-<p><strong>Setting variable values and viewing variable contents</strong></p>
+<div id="data-types" class="section level2">
+<h2><span class="header-section-number">2.2</span> Data types</h2>
+<p>In common with many programming languages, every variable in R is assigned a <strong>data type</strong>. The primary data types in R are <code>Numeric</code>, <code>Integer</code>, <code>Character</code>, <code>Logical</code>, and data structures, which will be covered in Section . The type of a variable determines what functions can be applied to it.</p>
+<div id="numeric-and-integer" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Numeric and Integer</h3>
+<p><strong>Numerics</strong> in R store decimal values. <strong>Integers</strong> are a separate type to numerics and contain <em>whole number</em> values only. By default R will store numbers as <code>numeric</code>, since most mathematical operations will require decimal point numbers (such as division).</p>
+<p>In the previous section we declared a variable called <code>x</code>, to which we assigned the value 42. R recognised this as a number and automatically set the type of <code>x</code> to be numeric.</p>
+<p>The following table shows the types of numeric and integer operations that can be performed:</p>
 <table>
-<colgroup>
-<col width="13%" />
-<col width="86%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th>Command</th>
+<th>Operator</th>
 <th>Description</th>
+<th>Example</th>
+<th>Result</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>&lt;-</code></td>
-<td>This marker is used to set a variable’s value. The more standard <code>=</code> operator will also work but they have different levels of precedence. As best practice it is better to use <code>&lt;-</code> in R.</td>
+<td>+</td>
+<td>Addition</td>
+<td><code>x + 2</code></td>
+<td>44</td>
 </tr>
 <tr class="even">
-<td><code>#</code></td>
-<td>The hashmark at the start of a line is a way to comment your code. This directs R to ignore the rest of the current line. Commenting your good is very good practice and is also used lots to remove commands that you may use in debugging a more complex workflow.</td>
+<td>-</td>
+<td>Subtraction</td>
+<td><code>x-20</code></td>
+<td>22</td>
 </tr>
 <tr class="odd">
-<td><code>print()</code></td>
-<td>Is the print function which writes out the value of the variable. Simply typing the name of the variable will also write out the value contained within, as seen in the examples above: <code>x</code> and <code>print(x)</code></td>
+<td>*</td>
+<td>Multiplication</td>
+<td><code>x*2.23</code></td>
+<td>93.66</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Division</td>
+<td><code>x/3.5</code></td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>%/%</td>
+<td>Integer division</td>
+<td><code>x %% 3.5</code></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>^</td>
+<td>Exponential</td>
+<td><code>x^2</code></td>
+<td>1764</td>
+</tr>
+<tr class="odd">
+<td>%%</td>
+<td>Modulus</td>
+<td><code>x%%2</code></td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
+<p>In addition to the basic operations, there are more complex numeric functions, the following table shows some common examples.</p>
+Given <code>y &lt;- 423.2332</code> and <code>z &lt;- -2.34</code>.
+
+<p></p>
+</div>
+<div id="character" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Character</h3>
+<p>A <strong>character</strong> variable is used to represent strings or text values in R. Characters are identified by the surrounding double (&quot; “)or single quotes (‘’).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">h &lt;-<span class="st"> &quot;Hello world&quot;</span>
+<span class="kw">print</span>(h)</code></pre></div>
+<pre><code>## [1] &quot;Hello world&quot;</code></pre>
+<p>The following table shows some types of character operations that can be performed. Given the example <code>h &lt;- &quot;Hello world&quot;</code>.</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="27%" />
+<col width="32%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>nchar(h)</code></td>
+<td>number of characters in variable <span class="math inline">\(x\)</span></td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td><code>substr(x,start,stop)</code></td>
+<td>extract substring from start position to stop position</td>
+<td><code>substr(h,2,4)</code></td>
+<td>ell</td>
+</tr>
+<tr class="odd">
+<td><code>grep(pattern,x)</code></td>
+<td>search for <span class="math inline">\(pattern\)</span> in variable <span class="math inline">\(x\)</span></td>
+<td><code>grep('ell',h)</code></td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><code>grepl()</code></td>
+<td>provides a logical response as to whether the pattern exists.</td>
+<td>TRUE</td>
+</tr>
+<tr class="odd">
+<td><code>sub(pattern,rep,x)</code></td>
+<td>search for <span class="math inline">\(pattern\)</span> and replace with <span class="math inline">\(rep\)</span> in variable <span class="math inline">\(x\)</span></td>
+<td><code>sub('ello','i',h)</code></td>
+<td>Hi world</td>
+</tr>
+<tr class="even">
+<td><code>strsplit(x,delim)</code></td>
+<td>split the elements of a character variable <span class="math inline">\(x\)</span> using the specified <span class="math inline">\(delim\)</span></td>
+<td><code>strsplit(h,'o')</code></td>
+<td>c(“Hell”, &quot; w“,”rld“)</td>
+</tr>
+<tr class="odd">
+<td><code>paste(...,sep)</code></td>
+<td>concatenate list of strings together (…) separating them using the <span class="math inline">\(sep\)</span> delimiter</td>
+<td><code>paste('a','b,'c',sep=',')</code></td>
+<td>a,b,c</td>
+</tr>
+<tr class="even">
+<td><code>toupper(x)</code></td>
+<td>change to uppercase</td>
+<td><code>toupper(h)</code></td>
+<td>HELLO WORLD</td>
+</tr>
+<tr class="odd">
+<td><code>tolower(y)</code></td>
+<td>chagne to lowercase</td>
+<td><code>tolower(h)</code></td>
+<td>hello world</td>
+</tr>
+</tbody>
+</table>
+<p>Some examples:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hello &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;Hello&quot;</span>, <span class="st">&quot;World&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;~&quot;</span>)
+<span class="kw">print</span>(hello)
+<span class="kw">nchar</span>(hello)
+<span class="kw">substr</span>(hello, <span class="dv">3</span>, <span class="dv">7</span>)
+<span class="kw">strsplit</span>(hello,<span class="st">&#39;~&#39;</span>)</code></pre></div>
+<pre><code>## [1] &quot;Hello~World&quot;
+## [1] 11
+## [1] &quot;llo~W&quot;
+## [[1]]
+## [1] &quot;Hello&quot; &quot;World&quot;</code></pre>
+<p></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gsub</span>(<span class="st">&quot;World&quot;</span>, <span class="st">&quot;R&quot;</span>, hello)
+<span class="kw">grep</span>(<span class="st">&quot;Hello&quot;</span>, hello)
+<span class="kw">grep</span>(<span class="st">&quot;Mouse&quot;</span>, hello)
+<span class="kw">grepl</span>(<span class="st">&quot;Stephen&quot;</span>, hello)</code></pre></div>
+<pre><code>## [1] &quot;Hello~R&quot;
+## [1] 1
+## integer(0)
+## [1] FALSE</code></pre>
+</div>
+<div id="logical" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Logical</h3>
+<p><strong>Logical</strong> datatypes can have one of only two values: <code>TRUE</code> or <code>FALSE</code>. <strong>Note</strong>, these are case-specific, <code>True</code> or <code>true</code> are not valid logical values. However, the shortcut: <code>T</code> and `<code>F</code> will work.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">42</span>
+is.even &lt;-<span class="st"> </span>x %%<span class="st"> </span><span class="dv">2</span>
+is.even</code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="rmdexercise">
+<p>
+<strong>Setting, retrieving and changing data types</strong>
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Enter the examples from the sections above (numerics to logical) in RStudio. Either into the console or the editor window.
+</p>
+<ul>
+<li>
+Remember, you can use the <em>Environments</em> tab to keep track of the variables being created.
+</li>
+<li>
+<strong>Note</strong>, below all the outputs are shown altogether for readability. If you are running them in console, you will see the output immediately as you hit [Enter].
+</li>
+</ul>
+</li>
+<li>
+<p>
+Experiment with different values so you understand better how different operations work.
+</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-variables-objects-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="declaring-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="determining-data-type.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
