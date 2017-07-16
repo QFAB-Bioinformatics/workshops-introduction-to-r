@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="extending-r-with-packages.html">
-<link rel="next" href="more-complex-data-analysis.html">
+<link rel="prev" href="reading-from-a-web-connection.html">
+<link rel="next" href="extending-r-with-packages.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -187,144 +187,16 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="user-defined-functions" class="section level2">
-<h2><span class="header-section-number">5.2</span> User defined functions</h2>
-<p>In this section we cover how to write your own <strong>user-defined functions</strong> (Section <a href="user-defined-functions.html#user-defined-functions">5.2</a>), which as the name suggests are functions you write yourself instead of using the built-in functions. <!--Sections \@ref(for-loops-while-loops-and-vectorisation) 
-and \@ref(apply-lapply) will cover methods for looping through your data and we 
-finish this chapter off with **basic data analysis methods** in Section \@ref(basic-data-analysis-methods).--></p>
-<p>While there are hundreds of packages that can do everything that you need in R, it is often quicker to write a function to do something specific than it is to find someone else’s function. For purposes of scientific reproducibility, for automation and for clean code, wrapping chunks of code into functions is a must!</p>
-<p>Crafting a function is pretty simple. We use the <code>function()</code> command, and provide it with a name for our new function and some logic for that function to perform.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create a function called addOrminus</span>
-addOrminus &lt;-<span class="st"> </span>function(a, <span class="dt">b=</span><span class="dv">2</span>, <span class="dt">add=</span><span class="ot">TRUE</span>) {
-  if (add) {  <span class="co"># If the logical add is TRUE, then carry out this section</span>
-    a +<span class="st"> </span>b     <span class="co"># Add a and b and return the result</span>
-  } else {    <span class="co"># or if add is FALSE, then do this instead</span>
-    a -<span class="st"> </span>b     <span class="co"># Subtract b from a and return that result</span>
-  }
-}
-
-<span class="co"># Test what we get with some different input options</span>
-<span class="kw">addOrminus</span>(<span class="dv">1</span>)
-<span class="kw">addOrminus</span>(<span class="dv">2</span>, <span class="dv">4</span>)
-
-<span class="co"># Assign the answer from the function to a new variable.</span>
-answer &lt;-<span class="st"> </span><span class="kw">addOrminus</span>(<span class="dv">2</span>, <span class="dt">add=</span><span class="ot">FALSE</span>, <span class="dt">b=</span><span class="dv">4</span>)</code></pre></div>
-<p><strong>What is happening here?</strong></p>
-<p>In the example above, we create a function called <code>addOrminus</code>. This function takes the following three <strong>arguments</strong>:</p>
-<ol style="list-style-type: lower-roman">
-<li>a <em>required</em> numerical value named <code>a</code>,</li>
-<li>an <em>optional</em> numerical value named <code>b</code> and</li>
-<li>an <em>optional</em> logical value named <code>add</code>.</li>
-</ol>
-<p>Arguments <code>b</code> and <code>add</code> are given <strong>default values</strong> of <code>2</code> and <code>TRUE</code> respectively by using the equal (=) sign in the function declaration. These defaults values are used in the logic of the function if no other values are provided when the function is called.</p>
-<p>You call the function using its name, <code>addOrminus(1)</code> and you can assign the answer to a new variable.</p>
-<p><strong>Another example</strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hypotenuse &lt;-<span class="st"> </span>function(a,b) {
-  <span class="kw">return</span>(<span class="kw">sqrt</span>(a^<span class="dv">2</span>+b^<span class="dv">2</span>))
-}
-<span class="kw">hypotenuse</span>(<span class="dv">3</span>,<span class="dv">4</span>)</code></pre></div>
-<p><strong>What is happening here?</strong></p>
-<p>The second example named <code>hypotenuse</code>, takes two numbers and <strong>returns</strong> the square root of the sum of the squares of those two numbers.</p>
-<p>Functions can contain any data-type as input, they can be simple data types (Section <a href="data-types.html#data-types">2.2</a>) or even the more complex data structures (Section <a href="data-structures.html#data-structures">2.5</a>). You can have a mixture of required and optional values. By convention, required arguments are listed first, then followed by any optional arguments.</p>
-<p><strong>Optional arguments</strong></p>
-<p>Taking the above <code>hypotenuse</code> function, the second number <span class="math inline">\(b\)</span> can become optional by specifying a default value, such as:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">hypotenuse2 &lt;-<span class="st"> </span>function(a,<span class="dt">b=</span><span class="dv">3</span>){
-  <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;a=&quot;</span>,a,<span class="st">&quot;and b=&quot;</span>,b))
-  <span class="kw">return</span>(<span class="kw">sqrt</span>(a^<span class="dv">2</span>+b^<span class="dv">2</span>))
-}
-<span class="kw">hypotenuse2</span>(<span class="dv">3</span>)</code></pre></div>
-<pre><code>## [1] &quot;a= 3 and b= 3&quot;</code></pre>
-<pre><code>## [1] 4.242641</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hypotenuse2</span>(<span class="dv">234</span>,<span class="dv">32</span>)</code></pre></div>
-<pre><code>## [1] &quot;a= 234 and b= 32&quot;</code></pre>
-<pre><code>## [1] 236.1779</code></pre>
-<div class="rmdexercise">
-<p>
-<strong>Creating and using functions</strong>
-</p>
-<ol style="list-style-type: decimal">
-<li>
-<p>
-Use the code chunks above to create and experiment with the two example functions.
-</p>
-</li>
-<li>
-<p>
-Create a function that will perform the temperature conversion celsius to fahrenheit: <span class="math inline"><span class="math inline">\(F=\frac{9}{5}C+32\)</span></span>. Call the function <code>celsius.to.fahrenheit(x)</code>
-</p>
-</li>
-<li>
-<p>
-Create another function to perform the ooposite conversion, from fahrenheit to celsius: <span class="math inline"><span class="math inline">\(C=(F-32)\frac{5}{9}\)</span></span>. Call the function <code>fahrenheit.to.celsius(x)</code>
-</p>
-</li>
-<li>
-<p>
-Now try running either <code>celsius.to.fahrenheit</code> or <code>fahrenheit.to.celsius</code> on a matrix of temperatures.
-</p>
-</li>
-</ol>
+<div id="packages-and-functions" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Packages and functions</h1> 
 </div>
-<p><strong>Expected output:</strong></p>
-<pre><code>## [1] &quot;Before calling celsius.to.fahrenheit()&quot;</code></pre>
-<pre><code>##      [,1] [,2] [,3] [,4] [,5]
-## [1,]   26   26   -7   -4   13
-## [2,]   25   36    9   35   40
-## [3,]   -7   20   40   16   -4
-## [4,]   13   20   32   -2    8
-## [5,]    3   33   19    4   -7</code></pre>
-<pre><code>## [1] &quot;Convert to fahrenheit:&quot;</code></pre>
-<pre><code>##      [,1] [,2]  [,3] [,4]  [,5]
-## [1,] 78.8 78.8  19.4 24.8  55.4
-## [2,] 77.0 96.8  48.2 95.0 104.0
-## [3,] 19.4 68.0 104.0 60.8  24.8
-## [4,] 55.4 68.0  89.6 28.4  46.4
-## [5,] 37.4 91.4  66.2 39.2  19.4</code></pre>
-<div class="rmdtip">
-<p>
-<strong>Other tips for functions</strong>
-</p>
-<ul>
-<li>
-<p>
-Like variables, give functions a meaningful and self-explanatory name.
-</p>
-</li>
-<li>
-<p>
-Keep things in functions simple and structured.
-</p>
-</li>
-<li>
-<p>
-Use some form of indentation to keep your code readable so that you can follow what is happening. Have a look at the R coding conventions and links contained within at <a href="http://journal.rproject.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf" class="uri">http://journal.rproject.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf</a>.
-</p>
-</li>
-<li>
-An explicit <code>return()</code> is not required in a function. By default a function will return the last executed command. However, it is worthwhile to include a return statement if you have a complicated function that has multiple endpoints and logical decisions. This also makes debugging easier.
-<ul>
-<li>
-You can also create and return complex data structures e.g. <code>return(list(…))</code>
-</li>
-</ul>
-</li>
-<li>
-<p>
-If you think that writing a function is great, the next step will be to write whole packages that automate, streamline and focus your research. This is not difficult but unfortunately does not fit in the scope of this workshop.
-</p>
-</li>
-</ul>
-</div>
-
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="extending-r-with-packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="more-complex-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reading-from-a-web-connection.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="extending-r-with-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
