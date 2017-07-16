@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to R</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -26,11 +25,6 @@
 <meta name="author" content="QFAB">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -39,7 +33,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="functions.html">
 <link rel="next" href="finding-describing-and-removing-objects.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -88,10 +81,11 @@ code > span.at { } /* Attribute */
 code > span.in { color: #008000; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -110,42 +104,37 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
 <li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
+<li class="chapter" data-level="1.6" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>1.6</b> Documentation</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
-<li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
-<li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
-<li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
-<li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> Data types</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.2.1</b> Numeric and Integer</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.2.2</b> Character</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+<li class="chapter" data-level="2.3" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.3</b> Determining data type</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.3.1</b> Typecasting</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
-<li class="chapter" data-level="2.4.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.4.3</b> Changing Vectors and Lists</a></li>
-<li class="chapter" data-level="2.4.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.4.4</b> Factors</a></li>
-<li class="chapter" data-level="2.4.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.4.5</b> Matrices</a></li>
-<li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.4</b> Functions</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.4.1</b> Nesting functions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
+<li class="chapter" data-level="2.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.5</b> Data structures</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.5.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.5.2</b> Lists</a></li>
+<li class="chapter" data-level="2.5.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.5.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.5.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.5.4</b> Factors</a></li>
+<li class="chapter" data-level="2.5.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.5.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.5.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.5.6</b> Data frame</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
-<li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
-<li class="chapter" data-level="3.2" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>3.2</b> Extending R with packages</a></li>
-<li class="chapter" data-level="3.3" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>3.3</b> Vignettes</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="vignettes.html"><a href="vignettes.html#citations"><i class="fa fa-check"></i><b>3.3.1</b> Citations</a></li>
+<li class="chapter" data-level="2.6" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.6</b> Finding, describing and removing objects</a></li>
+<li class="chapter" data-level="2.7" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.7</b> Best practise and variable naming conventions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="sessioninfo.html"><a href="sessioninfo.html"><i class="fa fa-check"></i><b>3.4</b> SessionInfo</a></li>
-<li class="chapter" data-level="3.5" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html"><i class="fa fa-check"></i><b>3.5</b> Other ways of running R</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#preparing-an-r-script"><i class="fa fa-check"></i><b>3.5.1</b> Preparing an R script</a></li>
-<li class="chapter" data-level="3.5.2" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#running-an-r-script"><i class="fa fa-check"></i><b>3.5.2</b> Running an R script</a></li>
+<li class="chapter" data-level="3" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Simple data analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="useful-operations.html"><a href="useful-operations.html"><i class="fa fa-check"></i><b>3.1</b> Useful operations</a></li>
+<li class="chapter" data-level="3.2" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>3.2</b> Vectorisation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
+<li class="chapter" data-level="4" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>4</b> File and data input/output (IO)</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
 <li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
@@ -154,40 +143,30 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
 <li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
-<li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
-<li class="chapter" data-level="5.2" data-path="for-loops-while-loops-and-vectorisation.html"><a href="for-loops-while-loops-and-vectorisation.html"><i class="fa fa-check"></i><b>5.2</b> For loops, While loops and Vectorisation</a></li>
-<li class="chapter" data-level="5.3" data-path="apply-lapply.html"><a href="apply-lapply.html"><i class="fa fa-check"></i><b>5.3</b> Apply, Lapply</a></li>
-<li class="chapter" data-level="5.4" data-path="basic-data-analysis-methods.html"><a href="basic-data-analysis-methods.html"><i class="fa fa-check"></i><b>5.4</b> Basic data analysis methods</a></li>
+<li class="chapter" data-level="5" data-path="packages-and-functions.html"><a href="packages-and-functions.html"><i class="fa fa-check"></i><b>5</b> Packages and functions</a><ul>
+<li class="chapter" data-level="5.1" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>5.1</b> Extending R with packages</a></li>
+<li class="chapter" data-level="5.2" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.2</b> User defined functions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data-presentation-and-reporting.html"><a href="data-presentation-and-reporting.html"><i class="fa fa-check"></i><b>6</b> Data presentation and reporting</a><ul>
-<li class="chapter" data-level="6.1" data-path="native-r-methods.html"><a href="native-r-methods.html"><i class="fa fa-check"></i><b>6.1</b> Native R methods</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="native-r-methods.html"><a href="native-r-methods.html#boxplots"><i class="fa fa-check"></i><b>6.1.1</b> Boxplots</a></li>
-<li class="chapter" data-level="6.1.2" data-path="native-r-methods.html"><a href="native-r-methods.html#histograms"><i class="fa fa-check"></i><b>6.1.2</b> Histograms</a></li>
-<li class="chapter" data-level="6.1.3" data-path="native-r-methods.html"><a href="native-r-methods.html#bar-charts"><i class="fa fa-check"></i><b>6.1.3</b> Bar charts</a></li>
-<li class="chapter" data-level="6.1.4" data-path="native-r-methods.html"><a href="native-r-methods.html#scatterplots"><i class="fa fa-check"></i><b>6.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="6" data-path="more-complex-data-analysis.html"><a href="more-complex-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More complex data analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="apply.html"><a href="apply.html"><i class="fa fa-check"></i><b>6.1</b> apply()</a></li>
+<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html"><i class="fa fa-check"></i><b>6.2</b> Advanced plotting using ggplot2</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#boxplots-1"><i class="fa fa-check"></i><b>6.2.1</b> Boxplots</a></li>
-<li class="chapter" data-level="6.2.2" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#histograms-1"><i class="fa fa-check"></i><b>6.2.2</b> Histograms</a></li>
-<li class="chapter" data-level="6.2.3" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#bar-charts-1"><i class="fa fa-check"></i><b>6.2.3</b> Bar charts</a></li>
-<li class="chapter" data-level="6.2.4" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#scatterplots-1"><i class="fa fa-check"></i><b>6.2.4</b> Scatterplots</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>7</b> Visualising data</a><ul>
+<li class="chapter" data-level="7.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>7.1</b> Boxplots</a></li>
+<li class="chapter" data-level="7.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>7.2</b> Histograms</a></li>
+<li class="chapter" data-level="7.3" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="7.4" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.4</b> Bar charts</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
 <li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
+<li class="chapter" data-level="7.5" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.5</b> Going further with R</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.5.1</b> Vignettes</a></li>
+<li class="chapter" data-level="7.5.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.5.2</b> Citations</a></li>
+<li class="chapter" data-level="7.5.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.5.3</b> SessionInfo</a></li>
+<li class="chapter" data-level="7.5.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.5.4</b> Other ways of running R</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-2-solutions-to-exercises.html"><a href="appendix-2-solutions-to-exercises.html"><i class="fa fa-check"></i>Appendix 2 - Solutions to exercises</a><ul>
-<li class="chapter" data-level="" data-path="using-vectors.html"><a href="using-vectors.html"><i class="fa fa-check"></i>2.4.1 Using vectors</a></li>
-<li class="chapter" data-level="" data-path="using-lists.html"><a href="using-lists.html"><i class="fa fa-check"></i>2.4.3 Using lists</a></li>
-<li class="chapter" data-level="" data-path="adding-factor-values.html"><a href="adding-factor-values.html"><i class="fa fa-check"></i>2.4.4 Adding factor values</a></li>
-<li class="chapter" data-level="" data-path="creating-a-data-frame.html"><a href="creating-a-data-frame.html"><i class="fa fa-check"></i>2.4.6 Creating a data frame</a></li>
-<li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
-<li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
-<li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -209,25 +188,72 @@ code > span.in { color: #008000; } /* Information */
 
             <section class="normal" id="section-">
 <div id="data-structures" class="section level2">
-<h2><span class="header-section-number">2.4</span> Data structures</h2>
+<h2><span class="header-section-number">2.5</span> Data structures</h2>
 <p>We do not typically expect to work with atomic variables during an <em>-omics</em> analysis. To make the best use of R we want to use hundreds, thousands and millions of data points. We arrange these in one of a number of different data structures: vectors, lists, matrices and data frames.</p>
 <div id="vectors" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Vectors</h3>
-<p>A <strong>vector</strong> is a group of components of the <em>same</em> type. Elements of a vector can be accessed by their numeric position (referred to as <strong>indexing</strong>) starting at position 1. They can also be named so that we can access the variable component using the namespace. The <code>c()</code> function (for <em>combine</em>) is used to join a number of single values together into a vector.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
-<span class="kw">is.vector</span>(l)</code></pre></div>
-<pre><code>## [1] TRUE</code></pre>
-<p>Access the second element of the vector:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">l[<span class="dv">2</span>]</code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<p>What happens if we try to mix data types in a vector? <code>str()</code> is a function that describes the structure of an variable.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedVector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">animal=</span><span class="st">&quot;sheep&quot;</span>, <span class="dt">meaningOfLife=</span><span class="kw">as.integer</span>(<span class="dv">42</span>), <span class="dt">pi=</span><span class="fl">3.1415</span>)
+<h3><span class="header-section-number">2.5.1</span> Vectors</h3>
+<p>A <strong>vector</strong> is a group of components of the <em>same</em> type. Vectors are created using the <code>c()</code> function and elements are accessed by their position.</p>
+<table style="width:99%;">
+<colgroup>
+<col width="20%" />
+<col width="77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>vector &lt;- c()</code></td>
+<td>function (for <em>combine</em>) is used to join a number of single values together into a vector</td>
+</tr>
+<tr class="even">
+<td><code>vector[i]</code></td>
+<td>return element at position <span class="math inline">\(i\)</span> of a vector, positions start from 1</td>
+</tr>
+<tr class="odd">
+<td><code>vector[-i]</code></td>
+<td>return all elements except position <span class="math inline">\(i\)</span></td>
+</tr>
+<tr class="even">
+<td><code>vector[start:end]</code></td>
+<td>slicing, get elements from <span class="math inline">\(start\)</span> positon to the <span class="math inline">\(end\)</span> position</td>
+</tr>
+<tr class="odd">
+<td><code>vector[c(3,5,10)]</code></td>
+<td>retrieves positions 3, 5, 10 of the vector</td>
+</tr>
+<tr class="even">
+<td><code>length(vector)</code></td>
+<td>returns the number of elments in the vector</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">34</span>,<span class="dv">2</span>,<span class="dv">43</span>,<span class="dv">234</span>,<span class="dv">2</span>,<span class="dv">342</span>,<span class="dv">43</span>,<span class="dv">423</span>)
+data[<span class="dv">2</span>]
+data[<span class="dv">3</span>:<span class="dv">7</span>]
+<span class="kw">length</span>(data)</code></pre></div>
+<pre><code>## [1] 3
+## [1]  34   2  43 234   2
+## [1] 10</code></pre>
+<p>What happens if we try to mix data types in a vector? See the following worked example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedVector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dt">animal=</span><span class="st">&quot;sheep&quot;</span>, 
+                 <span class="dt">meaningOfLife=</span><span class="kw">as.integer</span>(<span class="dv">42</span>), 
+                 <span class="dt">pi=</span><span class="fl">3.1415</span>)
 <span class="kw">str</span>(mixedVector)</code></pre></div>
 <pre><code>##  Named chr [1:3] &quot;sheep&quot; &quot;42&quot; &quot;3.1415&quot;
 ##  - attr(*, &quot;names&quot;)= chr [1:3] &quot;animal&quot; &quot;meaningOfLife&quot; &quot;pi&quot;</code></pre>
+<p>Above, the variable <span class="math inline">\(mixedVector\)</span> holds three elements of different data types, however a vector must consists of the <em>same</em> data type. So all elements are automatically cast to the most robust datatype which is a <code>character</code>.</p>
+<p>The <code>str()</code> is a function that describes the structure of an variable.</p>
+<p>Furthermore, in this example, each element has an associated name. We can access the element using its name instead of the position, e.g.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedVector[<span class="st">&#39;meaningOfLife&#39;</span>]</code></pre></div>
+<pre><code>## meaningOfLife 
+##          &quot;42&quot;</code></pre>
 <div class="rmdtip">
 <p>
-<strong>Vectors and Collections of data</strong>
+<strong>Vectors and collections of data</strong>
 </p>
 <ul>
 <li>
@@ -239,11 +265,13 @@ Because elements of a vector must be the same type, when we investigate the cont
 </ul>
 </div>
 <p><code>c()</code> can be used to combine vectors, not just individual values:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(l, mixedVector)</code></pre></div>
-<pre><code>##                                                  animal meaningOfLife 
-##           &quot;1&quot;           &quot;2&quot;           &quot;3&quot;       &quot;sheep&quot;          &quot;42&quot; 
-##            pi 
-##      &quot;3.1415&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">c</span>(data, mixedVector)</code></pre></div>
+<pre><code>##                                                                       
+##           &quot;2&quot;           &quot;3&quot;          &quot;34&quot;           &quot;2&quot;          &quot;43&quot; 
+##                                                                       
+##         &quot;234&quot;           &quot;2&quot;         &quot;342&quot;          &quot;43&quot;         &quot;423&quot; 
+##        animal meaningOfLife            pi 
+##       &quot;sheep&quot;          &quot;42&quot;      &quot;3.1415&quot;</code></pre>
 <div class="rmdexercise">
 <p>
 <strong>Using vectors</strong>
@@ -304,7 +332,7 @@ mixedVector[<span class="st">&#39;animal&#39;</span>]
 <span class="kw">names</span>(mixedVector)</code></pre></div>
 </div>
 <div id="lists" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Lists</h3>
+<h3><span class="header-section-number">2.5.2</span> Lists</h3>
 <p><strong>Lists</strong> are similar to vectors in that they are one-dimensional structures for storing data and like vectors can be accessed by position or namespace. They differ from vectors in that they can contain multiple <em>different</em> data types. This makes them more flexible for storing data but more limited in the analyses that can be performed on them. Lists are created using the <code>list()</code> command, which has a similar format to <code>c()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedList &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">animal=</span><span class="st">&quot;sheep&quot;</span>, <span class="dt">meaningOfLife=</span><span class="kw">as.integer</span>(<span class="dv">42</span>), <span class="dt">pi=</span><span class="fl">3.1415</span>)
 <span class="kw">str</span>(mixedList)</code></pre></div>
@@ -320,9 +348,20 @@ mixedVector[<span class="st">&#39;animal&#39;</span>]
 <code>%in%</code> is a way to test the membership of a single element in a list or vector of items. For example, try typing in the command: <code>“sheep” %in% mixedList</code>
 </p>
 </div>
+<p>Like vectors, elements of a lists can be accessed by their position or their name. The name can also be accessed using the <code>$</code> notation. That is, the two lines below are eqivalent.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mixedList$meaningOfLife
+mixedList[<span class="st">&#39;meaningOfLife&#39;</span>]</code></pre></div>
+<pre><code>## [1] 42
+## $meaningOfLife
+## [1] 42</code></pre>
+<div class="rmdtip">
+<p>
+The <code>$</code> notation is only accessible by <code>Lists</code> and <code>Data frames</code> (Section <span class="citation">@ref</span>(data-frame)).
+</p>
+</div>
 </div>
 <div id="changing-vectors-and-lists" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> Changing Vectors and Lists</h3>
+<h3><span class="header-section-number">2.5.3</span> Changing Vectors and Lists</h3>
 <p>While a list or vector is useful, their utility is much greater when we can add or remove elements from them, or change the value of existing elements.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Add an item named &#39;pens&#39; with a numeric value of 3 to the list</span>
 mixedList &lt;-<span class="st"> </span><span class="kw">append</span>(mixedList, <span class="kw">c</span>(<span class="dt">pens=</span><span class="dv">3</span>))
@@ -410,7 +449,7 @@ When you have these vectors created, place them all in a single list variable ca
 </div>
 </div>
 <div id="factors" class="section level3">
-<h3><span class="header-section-number">2.4.4</span> Factors</h3>
+<h3><span class="header-section-number">2.5.4</span> Factors</h3>
 <p><strong>Factors</strong> are vector objects that contain grouping (classification) information of its components. Functionally they are similar to vectors in that they are a collection of objects of a <em>single</em> type. Factors are best applied when there are a limited number of different values. They are often used when categorical values are used in modelling or presenting data, e.g. phenotypic or study class data, such as diabetic, pre-diabetic, healthy.</p>
 <p>For the example that we explore in the following exercise, we are going to consider a massive bucket of M&amp;Ms. Assuming that the different colours are randomly mixed with an equal probability we would like to explore a million different sweets.</p>
 <div class="rmdexercise">
@@ -421,30 +460,37 @@ When you have these vectors created, place them all in a single list variable ca
 Use the code below to create a factorised <code>mandm</code> vector containing 1 million M&amp;Ms of various colours.
 </p>
 <p>
-<strong>Note</strong>, the output is again grouped together at the end for readability. The table below explains the new functions and what they mean.
+<strong>Note</strong>: the output is again grouped together at the end for readability. The table below explains the new functions and what they mean.
 </p>
 </div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">colours &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;orange&quot;</span>)
-mandm &lt;-<span class="st"> </span><span class="kw">sample</span>(colours, <span class="dv">1000000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create some colours and randomly select a million samples from this list of</span>
+<span class="co"># colours using the sample() function, with replacement (meaning duplicate)</span>
+<span class="co"># colours are allowed.</span>
+colours &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;orange&quot;</span>)
+mandm   &lt;-<span class="st"> </span><span class="kw">sample</span>(colours, <span class="dv">1000000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)
+
 <span class="kw">object.size</span>(mandm)
-<span class="kw">length</span>(mandm)
+<span class="kw">length</span>(mandm)</code></pre></div>
+<pre><code>## 8000280 bytes
+## [1] 1000000</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># convert this into a factor datatype</span>
 mandm &lt;-<span class="st"> </span><span class="kw">as.factor</span>(mandm)
 <span class="kw">str</span>(mandm)
-<span class="kw">object.size</span>(mandm)
-<span class="kw">table</span>(mandm)
-<span class="kw">head</span>(mandm ==<span class="st"> &quot;blue&quot;</span>,<span class="dv">10</span>)
-<span class="kw">which</span>(mandm ==<span class="st"> &quot;white&quot;</span>)
-<span class="kw">length</span>(<span class="kw">which</span>(mandm ==<span class="st"> &quot;blue&quot;</span>))</code></pre></div>
-<pre><code>## 8000280 bytes
-## [1] 1000000
-##  Factor w/ 5 levels &quot;blue&quot;,&quot;green&quot;,..: 3 3 1 4 1 1 1 3 5 2 ...
-## 4000688 bytes
-## mandm
+<span class="kw">object.size</span>(mandm)</code></pre></div>
+<pre><code>##  Factor w/ 5 levels &quot;blue&quot;,&quot;green&quot;,..: 4 2 2 3 1 5 4 2 1 1 ...
+## 4000688 bytes</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># table() returns the count for each colour that is in the dataset</span>
+<span class="kw">table</span>(mandm)</code></pre></div>
+<pre><code>## mandm
 ##   blue  green orange    red yellow 
-## 200233 199882 199990 199590 200305 
-##  [1] FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE
-## integer(0)
-## [1] 200233</code></pre>
+## 199475 200258 199600 200228 200439</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mandm ==<span class="st"> &quot;blue&quot;</span>,<span class="dv">10</span>)</code></pre></div>
+<pre><code>##  [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># return the positions in the dataset that has the value &#39;white&#39;</span>
+<span class="kw">which</span>(mandm ==<span class="st"> &quot;white&quot;</span>)</code></pre></div>
+<pre><code>## integer(0)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(<span class="kw">which</span>(mandm ==<span class="st"> &quot;blue&quot;</span>))</code></pre></div>
+<pre><code>## [1] 199475</code></pre>
 <p><strong>What is happening here?</strong></p>
 <table>
 <colgroup>
@@ -529,15 +575,42 @@ mandm[<span class="dv">1</span>] &lt;-<span class="st"> &quot;white&quot;</span>
 <span class="kw">table</span>(mandm)</code></pre></div>
 </div>
 <div id="matrices" class="section level3">
-<h3><span class="header-section-number">2.4.5</span> Matrices</h3>
+<h3><span class="header-section-number">2.5.5</span> Matrices</h3>
 <p>A <strong>matrix</strong> is a collection of data elements arranged in a two-dimensional rectangular layout, effectively a table. Similar to the vector a matrix can contain only a <em>single</em> type of data.</p>
 <p>It is often easiest to create a matrix from a vector of data. The next exercise will show you how to do this, follow the code below to generate a variety of matrices. R cannot guess the dimension of the data so you should specify either the number of rows (<code>nrow</code>) or columns (<code>ncol</code>) that the final data should have.</p>
+<p>Common matrix operations:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>matrix()</code></td>
+<td>create matrix</td>
+</tr>
+<tr class="even">
+<td><code>nrow()</code></td>
+<td>returns number of rows</td>
+</tr>
+<tr class="odd">
+<td><code>ncol()</code></td>
+<td>returns number of columns</td>
+</tr>
+<tr class="even">
+<td><code>dim()</code></td>
+<td>returns the dimension</td>
+</tr>
+</tbody>
+</table>
 <div class="rmdexercise">
 <p>
 <strong>Creating a matrix</strong>
 </p>
 <p>
-<em>Note</em>, this time the output follows <em>immediately</em> after each command, so that you can compare with what you get.
+<strong>Note</strong>: this time the output follows <em>immediately</em> after each command, so that you can compare with what you get.
 </p>
 <ol style="list-style-type: decimal">
 <li>
@@ -578,7 +651,8 @@ Rather than printing the output directly to screen, store the matrix into a vari
 ## [2,]    4    5    6
 ## [3,]    7    8    9
 ## [4,]   10   11   12</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letter.mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;G&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;J&quot;</span>,<span class="st">&quot;K&quot;</span>,<span class="st">&quot;L&quot;</span>),<span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letter.mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>,<span class="st">&quot;E&quot;</span>,<span class="st">&quot;F&quot;</span>,<span class="st">&quot;G&quot;</span>,<span class="st">&quot;H&quot;</span>,<span class="st">&quot;I&quot;</span>,<span class="st">&quot;J&quot;</span>,<span class="st">&quot;K&quot;</span>,<span class="st">&quot;L&quot;</span>), 
+                     <span class="dt">nrow=</span><span class="dv">4</span>, <span class="dt">byrow=</span><span class="ot">TRUE</span>)</code></pre></div>
 <div class="rmdtip">
 <ul>
 <li>
@@ -604,8 +678,8 @@ Assign this to a variable named <code>numRange</code>.
 </ul>
 </div>
 <div id="indexing-a-matrix" class="section level4">
-<h4><span class="header-section-number">2.4.5.1</span> Indexing a matrix</h4>
-<p>To access the elements of a matrix you use the following methods:</p>
+<h4><span class="header-section-number">2.5.5.1</span> Indexing a matrix</h4>
+<p>To access the elements of a matrix you use the notation <code>matrix[row, col]</code>. Examples as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">letter.mat[<span class="dv">2</span>,]   <span class="co"># returns the 2nd row</span>
 letter.mat[,<span class="dv">3</span>]   <span class="co"># returns the 3rd column</span>
 letter.mat[<span class="dv">2</span>,<span class="dv">3</span>]  <span class="co"># returns the element at row=2 and column=3</span>
@@ -614,8 +688,51 @@ letter.mat[<span class="dv">3</span>:<span class="dv">4</span>,] <span class="co
 </div>
 </div>
 <div id="data-frame" class="section level3">
-<h3><span class="header-section-number">2.4.6</span> Data frame</h3>
+<h3><span class="header-section-number">2.5.6</span> Data frame</h3>
 <p>The <strong>data frame</strong> is to a matrix what a list is to a vector. Like a matrix it is a two dimensional table for storing data and is made up of equal length rows and columns, but like a list, the columns can contain data of <em>different</em> data types. Although within a column, the data must all be of the <em>same</em> type.</p>
+<p>Common operations for data frames:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data.frame()</code></td>
+<td>creates a data.frame</td>
+</tr>
+<tr class="even">
+<td><code>nrow()</code></td>
+<td>returns number of rows</td>
+</tr>
+<tr class="odd">
+<td><code>ncol()</code></td>
+<td>returns number of columns</td>
+</tr>
+<tr class="even">
+<td><code>dim()</code></td>
+<td>returns the dimension</td>
+</tr>
+<tr class="odd">
+<td><code>colnames(x)</code></td>
+<td>returns the column names of a data frame</td>
+</tr>
+<tr class="even">
+<td><code>colnames(x) &lt;- c('a','b','c')</code></td>
+<td>sets the column names for a data frame</td>
+</tr>
+<tr class="odd">
+<td><code>rownames(x)</code></td>
+<td>returns the rownames of a data frame</td>
+</tr>
+<tr class="even">
+<td><code>rownames(x) &lt;- c('p1','p2','p3')</code></td>
+<td>sets the rownames for a data frame</td>
+</tr>
+</tbody>
+</table>
 <div class="rmdexercise">
 <p>
 Follow the code chunk below to start exploring data frames. The comments explain what is happening in each stage. The first step tries creating a data frame using the same format as creating a matrix. This doesn’t work though, see if you can work out what is actually happening here.
@@ -633,10 +750,10 @@ exampleDf &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<s
 <span class="kw">rownames</span>(exampleDf)
 
 <span class="co"># What is the size and structure of our data frame</span>
-<span class="kw">dim</span>(exampleDf) <span class="co"># Dimension of the data frame</span>
+<span class="kw">dim</span>(exampleDf)  <span class="co"># Dimension of the data frame</span>
 <span class="kw">ncol</span>(exampleDf) <span class="co"># Number of columns</span>
 <span class="kw">nrow</span>(exampleDf) <span class="co"># Number of rows</span>
-<span class="kw">str</span>(exampleDf) <span class="co"># Structure information</span>
+<span class="kw">str</span>(exampleDf)  <span class="co"># Structure information</span>
 
 <span class="co"># Retrieve a &#39;data slice&#39; from the data frame</span>
 <span class="co"># First, get the contents of the first column</span>
@@ -686,8 +803,9 @@ An easier way to access data.frame columns by name is to use the <code><span cla
         </div>
       </div>
 <a href="functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="finding-describing-and-removing-objects.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="finding-describing-and-removing-objects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -699,6 +817,7 @@ An easier way to access data.frame columns by name is to use the <code><span cla
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,
@@ -729,7 +848,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);
