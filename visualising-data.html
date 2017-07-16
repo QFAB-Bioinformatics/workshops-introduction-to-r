@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="boxplots.html">
-<link rel="next" href="scatterplots.html">
+<link rel="prev" href="for-and-while-loops.html">
+<link rel="next" href="boxplots.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -187,48 +187,52 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="histograms" class="section level2">
-<h2><span class="header-section-number">7.2</span> Histograms</h2>
-<p>A histogram shows the distribution of data for typically a single sample. This time we will plot the distribution for each property of the iris data: Sepal.Length, Sepal.Width, Petal.Length, Petal.Width. Again we make use of a <code>for</code> loop to generate the plots.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">1</span>))
-for(prop in <span class="kw">names</span>(iris.data)) {
-  <span class="kw">hist</span>(iris.data[[prop]], <span class="dt">col=</span><span class="st">&#39;steelblue&#39;</span>,
-       <span class="dt">main=</span>prop, <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>)
-}</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/histogram-iris-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="rmdexercise">
-<p>
-<strong>Challenge</strong>
-</p>
-<p>
-Can you generate a histogram for each species?
-</p>
-<p>
-<em>Hints</em>
-</p>
+<div id="visualising-data" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Visualising data</h1>
+<p>In the previous sections we have looked at a number of ways to import data, access data, summarise data. We should now consider how we best present data in a graphical way. R is endowed with a number of native and add-on packages that facilitate the preparation of figures, diagrams and graphs. In this section we will explore plots prepared using the built-in plotting functions, which will give you a quick way to visualise your data.</p>
+<p>The plots covered are</p>
 <ul>
-<li>
-look at the previous species boxplot code to start and combine this with the histogram code above. Yes, you can have nested for loops too!
-</li>
+<li>boxplots</li>
+<li>histograms</li>
+<li>scatterplots</li>
+<li>bar charts</li>
 </ul>
-</div>
-<p><strong>Expected output</strong></p>
-<p><img src="intro-to-r_files/figure-html/histogram-iris-2-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="rmdtip">
-<p>
-Another alternative for histogram plot is to use the density plot. See <code>plot(density(x))</code> where x is the vector of numbers like the one used in <code>hist()</code> above.
-</p>
-</div>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-67-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p></p>
+<p>For this section we will using the following datasets:</p>
+<table style="width:85%;">
+<colgroup>
+<col width="18%" />
+<col width="66%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>iris</code></td>
+<td>built-in R dataset. This is the <em>famous (Fisher’s or Anderson’s) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.</em></td>
+</tr>
+<tr class="even">
+<td><code>mtcars</code></td>
+<td>built-in R dataset. <em>The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).</em></td>
+</tr>
+<tr class="odd">
+<td><code>gene.atlas</code></td>
+<td>dataset that was read in in Chapter <a href="file-and-data-inputoutput-io.html#file-and-data-inputoutput-io">4</a>;</td>
+</tr>
+</tbody>
+</table>
+<p></p> 
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="boxplots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="scatterplots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="for-and-while-loops.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="boxplots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

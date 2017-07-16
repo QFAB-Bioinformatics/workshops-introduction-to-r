@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to R</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -32,9 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="data-presentation-and-reporting.html">
+<link rel="prev" href="visualising-data.html">
 <link rel="next" href="histograms.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -83,10 +81,11 @@ code > span.at { } /* Attribute */
 code > span.in { color: #008000; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -105,42 +104,37 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
 <li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
+<li class="chapter" data-level="1.6" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>1.6</b> Documentation</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
-<li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
-<li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
-<li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
-<li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> Data types</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.2.1</b> Numeric and Integer</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.2.2</b> Character</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+<li class="chapter" data-level="2.3" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.3</b> Determining data type</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.3.1</b> Typecasting</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
-<li class="chapter" data-level="2.4.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.4.3</b> Changing Vectors and Lists</a></li>
-<li class="chapter" data-level="2.4.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.4.4</b> Factors</a></li>
-<li class="chapter" data-level="2.4.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.4.5</b> Matrices</a></li>
-<li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.4</b> Functions</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.4.1</b> Nesting functions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
+<li class="chapter" data-level="2.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.5</b> Data structures</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.5.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.5.2</b> Lists</a></li>
+<li class="chapter" data-level="2.5.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.5.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.5.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.5.4</b> Factors</a></li>
+<li class="chapter" data-level="2.5.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.5.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.5.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.5.6</b> Data frame</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
-<li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
-<li class="chapter" data-level="3.2" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>3.2</b> Extending R with packages</a></li>
-<li class="chapter" data-level="3.3" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>3.3</b> Vignettes</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="vignettes.html"><a href="vignettes.html#citations"><i class="fa fa-check"></i><b>3.3.1</b> Citations</a></li>
+<li class="chapter" data-level="2.6" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.6</b> Finding, describing and removing objects</a></li>
+<li class="chapter" data-level="2.7" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.7</b> Best practise and variable naming conventions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="sessioninfo.html"><a href="sessioninfo.html"><i class="fa fa-check"></i><b>3.4</b> SessionInfo</a></li>
-<li class="chapter" data-level="3.5" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html"><i class="fa fa-check"></i><b>3.5</b> Other ways of running R</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#preparing-an-r-script"><i class="fa fa-check"></i><b>3.5.1</b> Preparing an R script</a></li>
-<li class="chapter" data-level="3.5.2" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#running-an-r-script"><i class="fa fa-check"></i><b>3.5.2</b> Running an R script</a></li>
+<li class="chapter" data-level="3" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Simple data analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="useful-operations.html"><a href="useful-operations.html"><i class="fa fa-check"></i><b>3.1</b> Useful operations</a></li>
+<li class="chapter" data-level="3.2" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>3.2</b> Vectorisation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
+<li class="chapter" data-level="4" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>4</b> File and data input/output (IO)</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
 <li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
@@ -149,39 +143,30 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
 <li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
-<li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
-<li class="chapter" data-level="5.2" data-path="for-loops-while-loops-and-vectorisation.html"><a href="for-loops-while-loops-and-vectorisation.html"><i class="fa fa-check"></i><b>5.2</b> For loops, While loops and Vectorisation</a></li>
-<li class="chapter" data-level="5.3" data-path="apply-lapply.html"><a href="apply-lapply.html"><i class="fa fa-check"></i><b>5.3</b> Apply, Lapply</a></li>
-<li class="chapter" data-level="5.4" data-path="basic-data-analysis-methods.html"><a href="basic-data-analysis-methods.html"><i class="fa fa-check"></i><b>5.4</b> Basic data analysis methods</a></li>
+<li class="chapter" data-level="5" data-path="packages-and-functions.html"><a href="packages-and-functions.html"><i class="fa fa-check"></i><b>5</b> Packages and functions</a><ul>
+<li class="chapter" data-level="5.1" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>5.1</b> Extending R with packages</a></li>
+<li class="chapter" data-level="5.2" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.2</b> User defined functions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data-presentation-and-reporting.html"><a href="data-presentation-and-reporting.html"><i class="fa fa-check"></i><b>6</b> Data presentation and reporting</a><ul>
-<li class="chapter" data-level="6.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>6.1</b> Boxplots</a></li>
-<li class="chapter" data-level="6.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>6.2</b> Histograms</a></li>
-<li class="chapter" data-level="6.3" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>6.3</b> Bar charts</a></li>
-<li class="chapter" data-level="6.4" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>6.4</b> Scatterplots</a></li>
-<li class="chapter" data-level="6.5" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html"><i class="fa fa-check"></i><b>6.5</b> Advanced plotting using ggplot2</a></li>
-<li class="chapter" data-level="6.6" data-path="boxplots-1.html"><a href="boxplots-1.html"><i class="fa fa-check"></i><b>6.6</b> Boxplots</a></li>
-<li class="chapter" data-level="6.7" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>6.7</b> Histograms</a></li>
-<li class="chapter" data-level="6.8" data-path="bar-charts-1.html"><a href="bar-charts-1.html"><i class="fa fa-check"></i><b>6.8</b> Bar charts</a></li>
-<li class="chapter" data-level="6.9" data-path="scatterplots-1.html"><a href="scatterplots-1.html"><i class="fa fa-check"></i><b>6.9</b> Scatterplots</a><ul>
-<li class="chapter" data-level="6.9.1" data-path="scatterplots-1.html"><a href="scatterplots-1.html#ggplot2geom_point"><i class="fa fa-check"></i><b>6.9.1</b> ggplot2::geom_point()</a></li>
+<li class="chapter" data-level="6" data-path="more-complex-data-analysis.html"><a href="more-complex-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More complex data analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="apply.html"><a href="apply.html"><i class="fa fa-check"></i><b>6.1</b> apply()</a></li>
+<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>7</b> Visualising data</a><ul>
+<li class="chapter" data-level="7.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>7.1</b> Boxplots</a></li>
+<li class="chapter" data-level="7.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>7.2</b> Histograms</a></li>
+<li class="chapter" data-level="7.3" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="7.4" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.4</b> Bar charts</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
 <li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
+<li class="chapter" data-level="7.5" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.5</b> Going further with R</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.5.1</b> Vignettes</a></li>
+<li class="chapter" data-level="7.5.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.5.2</b> Citations</a></li>
+<li class="chapter" data-level="7.5.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.5.3</b> SessionInfo</a></li>
+<li class="chapter" data-level="7.5.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.5.4</b> Other ways of running R</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-2-solutions-to-exercises.html"><a href="appendix-2-solutions-to-exercises.html"><i class="fa fa-check"></i>Appendix 2 - Solutions to exercises</a><ul>
-<li class="chapter" data-level="" data-path="using-vectors.html"><a href="using-vectors.html"><i class="fa fa-check"></i>2.4.1 Using vectors</a></li>
-<li class="chapter" data-level="" data-path="using-lists.html"><a href="using-lists.html"><i class="fa fa-check"></i>2.4.3 Using lists</a></li>
-<li class="chapter" data-level="" data-path="adding-factor-values.html"><a href="adding-factor-values.html"><i class="fa fa-check"></i>2.4.4 Adding factor values</a></li>
-<li class="chapter" data-level="" data-path="creating-a-data-frame.html"><a href="creating-a-data-frame.html"><i class="fa fa-check"></i>2.4.6 Creating a data frame</a></li>
-<li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
-<li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
-<li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -203,29 +188,87 @@ code > span.in { color: #008000; } /* Information */
 
             <section class="normal" id="section-">
 <div id="boxplots" class="section level2">
-<h2><span class="header-section-number">6.1</span> Boxplots</h2>
-<p>The boxplot is a widely used plot that can summarise the distribution of data within a collection. We routinely use boxplots to show a trend within data during e.g. signal intensity of DNA microarrays or read-counts for a single gene across different experimental condition.</p>
-<p>In this example we will prepare a boxplot for signal intensity across different arrays in our gene.atlas data set. The simplest way is to call the native <code>boxplot()</code> function. This produces a reasonable summary view of the data, but not one that would be suitable for publication purposes.</p>
-<p>The command below generates a boxplot of 1000 gene expression values for the first 15 samples. Remember, gene.atlas contains over 22,000 expression values and 158 samples</p>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
-<p>There are other arguments you can use to add to the plot for example:</p>
+<h2><span class="header-section-number">7.1</span> Boxplots</h2>
+<p>The boxplot is a widely used plot that can summarise the distribution of data within a collection. We routinely use boxplots to show a trend within data during.</p>
+<p><strong>Iris example</strong></p>
+<p>Let’s take a look a the first few rows of the <code>iris</code> dataset.</p>
+
+<p>Bboxplots are only logical for numeric data, so we don’t include the Species column make a copy of the iris dataset without the species column (column 5)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris.data &lt;-<span class="st"> </span>iris[,-<span class="dv">5</span>]
+<span class="kw">boxplot</span>(iris.data)</code></pre></div>
+<p><img src="intro-to-r_files/figure-html/boxplot-iris-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Let’s add in the parameters to get a more sophisticated boxplot. It’s a good idea to include one parameter at a time to see the effects of that parameter. We only show the last figure in the following worked example.</p>
+<p>In the help, look up <code>par</code> which will show you the list of parameters that can be set for plotting. Some are used in the worked examples below.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bar.colours &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;orange&quot;</span>,<span class="st">&quot;salmon&quot;</span>,<span class="st">&quot;powderblue&quot;</span>,<span class="st">&quot;steelblue&quot;</span>)
+
+<span class="kw">boxplot</span>(iris.data, <span class="dt">col=</span>bar.colours)
+
+<span class="kw">boxplot</span>(iris.data, <span class="dt">col=</span>bar.colours, <span class="dt">main=</span><span class="st">&quot;Iris dataset&quot;</span>,
+        <span class="dt">xlab=</span><span class="st">&quot;Properties&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;values&quot;</span>)
+
+<span class="kw">boxplot</span>(iris.data, <span class="dt">col=</span>bar.colours, <span class="dt">main=</span><span class="st">&quot;Iris dataset&quot;</span>, 
+        <span class="dt">xlab=</span><span class="st">&quot;Properties&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;values&quot;</span>,<span class="dt">las=</span><span class="dv">1</span>)
+
+<span class="kw">abline</span>(<span class="dt">h=</span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">8</span>,<span class="dv">2</span>),<span class="dt">lty=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&#39;grey70&#39;</span>) <span class="co"># adds horizontal lines to the plot</span></code></pre></div>
+<p><img src="intro-to-r_files/figure-html/boxplot-iris-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Since there are 3 species in the iris dataset, we can make use of the for loop to create separate plots for each species. To have all plots appear on one use the <code>par(mfrow)</code> function to specify a canvas with 1 row and 3 columns.</p>
+<p>Other properties:</p>
 <ul>
-<li><code>main='Expr distribution'</code> to add a title to the plot</li>
-<li><code>las=2</code> will rotate the x-axis labels to 90 degrees. (0=parallel, 1=horizontal, 2=perpendicular to the axis, 3=vertical)</li>
-<li><code>cex.axis = 0.8</code> to change the font size of the tick labels</li>
-<li><code>xlab='sample'</code> to label x-axes</li>
-<li><code>col=rainbow(15)</code> to add colours to the bars. <code>rainbow(15)</code> is a builtin colours palette in R, this returns 15 colours.</li>
-<li>and more, use <code>?barplot</code> to use Help to find out more about the function.</li>
+<li><code>mar=c(8,4,4,1)</code> - is to specify the margins surrounding the plot: (bottom,left,top,right)</li>
+<li><code>las=2</code> will rotate the x-axis labels to 90 degrees.</li>
+<li><code>cex.main</code>, <code>cex.lab</code>, <code>cex.axis</code> - affects the font size</li>
+<li><code>title()</code> gives finer control for the <code>xlab</code>, <code>ylab</code>, <code>main</code>, using the <code>line</code> parameter, you can adjust the location of the labels close to or away from the borders of the plot</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">1</span>))
+unique.species &lt;-<span class="st"> </span><span class="kw">unique</span>(iris$Species)
+for(sp in unique.species) {
+  species.data &lt;-<span class="st"> </span>iris.data[iris$Species ==<span class="st"> </span>sp, -<span class="dv">5</span>]
+  <span class="kw">boxplot</span>(species.data, <span class="dt">col=</span>bar.colours, <span class="dt">las=</span><span class="dv">2</span>,
+          <span class="dt">main=</span>sp, <span class="dt">cex.main=</span><span class="dv">2</span>, <span class="dt">cex.lab=</span><span class="fl">1.25</span>, <span class="dt">cex.axis=</span><span class="fl">1.25</span>)
+  <span class="kw">title</span>(<span class="dt">xlab=</span><span class="st">&quot;Sample&quot;</span>,<span class="dt">line=</span><span class="dv">8</span>,<span class="dt">cex.lab=</span><span class="fl">1.5</span>)
+}</code></pre></div>
+<p><img src="intro-to-r_files/figure-html/boxplot-species-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p>Note how the y-axis are different for each plot, this can lead to mis-interpretation if the reader is not paying close attention. It is better to keep the y-axis the same across such figures. You can specify this using the <code>ylim</code> parameter.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data.range &lt;-<span class="st"> </span><span class="kw">range</span>(iris.data)
+<span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>),<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">10</span>,<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">1</span>))
+unique.species &lt;-<span class="st"> </span><span class="kw">unique</span>(iris$Species)
+for(sp in unique.species) {
+  species.data &lt;-<span class="st"> </span>iris.data[iris$Species ==<span class="st"> </span>sp, -<span class="dv">5</span>]
+  <span class="kw">boxplot</span>(species.data, <span class="dt">col=</span>bar.colours, <span class="dt">las=</span><span class="dv">2</span>,
+          <span class="dt">ylim=</span>data.range,
+          <span class="dt">main=</span>sp, <span class="dt">cex.main=</span><span class="dv">2</span>, <span class="dt">cex.lab=</span><span class="fl">1.25</span>, <span class="dt">cex.axis=</span><span class="fl">1.25</span>)
+  <span class="kw">title</span>(<span class="dt">xlab=</span><span class="st">&quot;Sample&quot;</span>,<span class="dt">line=</span><span class="dv">8</span>,<span class="dt">cex.lab=</span><span class="fl">1.5</span>)
+}</code></pre></div>
+<p><img src="intro-to-r_files/figure-html/boxplot-species-y-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p>Now it is clearer that there is differences in the sepal and petal length/widths across the different species.</p>
+<div class="rmdexercise">
+<p>
+If you are ahead, try using the boxplot to generate the following diagram for the gene expression data, <code>gene.atlas</code> that was imported in Chapter 5. Remember, gene.atlas contains over 22,000 expression values and 158 samples, so we only show values for the first 10 samples.
+</p>
+<p>
+<em>Hints</em>
+</p>
+<ul>
+<li>
+use <code>log2()</code> values
+</li>
+<li>
+use the <code>rainbow(10)</code> function to generate a rainbow colour palette
+</li>
+</ul>
+</div>
+<p><img src="intro-to-r_files/figure-html/boxplot-gene-atlas-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="data-presentation-and-reporting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="histograms.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="visualising-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="histograms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -237,6 +280,7 @@ code > span.in { color: #008000; } /* Information */
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,
@@ -262,6 +306,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
