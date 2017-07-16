@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to R</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.1.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -26,11 +25,6 @@
 <meta name="author" content="QFAB">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -39,7 +33,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="current-working-directory.html">
 <link rel="next" href="scan.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -88,10 +81,11 @@ code > span.at { } /* Attribute */
 code > span.in { color: #008000; } /* Information */
 </style>
 
-<link rel="stylesheet" href="css\style.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -110,42 +104,37 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
 <li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
 <li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
+<li class="chapter" data-level="1.6" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>1.6</b> Documentation</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
-<li class="chapter" data-level="2.2" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>2.2</b> Datatypes</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="datatypes.html"><a href="datatypes.html#numeric"><i class="fa fa-check"></i><b>2.2.1</b> Numeric</a></li>
-<li class="chapter" data-level="2.2.2" data-path="datatypes.html"><a href="datatypes.html#integer"><i class="fa fa-check"></i><b>2.2.2</b> Integer</a></li>
-<li class="chapter" data-level="2.2.3" data-path="datatypes.html"><a href="datatypes.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
-<li class="chapter" data-level="2.2.4" data-path="datatypes.html"><a href="datatypes.html#character"><i class="fa fa-check"></i><b>2.2.4</b> Character</a></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> Data types</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.2.1</b> Numeric and Integer</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.2.2</b> Character</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.3</b> Functions</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.3.1</b> Nesting functions</a></li>
+<li class="chapter" data-level="2.3" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.3</b> Determining data type</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.3.1</b> Typecasting</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.4</b> Data structures</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.4.1</b> Vectors</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.4.2</b> Lists</a></li>
-<li class="chapter" data-level="2.4.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.4.3</b> Changing Vectors and Lists</a></li>
-<li class="chapter" data-level="2.4.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.4.4</b> Factors</a></li>
-<li class="chapter" data-level="2.4.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.4.5</b> Matrices</a></li>
-<li class="chapter" data-level="2.4.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.4.6</b> Data frame</a></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.4</b> Functions</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.4.1</b> Nesting functions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.5</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.6" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.6</b> Best practise and variable naming conventions</a></li>
+<li class="chapter" data-level="2.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.5</b> Data structures</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.5.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.5.2</b> Lists</a></li>
+<li class="chapter" data-level="2.5.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.5.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.5.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.5.4</b> Factors</a></li>
+<li class="chapter" data-level="2.5.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.5.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.5.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.5.6</b> Data frame</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>3</b> Going further with R</a><ul>
-<li class="chapter" data-level="3.1" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>3.1</b> Documentation</a></li>
-<li class="chapter" data-level="3.2" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>3.2</b> Extending R with packages</a></li>
-<li class="chapter" data-level="3.3" data-path="vignettes.html"><a href="vignettes.html"><i class="fa fa-check"></i><b>3.3</b> Vignettes</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="vignettes.html"><a href="vignettes.html#citations"><i class="fa fa-check"></i><b>3.3.1</b> Citations</a></li>
+<li class="chapter" data-level="2.6" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.6</b> Finding, describing and removing objects</a></li>
+<li class="chapter" data-level="2.7" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.7</b> Best practise and variable naming conventions</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="sessioninfo.html"><a href="sessioninfo.html"><i class="fa fa-check"></i><b>3.4</b> SessionInfo</a></li>
-<li class="chapter" data-level="3.5" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html"><i class="fa fa-check"></i><b>3.5</b> Other ways of running R</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#preparing-an-r-script"><i class="fa fa-check"></i><b>3.5.1</b> Preparing an R script</a></li>
-<li class="chapter" data-level="3.5.2" data-path="other-ways-of-running-r.html"><a href="other-ways-of-running-r.html#running-an-r-script"><i class="fa fa-check"></i><b>3.5.2</b> Running an R script</a></li>
+<li class="chapter" data-level="3" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Simple data analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="useful-operations.html"><a href="useful-operations.html"><i class="fa fa-check"></i><b>3.1</b> Useful operations</a></li>
+<li class="chapter" data-level="3.2" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>3.2</b> Vectorisation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="importing-and-exporting-data-from-r.html"><a href="importing-and-exporting-data-from-r.html"><i class="fa fa-check"></i><b>4</b> Importing and exporting data from R</a><ul>
+<li class="chapter" data-level="4" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>4</b> File and data input/output (IO)</a><ul>
 <li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
 <li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
 <li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
@@ -154,40 +143,30 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
 <li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="transforming-and-summarising-data-in-r.html"><a href="transforming-and-summarising-data-in-r.html"><i class="fa fa-check"></i><b>5</b> Transforming and summarising data in R</a><ul>
-<li class="chapter" data-level="5.1" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.1</b> User defined functions</a></li>
-<li class="chapter" data-level="5.2" data-path="for-loops-while-loops-and-vectorisation.html"><a href="for-loops-while-loops-and-vectorisation.html"><i class="fa fa-check"></i><b>5.2</b> For loops, While loops and Vectorisation</a></li>
-<li class="chapter" data-level="5.3" data-path="apply-lapply.html"><a href="apply-lapply.html"><i class="fa fa-check"></i><b>5.3</b> Apply, Lapply</a></li>
-<li class="chapter" data-level="5.4" data-path="basic-data-analysis-methods.html"><a href="basic-data-analysis-methods.html"><i class="fa fa-check"></i><b>5.4</b> Basic data analysis methods</a></li>
+<li class="chapter" data-level="5" data-path="packages-and-functions.html"><a href="packages-and-functions.html"><i class="fa fa-check"></i><b>5</b> Packages and functions</a><ul>
+<li class="chapter" data-level="5.1" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>5.1</b> Extending R with packages</a></li>
+<li class="chapter" data-level="5.2" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.2</b> User defined functions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data-presentation-and-reporting.html"><a href="data-presentation-and-reporting.html"><i class="fa fa-check"></i><b>6</b> Data presentation and reporting</a><ul>
-<li class="chapter" data-level="6.1" data-path="native-r-methods.html"><a href="native-r-methods.html"><i class="fa fa-check"></i><b>6.1</b> Native R methods</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="native-r-methods.html"><a href="native-r-methods.html#boxplots"><i class="fa fa-check"></i><b>6.1.1</b> Boxplots</a></li>
-<li class="chapter" data-level="6.1.2" data-path="native-r-methods.html"><a href="native-r-methods.html#histograms"><i class="fa fa-check"></i><b>6.1.2</b> Histograms</a></li>
-<li class="chapter" data-level="6.1.3" data-path="native-r-methods.html"><a href="native-r-methods.html#bar-charts"><i class="fa fa-check"></i><b>6.1.3</b> Bar charts</a></li>
-<li class="chapter" data-level="6.1.4" data-path="native-r-methods.html"><a href="native-r-methods.html#scatterplots"><i class="fa fa-check"></i><b>6.1.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="6" data-path="more-complex-data-analysis.html"><a href="more-complex-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More complex data analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="apply.html"><a href="apply.html"><i class="fa fa-check"></i><b>6.1</b> apply()</a></li>
+<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html"><i class="fa fa-check"></i><b>6.2</b> Advanced plotting using ggplot2</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#boxplots-1"><i class="fa fa-check"></i><b>6.2.1</b> Boxplots</a></li>
-<li class="chapter" data-level="6.2.2" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#histograms-1"><i class="fa fa-check"></i><b>6.2.2</b> Histograms</a></li>
-<li class="chapter" data-level="6.2.3" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#bar-charts-1"><i class="fa fa-check"></i><b>6.2.3</b> Bar charts</a></li>
-<li class="chapter" data-level="6.2.4" data-path="advanced-plotting-using-ggplot2.html"><a href="advanced-plotting-using-ggplot2.html#scatterplots-1"><i class="fa fa-check"></i><b>6.2.4</b> Scatterplots</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>7</b> Visualising data</a><ul>
+<li class="chapter" data-level="7.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>7.1</b> Boxplots</a></li>
+<li class="chapter" data-level="7.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>7.2</b> Histograms</a></li>
+<li class="chapter" data-level="7.3" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="7.4" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.4</b> Bar charts</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
 <li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
+<li class="chapter" data-level="7.5" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.5</b> Going further with R</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.5.1</b> Vignettes</a></li>
+<li class="chapter" data-level="7.5.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.5.2</b> Citations</a></li>
+<li class="chapter" data-level="7.5.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.5.3</b> SessionInfo</a></li>
+<li class="chapter" data-level="7.5.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.5.4</b> Other ways of running R</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-2-solutions-to-exercises.html"><a href="appendix-2-solutions-to-exercises.html"><i class="fa fa-check"></i>Appendix 2 - Solutions to exercises</a><ul>
-<li class="chapter" data-level="" data-path="using-vectors.html"><a href="using-vectors.html"><i class="fa fa-check"></i>2.4.1 Using vectors</a></li>
-<li class="chapter" data-level="" data-path="using-lists.html"><a href="using-lists.html"><i class="fa fa-check"></i>2.4.3 Using lists</a></li>
-<li class="chapter" data-level="" data-path="adding-factor-values.html"><a href="adding-factor-values.html"><i class="fa fa-check"></i>2.4.4 Adding factor values</a></li>
-<li class="chapter" data-level="" data-path="creating-a-data-frame.html"><a href="creating-a-data-frame.html"><i class="fa fa-check"></i>2.4.6 Creating a data frame</a></li>
-<li class="chapter" data-level="" data-path="reading-in-the-geneatlas-data.html"><a href="reading-in-the-geneatlas-data.html"><i class="fa fa-check"></i>4.2 Reading in the GeneAtlas data</a></li>
-<li class="chapter" data-level="" data-path="creating-and-using-functions.html"><a href="creating-and-using-functions.html"><i class="fa fa-check"></i>5.1 Creating and using functions</a></li>
-<li class="chapter" data-level="" data-path="loops-and-vectorisation.html"><a href="loops-and-vectorisation.html"><i class="fa fa-check"></i>5.2 Loops and vectorisation</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="appendix-3-the-sessioninfo-for-this-version-of.html"><a href="appendix-3-the-sessioninfo-for-this-version-of.html"><i class="fa fa-check"></i>Appendix 3 - The SessionInfo for this version of</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -212,6 +191,10 @@ code > span.in { color: #008000; } /* Information */
 <h2><span class="header-section-number">4.3</span> Reading and writing tabular data</h2>
 <p>Data is most commonly shared in tabular formats (Excel presents data in a tabular format). These are most-often text files that contain columns of data separated with comma, tab or other field-delimiters. In R there are some simple methods for quickly reading in massive amounts of data.</p>
 <p>For the next few steps in this course we are going to explore a public dataset of human tissue gene expression data that was originally produced by Novartis. The dataset is known as the Novartis GeneAtlas data (now called BioGPS) and can be found in the GEO database under accession GSE1133 (<a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133" class="uri">http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1133</a>). We will look at some Affymetrix gene expression data from the study. These data have been prepared from microarray hybridisations using the Affymetrix Human Genome U133A Array. The data is in the file <code>data/Intro_to_R/GSE1133-GPL96_series_matrix.txt</code>.</p>
+<div class="figure">
+<img src="images/microrarray-data.png" alt="Sample data" />
+<p class="caption">Sample data</p>
+</div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># read data from the training server</span>
 data.path &lt;-<span class="st"> &quot;data/Intro_to_R&quot;</span>
 
@@ -264,7 +247,8 @@ use <code>head()</code> / <code>tail()</code> functions
 </li>
 </ul>
 </div>
-<p>We have started to explore the contents of the expression data file using the code above, but at the moment have not imported it into a variable in R. Before we get to that stage, we will first load the annotation data associated with this expression dataset.</p>
+<p>We have started to explore the contents of the expression data file using the code above, but at the moment <strong>have not imported</strong> it into a variable in R. The following exercise will step you through using the <code>read.table()</code> function in R to read a text file and import the data as a data.frame object.</p>
+<p>When reading a table, R expects the same number of columns for every row, it will by default use the first line to determine the number of columns that are in your dataset. You can specify the separater to use depending on how your data columns are separated e.g. tab-delimited, comma-delimited or by something else altogether.</p>
 <div class="rmdexercise">
 <p>
 <strong>Reading in tabular data</strong>
@@ -277,63 +261,61 @@ If you have not already done so, use the previous code chunk to set up your data
 </li>
 <li>
 <p>
-Follow the annotated code below to use <code>read.table()</code> to import the annotation data, or metadata, for this experiment
+Open up the help documentation for <code>read.table()</code> function while you perform the following worked example. Read up on the following parameters in detail:
 </p>
 </li>
 </ol>
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># As before, define the location of the file</span>
-annotation.file &lt;-<span class="st"> </span><span class="kw">file.path</span>(data.path,<span class="st">&quot;GSK_RNA.sdrf&quot;</span>)
-
-<span class="co"># Look at the first six lines of the data</span>
-<span class="co"># sep = &quot;\t&quot; means that the data is tab-separated</span>
-<span class="kw">head</span>(<span class="kw">read.table</span>(annotation.file, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>))
-
-<span class="co"># The last command included the header as the first line of data.</span>
-<span class="co"># Specify (header = TRUE) that the first line contains header information</span>
-<span class="kw">head</span>(<span class="kw">read.table</span>(annotation.file, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>))
-
-<span class="co"># Use read.table to import the data into an variable</span>
-expressionMetadata &lt;-<span class="st"> </span><span class="kw">read.table</span>(annotation.file, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)
-
-<span class="co"># Find out some information about the structure and contents of that new variable</span>
-<span class="kw">tail</span>(expressionMetadata)
-<span class="kw">dim</span>(expressionMetadata)
-<span class="kw">colnames</span>(expressionMetadata)
-<span class="kw">str</span>(expressionMetadata$Material.Type)
-
-<span class="co"># By default, read.table imports text fields as factors. That&#39;s probably</span>
-<span class="co"># not what we want, so disable it with stringsAsFactors=FALSE</span>
-expressionMetadata &lt;-<span class="st"> </span><span class="kw">read.table</span>(annotation.file, 
-                                 <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>, 
-                                 <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)
-<span class="kw">str</span>(expressionMetadata$Material.Type)</code></pre></div>
-<p>Note that the lines starting with the default comment symbol (#) have been omitted from the import.</p>
-<div class="rmdexercise">
-<p>
-<strong>Read the expression data into a variable called <code>gene.atlas</code></strong>
-</p>
-<p>
-In the last couple of sections we have used <code>readLines()</code> to look at the content of a file and we have used <code>read.table()</code> to read some experimental metadata into a data frame. Your challenge is now to import the “GSE1133-GPL96_series_matrix.txt” data into a data frame variable called <code>gene.atlas</code>.
-</p>
-<p>
-<em>Hints</em>:
-</p>
 <ul>
 <li>
-Use the <code>read.table</code> documentation to discover the nuances of the function.
+<code>sep</code>
 </li>
 <li>
-This import is not as simple as the annotation file. You will need to make some inferences about the structure of the file (<em>Hint</em>: use <code>head()</code> and <code>tail()</code> and look at some of the options for <code>read.table()</code> in the Help.)
+<code>quote</code>
 </li>
 <li>
-Make sure that the proper column names are included in the data frame.
+<code>comment</code>
+</li>
+<li>
+<code>header</code>
+</li>
+<li>
+<code>row.names</code>
 </li>
 </ul>
-<p>
-The output should look something like the following where only the first 6 rows and 6 columns are shown.
-</p>
+<ol start="3" style="list-style-type: decimal">
+<li>
+Follow the code below to use <code>read.table()</code> to import the dataset into R. There should be 22,283 rows (observations) and 158 columns (variables).
+</li>
+</ol>
 </div>
+<p>Pay close attention to the dimension of the dataset after each read as each parameter will affect the read.</p>
+
+<p><strong>Attempt 1:: read.table using default settings</strong>:</p>
+<p>This will fail because by default the <code>sep</code> parameter separates on white-space and the first X lines in the file are all comments, each line do not have the same number of columns as indicated by the error message.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene.atlas &lt;-<span class="st"> </span><span class="kw">read.table</span>(gene.atlas.file)</code></pre></div>
+<p><code># Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec, : line 48 did not have 2 elements</code></p>
+
+<p><strong>Attempt 2:: skip comment lines</strong></p>
+<p>We specify the comment character but check the dimension of the data after reading, is this correct? Also examine the first 5 rows and columns</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene.atlas &lt;-<span class="st"> </span><span class="kw">read.table</span>(gene.atlas.file, <span class="dt">comment.char =</span> <span class="st">&quot;!&quot;</span>)
+<span class="kw">dim</span>(gene.atlas)</code></pre></div>
+<pre><code>## [1] 22284   159</code></pre>
+<p>We have 1 too many columns and rows in our <code>gene.atlas</code> data frame and taking a physical look a the object will tell us why. It is because we haven’t assigned the row and column names to the matrix</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene.atlas[<span class="dv">1</span>:<span class="dv">5</span>,<span class="dv">1</span>:<span class="dv">5</span>]</code></pre></div>
+<pre><code>##          V1       V2       V3       V4       V5
+## 1    ID_REF GSM18865 GSM18866 GSM18867 GSM18868
+## 2 1007_s_at     2082   1577.2    231.8    328.4
+## 3   1053_at    598.4    256.2       57    102.1
+## 4    117_at    194.2    135.9    512.3    713.4
+## 5    121_at   1910.5   1516.2    529.8    990.2</code></pre>
+
+<p><strong>Attempt 3:: assign header and row names</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene.atlas &lt;-<span class="st"> </span><span class="kw">read.table</span>(gene.atlas.file, <span class="dt">comment.char=</span><span class="st">&quot;!&quot;</span>, 
+                         <span class="dt">header=</span><span class="ot">TRUE</span>, 
+                         <span class="dt">row.names=</span><span class="dv">1</span>)
+<span class="kw">dim</span>(gene.atlas)</code></pre></div>
+<pre><code>## [1] 22283   158</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gene.atlas[<span class="dv">1</span>:<span class="dv">6</span>,<span class="dv">1</span>:<span class="dv">6</span>]</code></pre></div>
 <pre><code>##           GSM18865 GSM18866 GSM18867 GSM18868 GSM18869 GSM18870
 ## 1007_s_at   2082.0   1577.2    231.8    328.4     83.6     73.0
 ## 1053_at      598.4    256.2     57.0    102.1     39.1     43.6
@@ -341,6 +323,16 @@ The output should look something like the following where only the first 6 rows 
 ## 121_at      1910.5   1516.2    529.8    990.2    383.4    396.4
 ## 1255_g_at    138.4     53.8     30.7     75.7     16.9     22.8
 ## 1294_at      263.4    287.2    347.8    345.6    300.8    377.7</code></pre>
+<p>Much better, this looks right!</p>
+<div class="rmdexercise">
+<p>
+<strong>Optional exercise</strong>
+</p>
+<p>
+If you are ahead, try reading in the associated metadata file for this dataset. The file is called “GSK_RNA.sdrf”. It is a normal text file and since it is less than 1MB in size, you can physically open up the file to have a look first before using <code>read.table()</code>. This will tell you what parameters you need to make use of.
+</p>
+</div>
+<p>Note that the lines starting with the default comment symbol (#) have been omitted from the import.</p>
 </div>
             </section>
 
@@ -348,8 +340,9 @@ The output should look something like the following where only the first 6 rows 
         </div>
       </div>
 <a href="current-working-directory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="scan.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="scan.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -361,6 +354,7 @@ The output should look something like the following where only the first 6 rows 
 require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": false,
 "twitter": false,
 "google": false,
@@ -391,7 +385,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);
