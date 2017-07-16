@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Introduction to R</title>
+  <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the complementary manual for QFAB’s Introduction to R workshop" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introduction to R" />
+  
+  <meta name="twitter:description" content="This is the complementary manual for QFAB’s Introduction to R workshop" />
+  
+
+<meta name="author" content="QFAB">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="apply.html">
+<link rel="next" href="visualising-data.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #0000ff; } /* Keyword */
+code > span.ch { color: #008080; } /* Char */
+code > span.st { color: #008080; } /* String */
+code > span.co { color: #008000; } /* Comment */
+code > span.ot { color: #ff4000; } /* Other */
+code > span.al { color: #ff0000; } /* Alert */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #008000; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #008080; } /* SpecialChar */
+code > span.vs { color: #008080; } /* VerbatimString */
+code > span.ss { color: #008080; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #0000ff; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ff4000; } /* Preprocessor */
+code > span.do { color: #008000; } /* Documentation */
+code > span.an { color: #008000; } /* Annotation */
+code > span.cv { color: #008000; } /* CommentVar */
+code > span.at { } /* Attribute */
+code > span.in { color: #008000; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> Getting started</a><ul>
+<li class="chapter" data-level="1.1" data-path="how-to-read-this-book.html"><a href="how-to-read-this-book.html"><i class="fa fa-check"></i><b>1.1</b> How to read this book</a></li>
+<li class="chapter" data-level="1.2" data-path="rstudio-ide.html"><a href="rstudio-ide.html"><i class="fa fa-check"></i><b>1.2</b> RStudio IDE</a></li>
+<li class="chapter" data-level="1.3" data-path="alternatives-to-rstudio.html"><a href="alternatives-to-rstudio.html"><i class="fa fa-check"></i><b>1.3</b> Alternatives to RStudio</a></li>
+<li class="chapter" data-level="1.4" data-path="the-r-workspace.html"><a href="the-r-workspace.html"><i class="fa fa-check"></i><b>1.4</b> The R workspace</a></li>
+<li class="chapter" data-level="1.5" data-path="literate-programming.html"><a href="literate-programming.html"><i class="fa fa-check"></i><b>1.5</b> Literate programming</a></li>
+<li class="chapter" data-level="1.6" data-path="documentation.html"><a href="documentation.html"><i class="fa fa-check"></i><b>1.6</b> Documentation</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
+<li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
+<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> Data types</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.2.1</b> Numeric and Integer</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.2.2</b> Character</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.3</b> Determining data type</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.3.1</b> Typecasting</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.4</b> Functions</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.4.1</b> Nesting functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.5</b> Data structures</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.5.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.5.2</b> Lists</a></li>
+<li class="chapter" data-level="2.5.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.5.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.5.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.5.4</b> Factors</a></li>
+<li class="chapter" data-level="2.5.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.5.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.5.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.5.6</b> Data frame</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.6</b> Finding, describing and removing objects</a></li>
+<li class="chapter" data-level="2.7" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.7</b> Best practise and variable naming conventions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Simple data analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="useful-operations.html"><a href="useful-operations.html"><i class="fa fa-check"></i><b>3.1</b> Useful operations</a></li>
+<li class="chapter" data-level="3.2" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>3.2</b> Vectorisation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>4</b> File and data input/output (IO)</a><ul>
+<li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
+<li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.3</b> Reading and writing tabular data</a></li>
+<li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
+<li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="packages-and-functions.html"><a href="packages-and-functions.html"><i class="fa fa-check"></i><b>5</b> Packages and functions</a><ul>
+<li class="chapter" data-level="5.1" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>5.1</b> Extending R with packages</a></li>
+<li class="chapter" data-level="5.2" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.2</b> User defined functions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="more-complex-data-analysis.html"><a href="more-complex-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More complex data analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="apply.html"><a href="apply.html"><i class="fa fa-check"></i><b>6.1</b> apply()</a></li>
+<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>7</b> Visualising data</a><ul>
+<li class="chapter" data-level="7.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>7.1</b> Boxplots</a></li>
+<li class="chapter" data-level="7.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>7.2</b> Histograms</a></li>
+<li class="chapter" data-level="7.3" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.3</b> Scatterplots</a></li>
+<li class="chapter" data-level="7.4" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.4</b> Bar charts</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
+<li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
+<li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
+<li class="chapter" data-level="7.5" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.5</b> Going further with R</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.5.1</b> Vignettes</a></li>
+<li class="chapter" data-level="7.5.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.5.2</b> Citations</a></li>
+<li class="chapter" data-level="7.5.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.5.3</b> SessionInfo</a></li>
+<li class="chapter" data-level="7.5.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.5.4</b> Other ways of running R</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="for-and-while-loops" class="section level2">
+<h2><span class="header-section-number">6.2</span> For and while loops</h2>
+<p><code>for</code> and <code>while</code> loops are controversial in R. They are slow and inefficient and due to the way that R has been crafted (the concept of vectorisation) there are typically faster and more efficient ways to process data such as what we have seen with the <code>apply</code> function. Nevertheless, there are times when <code>for</code> and <code>while</code> loops are useful, for instance proof-of-concept workflows running or when we want to create multiple plots for different variables.</p>
+<p>To create a loop, we need to set a looping condition. There are two types in R:</p>
+<ol style="list-style-type: decimal">
+<li><p>a <code>for()</code> loop will run on each element of the input variable, and</p></li>
+<li><p>a <code>while()</code> loop repeats until an exit condition is reached. <strong>Note</strong>, you must ensure that you update the exit condition so it eventually becomes true, otherwise you will get an <strong>infinite looping</strong> error where you code <em>never</em> exists until it uses up all available resources (usually the memory).</p></li>
+</ol>
+<p>We also need to wrap that loop in braces (<code>{</code> and <code>}</code>) to define the start and end of the code block to be iterated.</p>
+<p>Examples of a for loop:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">days &lt;-<span class="st"> </span><span class="kw">colnames</span>(temperatures) <span class="co"># get the column names</span>
+for(day in days) {
+  <span class="kw">print</span>(day)
+}</code></pre></div>
+<pre><code>## [1] &quot;Day 1&quot;
+## [1] &quot;Day 2&quot;
+## [1] &quot;Day 3&quot;
+## [1] &quot;Day 4&quot;
+## [1] &quot;Day 5&quot;</code></pre>
+<p>Something more complex:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Loop through each row of the `temperature` object created previously</span>
+<span class="co"># return the mean and sd of the row</span>
+for (i in <span class="dv">1</span>:<span class="kw">nrow</span>(temperatures)) {
+  row.data &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(temperatures[i,])
+  min.day &lt;-<span class="st"> </span><span class="kw">which.min</span>(row.data)
+  <span class="kw">print</span>(<span class="kw">paste</span>(<span class="st">&quot;Day&quot;</span>,min.day,<span class="st">&quot;in week &quot;</span>,i,
+              <span class="st">&quot;had the lowest temperature (&quot;</span>,<span class="kw">min</span>(row.data),<span class="st">&quot;)&quot;</span>))
+}</code></pre></div>
+<pre><code>## [1] &quot;Day 1 in week  1 had the lowest temperature ( -8 )&quot;
+## [1] &quot;Day 2 in week  2 had the lowest temperature ( 15 )&quot;
+## [1] &quot;Day 4 in week  3 had the lowest temperature ( -1 )&quot;
+## [1] &quot;Day 3 in week  4 had the lowest temperature ( -2 )&quot;
+## [1] &quot;Day 3 in week  5 had the lowest temperature ( -8 )&quot;
+## [1] &quot;Day 3 in week  6 had the lowest temperature ( -10 )&quot;
+## [1] &quot;Day 2 in week  7 had the lowest temperature ( -1 )&quot;
+## [1] &quot;Day 2 in week  8 had the lowest temperature ( 2 )&quot;
+## [1] &quot;Day 4 in week  9 had the lowest temperature ( -8 )&quot;
+## [1] &quot;Day 1 in week  10 had the lowest temperature ( -7 )&quot;</code></pre>
+<p>Example of a while loop:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># A while loop is similar in structure</span>
+<span class="co"># Start with a value of i = 1</span>
+
+i &lt;-<span class="st"> </span><span class="dv">1</span>
+
+while (i &lt;=<span class="st"> </span><span class="dv">5</span>) {  <span class="co"># Loop while i is less than or equal to 100</span>
+  <span class="kw">print</span>(i);
+  i&lt;&lt;-i<span class="dv">+1</span>;        <span class="co"># Remember to increment i with each loop</span>
+                  <span class="co"># otherwise it will loop forever</span>
+}</code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5</code></pre>
+<div class="rmdtip">
+<p>
+<strong>Going Loopy</strong>
+</p>
+<ul>
+<li>
+<p>
+Try to avoid <code>for</code> loops in production code, use them for testing ideas and exploring data.
+</p>
+</li>
+<li>
+<p>
+R objects are often vectors and can be analysed in bulk using normal mathematical and statistical transformations. This applies for the vectorised data in <code>data.frames</code> and <code>matrices</code>.
+</p>
+</li>
+<li>
+<p>
+<code>factors</code> cannot be used quite as easily in such analyses, so beware.
+</p>
+</li>
+</ul>
+</div>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="apply.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="visualising-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["intro-to-r.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
