@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="loading-variable-data.html">
-<link rel="next" href="importing-from-text-files.html">
+<link rel="prev" href="importing-from-text-files.html">
+<link rel="next" href="other-io-operations.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,34 +201,35 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="current-working-directory" class="section level2">
-<h2><span class="header-section-number">3.3</span> Current working directory</h2>
-<p>An aside about directory paths. When working with R, you need to be aware of your <strong>current working directory</strong> (CWD). As the name suggests, this is the directory (folder) in which you are currently working. If no paths are specified, any files you wish to import or export to and from R will be with respect to this directory.</p>
-<div class="rmdcaution">
+<div id="writing-to-text-file" class="section level2">
+<h2><span class="header-section-number">3.5</span> Writing to text file</h2>
+<p>You can also write tabular data to text files. Let’s say we are only interested in keep track of the station number and their name, so we will write this to a text file:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.table</span>(stations[,<span class="st">&quot;Station.name&quot;</span>], <span class="dt">file=</span><span class="st">&quot;stationName.tsv&quot;</span>, <span class="dt">row.names =</span> T, 
+            <span class="dt">col.names =</span> F, <span class="dt">quote=</span>F, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</code></pre></div>
+<p><strong>What is happening here</strong> * <code>file</code> - specifies the output file path, we are using the current working directory * <code>row.names</code> - specifies the row names are written to the file * <code>col.names</code> - specifies no column names are written to the file * <code>quote</code> - specifies do not use quotation symbols in the output * <code>sep</code> - specifies the character to use for separating the columns, in our case we are using tabs</p>
+<div class="rmdexercise">
 <p>
-The <em>Files</em> tab in the bottom-right corner is <em>not</em> always set to your CWD. Think of this as a Windows explorer (or Finder in Mac) built-in with Rstudio. This tab allows you to navigate your file system and check on files. This means that during your session, you may navigate away from your CWD.
+Enter the <code>write.table()</code> command above and then examine the output file. You should be able to click on the filename in the “Files” tab to view the file.
 </p>
-</div>
-<p>To check your CWD use the command:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
-<p>and to change your CWD to another location use the <code>setwd(file-path)</code> command.</p>
-<div class="rmdtip">
 <p>
-When using <code>save()</code> it is better to explicitly specifing the path to the folder where you want to save your data to so that no mistakes are made when you move away from your CWD.
+Then experiment with different parameter settings, you can keep the output file open to observe how the output changes with each parameter change. For example, try
 </p>
-</div>
-<div id="file-paths" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> File paths</h3>
-<p>File paths come in two forms:</p>
 <ul>
-<li><strong>relative filepath</strong> is relative to the current working directory. For example, using a Windows system, if my currently working directory is <code>C:\Users\john.smith\Documents</code> and I save a script called “area-rectangle.R” without specifying a specific location, then R will save the file in the location <code>C:\Users\john.smith\Documents\area-rectangle.R</code>.</li>
-<li><strong>absolute filepath</strong> is the fullpath of the location starting with the drive letter in Windows (e.g. C: or D:); or in Linux and Mac starting with the <code>\</code> symbol, meaning <a href="https://aarnet.zoom.us/j/579276844the" class="uri">https://aarnet.zoom.us/j/579276844the</a> <em>root</em> directory (the top).</li>
+<li>
+<code>row.names=F</code>
+</li>
+<li>
+<code>quote=T</code>
+</li>
+<li>
+<code>sep=‘,’</code>
+</li>
 </ul>
+</div>
 <div class="rmdtip">
 <p>
-R uses the forward slash (<code>/</code>) to specify filepaths by default. If you use the Windows format with the backwards slash (<code>\</code>), you will get an error. You can use two backward slashes (<code>\</code>) to escape the error but it’s faster and easier to read to use the <code>/</code> slash.
+If you are often dealing with comma-separated files then you can simple use the <code>read.csv()</code> and <code>write.csv()</code> functions. These functions have the parameter <code>sep</code> set to comma by default.
 </p>
-</div>
 </div>
 </div>
             </section>
@@ -236,8 +237,8 @@ R uses the forward slash (<code>/</code>) to specify filepaths by default. If yo
           </div>
         </div>
       </div>
-<a href="loading-variable-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-from-text-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="importing-from-text-files.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="other-io-operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

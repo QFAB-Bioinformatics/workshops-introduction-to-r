@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="loading-variable-data.html">
-<link rel="next" href="importing-from-text-files.html">
+<link rel="prev" href="file-and-data-inputoutput-io.html">
+<link rel="next" href="loading-variable-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,43 +201,29 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="current-working-directory" class="section level2">
-<h2><span class="header-section-number">3.3</span> Current working directory</h2>
-<p>An aside about directory paths. When working with R, you need to be aware of your <strong>current working directory</strong> (CWD). As the name suggests, this is the directory (folder) in which you are currently working. If no paths are specified, any files you wish to import or export to and from R will be with respect to this directory.</p>
-<div class="rmdcaution">
-<p>
-The <em>Files</em> tab in the bottom-right corner is <em>not</em> always set to your CWD. Think of this as a Windows explorer (or Finder in Mac) built-in with Rstudio. This tab allows you to navigate your file system and check on files. This means that during your session, you may navigate away from your CWD.
-</p>
-</div>
-<p>To check your CWD use the command:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
-<p>and to change your CWD to another location use the <code>setwd(file-path)</code> command.</p>
-<div class="rmdtip">
-<p>
-When using <code>save()</code> it is better to explicitly specifing the path to the folder where you want to save your data to so that no mistakes are made when you move away from your CWD.
-</p>
-</div>
-<div id="file-paths" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> File paths</h3>
-<p>File paths come in two forms:</p>
-<ul>
-<li><strong>relative filepath</strong> is relative to the current working directory. For example, using a Windows system, if my currently working directory is <code>C:\Users\john.smith\Documents</code> and I save a script called “area-rectangle.R” without specifying a specific location, then R will save the file in the location <code>C:\Users\john.smith\Documents\area-rectangle.R</code>.</li>
-<li><strong>absolute filepath</strong> is the fullpath of the location starting with the drive letter in Windows (e.g. C: or D:); or in Linux and Mac starting with the <code>\</code> symbol, meaning <a href="https://aarnet.zoom.us/j/579276844the" class="uri">https://aarnet.zoom.us/j/579276844the</a> <em>root</em> directory (the top).</li>
-</ul>
-<div class="rmdtip">
-<p>
-R uses the forward slash (<code>/</code>) to specify filepaths by default. If you use the Windows format with the backwards slash (<code>\</code>), you will get an error. You can use two backward slashes (<code>\</code>) to escape the error but it’s faster and easier to read to use the <code>/</code> slash.
-</p>
-</div>
-</div>
+<div id="saving-variable-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Saving variable data</h2>
+<p>If you started a new Project for your work, at the end of the day you can select <strong>File</strong> &gt; <strong>Close Project</strong>. This will save all of your variables, your history, your open files and a range of other information. When you then re-open R, you can double click on the project file (which will have the suffix <strong>.Rproj</strong>) to continue where you left off.</p>
+<p>As well as saving your entire project, you can save just specified variables, using the <code>save()</code> command. The save function saves the data as a binary object and the file prefix generally used for R binary objects is “.Rdata”.</p>
+<p>In the following worked example, we will save the <code>mandm</code> variable that was created in the previous chapter. We then remove this variable from our workspace using the <code>rm()</code> function and check that it has been removed using the <code>exists()</code> function.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">colours &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;yellow&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;orange&quot;</span>)
+mandm   &lt;-<span class="st"> </span><span class="kw">sample</span>(colours, <span class="dv">1000000</span>, <span class="dt">replace=</span><span class="ot">TRUE</span>)
+<span class="kw">save</span>(mandm,<span class="dt">file=</span><span class="st">&quot;chocolate.Rdata&quot;</span>)
+
+<span class="co"># Delete &#39;mandm&#39; from the workspace</span>
+<span class="kw">rm</span>(mandm)
+
+<span class="co"># Comfirm it is deleted</span>
+<span class="kw">exists</span>(<span class="st">&#39;mandm&#39;</span>)</code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="loading-variable-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-from-text-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="file-and-data-inputoutput-io.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="loading-variable-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="loading-variable-data.html">
-<link rel="next" href="importing-from-text-files.html">
+<link rel="prev" href="writing-to-text-file.html">
+<link rel="next" href="simple-data-analysis.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,43 +201,71 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="current-working-directory" class="section level2">
-<h2><span class="header-section-number">3.3</span> Current working directory</h2>
-<p>An aside about directory paths. When working with R, you need to be aware of your <strong>current working directory</strong> (CWD). As the name suggests, this is the directory (folder) in which you are currently working. If no paths are specified, any files you wish to import or export to and from R will be with respect to this directory.</p>
-<div class="rmdcaution">
-<p>
-The <em>Files</em> tab in the bottom-right corner is <em>not</em> always set to your CWD. Think of this as a Windows explorer (or Finder in Mac) built-in with Rstudio. This tab allows you to navigate your file system and check on files. This means that during your session, you may navigate away from your CWD.
-</p>
+<div id="other-io-operations" class="section level2">
+<h2><span class="header-section-number">3.6</span> Other IO operations</h2>
+<div id="interactive-input" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Interactive input</h3>
+<p><code>scan()</code> is a primitive method that can be used to import data from a variety of sources. In most instances it would be preferable to read data from file using <code>read.table</code> or <code>readLines</code>. scan is however magnificent for reading in data from the standard input or from other software streams. As a quick demonstration we can read in data as you type it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scan</span>(<span class="dt">what=</span><span class="kw">numeric</span>())</code></pre></div>
 </div>
-<p>To check your CWD use the command:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
-<p>and to change your CWD to another location use the <code>setwd(file-path)</code> command.</p>
+<div id="reading-from-a-web-connection" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Reading from a web connection</h3>
+<p>Most of the time we will be reading information into R that is stored on our local filesystem, but R can also import data directly from the web. The <code>read.table()</code> and <code>readLines()</code> functions are happy to read in from a web socket. This is great but requires that the data be present on a web-page to download.</p>
+<p>For example, the following reads data from Google Trends github account on search results for “Fathers day”. Based on the URL we can expect the file is a comma separated file because the filename as in “*.csv“, however, we do not know whether there are any comments in the files, if the first line is the heading columns etc. So we will peak into the file first before reading it as a data object.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data.URL &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/GoogleTrends/data/gh-pages/</span>
+<span class="st">20150624_FathersDay.csv&quot;</span>
+fathers.txt &lt;-<span class="st"> </span><span class="kw">readLines</span>(data.URL)
+<span class="kw">head</span>(fathers.txt)</code></pre></div>
+<pre><code>## Warning in readLines(data.URL): incomplete final line found on
+## &#39;https://raw.githubusercontent.com/GoogleTrends/data/gh-pages/
+## 20150624_FathersDay.csv&#39;</code></pre>
+<pre><code>## [1] &quot;Search interest in dads in each country&#39;s respective father&#39;s day in 2014,,,,,&quot;
+## [2] &quot;country,ISO Code,Date,Holiday,Indexed,Rank&quot;                                    
+## [3] &quot;Puerto Rico,PR,06/15/2014,Father&#39;s Day,100.00,1&quot;                               
+## [4] &quot;Caribbean Netherlands,BQ,06/01/2014,Global Day of Parents,79.46,2&quot;             
+## [5] &quot;Curaçao,CW,06/15/2014,Father&#39;s Day,75.63,3&quot;                                    
+## [6] &quot;Aruba,AW,06/15/2014,Father&#39;s Day,74.62,4&quot;</code></pre>
+<p>Now that we can see the first line is a description and the column headings are in line 2 we will read the data file into a data object:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fathers.day &lt;-<span class="st"> </span><span class="kw">read.csv</span>(data.URL, <span class="dt">header=</span>T, <span class="dt">skip=</span><span class="dv">1</span>)
+fathers.day[<span class="dv">1</span>:<span class="dv">5</span>,<span class="dv">1</span>:<span class="dv">6</span>]</code></pre></div>
+<pre><code>##                 country ISO.Code       Date               Holiday Indexed
+## 1           Puerto Rico       PR 06/15/2014          Father&#39;s Day  100.00
+## 2 Caribbean Netherlands       BQ 06/01/2014 Global Day of Parents   79.46
+## 3               Curaçao       CW 06/15/2014          Father&#39;s Day   75.63
+## 4                 Aruba       AW 06/15/2014          Father&#39;s Day   74.62
+## 5                Guyana       GY 06/15/2014          Father&#39;s Day   67.42
+##   Rank
+## 1    1
+## 2    2
+## 3    3
+## 4    4
+## 5    5</code></pre>
 <div class="rmdtip">
-<p>
-When using <code>save()</code> it is better to explicitly specifing the path to the folder where you want to save your data to so that no mistakes are made when you move away from your CWD.
-</p>
-</div>
-<div id="file-paths" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> File paths</h3>
-<p>File paths come in two forms:</p>
 <ul>
-<li><strong>relative filepath</strong> is relative to the current working directory. For example, using a Windows system, if my currently working directory is <code>C:\Users\john.smith\Documents</code> and I save a script called “area-rectangle.R” without specifying a specific location, then R will save the file in the location <code>C:\Users\john.smith\Documents\area-rectangle.R</code>.</li>
-<li><strong>absolute filepath</strong> is the fullpath of the location starting with the drive letter in Windows (e.g. C: or D:); or in Linux and Mac starting with the <code>\</code> symbol, meaning <a href="https://aarnet.zoom.us/j/579276844the" class="uri">https://aarnet.zoom.us/j/579276844the</a> <em>root</em> directory (the top).</li>
+<li>
+The <code>RCurl</code> package provides a much more flexible approach to accessing data that is on the web and is worth reviewing if you wish to scrape a web-accessible database in a more automated fashion.
+</li>
 </ul>
-<div class="rmdtip">
 <p>
-R uses the forward slash (<code>/</code>) to specify filepaths by default. If you use the Windows format with the backwards slash (<code>\</code>), you will get an error. You can use two backward slashes (<code>\</code>) to escape the error but it’s faster and easier to read to use the <code>/</code> slash.
+<strong>Bioinformatics data</strong>
 </p>
+<ul>
+<li>
+Of greatest interest however is the ability to download pre-structured biological data from the web. This can be managed using packages such as <code>bioMart</code> and <code>GEOquery</code>.
+</li>
+</ul>
+</div>
+
 </div>
 </div>
-</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="loading-variable-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-from-text-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="writing-to-text-file.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="simple-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

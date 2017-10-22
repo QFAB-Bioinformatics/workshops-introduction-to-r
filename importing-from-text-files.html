@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="loading-variable-data.html">
-<link rel="next" href="importing-from-text-files.html">
+<link rel="prev" href="current-working-directory.html">
+<link rel="next" href="writing-to-text-file.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,43 +201,179 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="current-working-directory" class="section level2">
-<h2><span class="header-section-number">3.3</span> Current working directory</h2>
-<p>An aside about directory paths. When working with R, you need to be aware of your <strong>current working directory</strong> (CWD). As the name suggests, this is the directory (folder) in which you are currently working. If no paths are specified, any files you wish to import or export to and from R will be with respect to this directory.</p>
+<div id="importing-from-text-files" class="section level2">
+<h2><span class="header-section-number">3.4</span> Importing from text files</h2>
+<p>Data is most commonly shared in tabular formats (Excel presents data in a tabular format). These are most-often text files that contain columns of data separated with comma, tab or other field-delimiters. In R there are some simple methods for quickly reading in massive amounts of data.</p>
+<p>For the rest of this workshop we are going to work with a public dataset measuring the daily minimum and maximum temperatures across a number of cities in Australia. The data has been measured by 112 stations across Australia. The input file is located in folder: <code>data/Intro_to_R/stations.txt</code>.</p>
+<div class="figure">
+<img src="images/stations.png" alt="Stations.txt file" />
+<p class="caption">Stations.txt file</p>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data.path &lt;-<span class="st"> &quot;data/Intro_to_R&quot;</span>
+
+<span class="co"># Of course, you will need a different path if the data is on your local P.C.</span>
+<span class="co"># e.g. data.path &lt;- &quot;C:/Intro_to_R/Data&quot;</span>
+<span class="co"># Create a variable pointing to the file location.</span>
+
+stations.file &lt;-<span class="st"> </span><span class="kw">file.path</span>(data.path, <span class="st">&quot;stations.txt&quot;</span>)
+
+<span class="co"># Then look at the start and finish of that file</span>
+<span class="kw">head</span>(<span class="kw">readLines</span>(stations.file))
+<span class="kw">tail</span>(<span class="kw">readLines</span>(stations.file))</code></pre></div>
+<p><strong>What is happening here?</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="20%" />
+<col width="79%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>readLines()</code></td>
+<td>reads each line from a target file into a vector. See also <code>read.table</code>, <code>read.csv</code> functions.</td>
+</tr>
+<tr class="even">
+<td><code>file.path()</code></td>
+<td><em>DOES NOT</em> read in the contents of a file. It just point to the location of a files on your system. You need to use <code>readLines</code>, <code>read.table</code> or similar to access the contents of that file.</td>
+</tr>
+<tr class="odd">
+<td><code>head()</code></td>
+<td>show first 6 lines of the object</td>
+</tr>
+<tr class="even">
+<td><code>tail()</code></td>
+<td>show last 6 lines of object</td>
+</tr>
+</tbody>
+</table>
+<p>Using the <code>head()</code> and <code>tail()</code> commands helps us understand the nature of the file. It seems that the <code>#</code> prefix indicates metadata rather than data and the file is tab separated indicated by the ‘’ symbols.</p>
 <div class="rmdcaution">
 <p>
-The <em>Files</em> tab in the bottom-right corner is <em>not</em> always set to your CWD. Think of this as a Windows explorer (or Finder in Mac) built-in with Rstudio. This tab allows you to navigate your file system and check on files. This means that during your session, you may navigate away from your CWD.
+Beware of printing large variables with RStudio Server, you can freeze your session. Judiciously use methods to limit the output:
 </p>
-</div>
-<p>To check your CWD use the command:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
-<p>and to change your CWD to another location use the <code>setwd(file-path)</code> command.</p>
-<div class="rmdtip">
-<p>
-When using <code>save()</code> it is better to explicitly specifing the path to the folder where you want to save your data to so that no mistakes are made when you move away from your CWD.
-</p>
-</div>
-<div id="file-paths" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> File paths</h3>
-<p>File paths come in two forms:</p>
 <ul>
-<li><strong>relative filepath</strong> is relative to the current working directory. For example, using a Windows system, if my currently working directory is <code>C:\Users\john.smith\Documents</code> and I save a script called “area-rectangle.R” without specifying a specific location, then R will save the file in the location <code>C:\Users\john.smith\Documents\area-rectangle.R</code>.</li>
-<li><strong>absolute filepath</strong> is the fullpath of the location starting with the drive letter in Windows (e.g. C: or D:); or in Linux and Mac starting with the <code>\</code> symbol, meaning <a href="https://aarnet.zoom.us/j/579276844the" class="uri">https://aarnet.zoom.us/j/579276844the</a> <em>root</em> directory (the top).</li>
+<li>
+read into a variable first
+</li>
+<li>
+limit the output
+</li>
+<li>
+use <code>head()</code> / <code>tail()</code> functions
+</li>
 </ul>
-<div class="rmdtip">
+</div>
+<p>We have started to explore the contents of the expression data file using the code above, but at the moment <strong>have not imported</strong> it into a variable in R. The following exercise will step you through using the <code>read.table()</code> function in R to read a text file and import the data as a data.frame object.</p>
+<p>When reading a table, R expects the same number of columns for every row, it will by default use the first line to determine the number of columns that are in your dataset. You can specify the separater to use depending on how your data columns are separated e.g. tab-delimited, comma-delimited or by something else altogether.</p>
+<div class="rmdexercise">
 <p>
-R uses the forward slash (<code>/</code>) to specify filepaths by default. If you use the Windows format with the backwards slash (<code>\</code>), you will get an error. You can use two backward slashes (<code>\</code>) to escape the error but it’s faster and easier to read to use the <code>/</code> slash.
+<strong>Reading in tabular data</strong>
+</p>
+<ol style="list-style-type: decimal">
+<li>
+<p>
+Enter the previous code chunk to set up your <code>data.path</code> and take an initial look at the expression data in the variable <code>stations.file</code>.
+</p>
+</li>
+<li>
+<p>
+Open up the help documentation for <code>read.table()</code> function while you perform the following worked example. Read up on the following parameters in detail:
+</p>
+</li>
+</ol>
+<ul>
+<li>
+<code>sep</code>
+</li>
+<li>
+<code>comment</code>
+</li>
+<li>
+<code>header</code>
+</li>
+<li>
+<code>row.names</code>
+</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>
+Follow the code below to use <code>read.table()</code> to import the dataset into R. There should be 112 rows (stations) and 5 columns (variables), use the station number as the rownames since it will be unique.
+</li>
+</ol>
+</div>
+<p>Pay close attention to the dimension of the dataset after each read as each parameter will affect the read.</p>
+
+<p><strong>Attempt 1:: read.table using default settings</strong>:</p>
+<p>This will fail because by default the <code>sep</code> parameter separates on white-space and the first X lines in the file are all comments, each line does not have the same number of columns as indicated by the error message.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stations &lt;-<span class="st"> </span><span class="kw">read.table</span>(stations.file)</code></pre></div>
+<p><code>Error in scan(file = file, what = what, sep = sep, quote = quote, dec = dec, : line 1 did not have 42 elements</code></p>
+
+<p><strong>Attempt 2:: skip comment lines</strong></p>
+<p>We specify the separating delimiter (<code>sep='\t'</code>), the comment character (‘!’) and check the dimension of the data object after reading in the file. Is the number of rows and columns correct?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stations &lt;-<span class="st"> </span><span class="kw">read.table</span>(stations.file, <span class="dt">comment.char =</span> <span class="st">&quot;!&quot;</span>, <span class="dt">sep=</span><span class="st">&#39;</span><span class="ch">\t</span><span class="st">&#39;</span>)
+<span class="kw">dim</span>(stations)</code></pre></div>
+<pre><code>## [1] 113   6</code></pre>
+<p>We have 1 too many rows and columns. Taking a physical look a the object will tell us why. It is because we haven’t assigned the row or column names to the data frame.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(stations)</code></pre></div>
+<pre><code>##       V1            V2          V3           V4          V5         V6
+## 1 Number  Station.name Latitude..S Longitude..E Elevation.m Start.year
+## 2  23090      Adelaide       34.92       138.62          48       1910
+## 3   9741        Albany       34.94        117.8          68       1910
+## 4  15590 Alice Springs        23.8       133.89         546       1910
+## 5  40004      Amberley       27.63       152.71          24       1941
+## 6  36007    Barcaldine       23.55       145.29         267       1962</code></pre>
+
+<p><strong>Attempt 3:: assign header and row names</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stations &lt;-<span class="st"> </span><span class="kw">read.table</span>(stations.file, <span class="dt">comment.char=</span><span class="st">&quot;!&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, 
+                       <span class="dt">header=</span><span class="ot">TRUE</span>, <span class="dt">row.names =</span> <span class="dv">1</span>)
+<span class="kw">dim</span>(stations)</code></pre></div>
+<pre><code>## [1] 112   5</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(stations)</code></pre></div>
+<pre><code>##        Station.name Latitude..S Longitude..E Elevation.m Start.year
+## 23090      Adelaide       34.92       138.62          48       1910
+## 9741         Albany       34.94       117.80          68       1910
+## 15590 Alice Springs       23.80       133.89         546       1910
+## 40004      Amberley       27.63       152.71          24       1941
+## 36007    Barcaldine       23.55       145.29         267       1962
+## 63005      Bathurst       33.43       149.56         713       1910</code></pre>
+<p>Much better, this looks right!</p>
+<p>Let’s save the <code>stations</code> variable as a Rdata object so that we don’t have to read it in again.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">save</span>(stations, <span class="dt">file=</span><span class="st">&#39;stations.Rdata&#39;</span>)</code></pre></div>
+<div class="rmdexercise">
+<p>
+<strong>Import temperature dataset</strong>
+</p>
+<p>
+Now that you have imported the stations metadata, let’s import the actual temperatures for one station across the last 69 years.
+</p>
+<p>
+Read in the minimum temperatures file: <code>data/Intro_to_R/minTEmp.040842.csv</code> into a variable named <code>minTemp</code>.
+</p>
+<p>
+Use the first column (date) as the rownames, there should be 366 rows and 69 variables.
 </p>
 </div>
-</div>
+<p>Expected output: </p>
+<pre><code>##       X1949 X1950 X1951 X1952 X1953
+## Jan-1    NA  22.3  19.0  22.4  18.3
+## Jan-2    NA  19.3  16.3  20.8  20.8
+## Jan-3    NA  23.1  15.4  23.4  16.3
+## Jan-4    NA  22.5  15.1  23.1  17.5
+## Jan-5    NA  22.4  14.6  20.3  19.8</code></pre>
+<p>We will be working with this dataset in the following chapter.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="loading-variable-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-from-text-files.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="current-working-directory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="writing-to-text-file.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
