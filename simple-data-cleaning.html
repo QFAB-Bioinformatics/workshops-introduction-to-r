@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="summary-statistics.html">
-<link rel="next" href="packages-and-functions.html">
+<link rel="prev" href="simple-data-analysis.html">
+<link rel="next" href="summary-statistics.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,24 +201,29 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vectorisation" class="section level2">
-<h2><span class="header-section-number">4.3</span> Vectorisation</h2>
-<p>The brilliance of using R for data analysis is the concept of <strong>vectorisation</strong>. Because we generally work with a table of values and want to perform the same operation again either on the whole table, a whole row or a whole column. Vectorisation means a function can be applied to every element of a vector or matrix without having to explicitly loop through each element of the whole variable.</p>
-<p>For example, let’s say we want to convert our temperatures from Celsius to Kelvin, we can do this simply by one line of code:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(minTemp$X1996 +<span class="st"> </span><span class="fl">273.15</span>)</code></pre></div>
-<pre><code>## [1] 296.55 296.65 297.85 290.95 293.55 293.65</code></pre>
-<p>Performing a vectorised function on a vector or matrix does not change the contents of that variable. To perform an in-place calculation, you need to explicitly overwrite the variable with the output of the function:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">kelvinTemp &lt;-<span class="st"> </span>minTemp +<span class="st"> </span><span class="fl">273.15</span></code></pre></div>
+<div id="simple-data-cleaning" class="section level2">
+<h2><span class="header-section-number">4.1</span> Simple Data cleaning</h2>
+<p>We have read in our temperature data from the Brisbane Airport station in the previous chapter. Before we do any simple statistical analysis in this chapter we need to first check on the data we uploaded. Data cleaning is an essential step prior to any data analysis, but is beyond the scope of this workshop. (Have a look at our Data preparation, processing and reporting with R workshop.)</p>
+<p>One quick way to check our temperature data is the range of the dataset:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">range</span>(minTemp, <span class="dt">na.rm=</span>T)</code></pre></div>
+<pre><code>## [1]    -2.2 99999.9</code></pre>
+<p>This tells us we have temperatures ranging from -2.2 degrees to 99999.9 degrees. Alarm bells should be going off in your head for the maximum range. Could this be an error in the reading or something else? Visiting the source of where the data is obtained from may provide more information.</p>
+<p>The Bureau of Metorology site tells us that missing data is also encoded with 99999.9, given that this is the case let’s change the data and use <code>NA</code> for missing data as the value 99999.9 will interfere when we perform simple summary statistics like calculating the average temperature.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a copy of the original dataset just in case</span>
+minTemp.ORI &lt;-<span class="st"> </span>minTemp
 
+minTemp[minTemp ==<span class="st"> </span><span class="fl">99999.9</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+<span class="kw">range</span>(minTemp, <span class="dt">na.rm=</span>T)</code></pre></div>
+<pre><code>## [1] -2.2 28.1</code></pre>
+<p>Recheck the range after any modification to the data, this is much more realistic. Now we can perform some basic summary functions on the dataset.</p>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="summary-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="packages-and-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="simple-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="summary-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
