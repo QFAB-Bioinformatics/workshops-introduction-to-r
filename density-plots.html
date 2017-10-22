@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="visualising-data.html">
-<link rel="next" href="histograms.html">
+<link rel="prev" href="histograms.html">
+<link rel="next" href="scatterplots.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -201,109 +201,29 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="boxplots" class="section level2">
-<h2><span class="header-section-number">7.1</span> Boxplots</h2>
-<p>The boxplot is a widely used plot that can summarise the distribution of data within a collection. We routinely use boxplots to show a trend within data during.</p>
-<p>Boxplots are for numeric data only:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(minTemp)</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-76-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Let’s add in the parameters to get a more sophisticated boxplot. It’s a good idea to include one parameter at a time to see the effects of the new parameter. We will explain what each of the parameters mean during the worshop. Only the last figure in the following worked example is shown.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>(minTemp, <span class="dt">las=</span><span class="dv">2</span>)
+<div id="density-plots" class="section level2">
+<h2><span class="header-section-number">7.3</span> Density plots</h2>
+<p>Another alternative for histogram plot is to use the density plot. See <code>plot(density(x))</code> where x is the vector of numbers like the one used in <code>hist()</code> above. Since density plots are lines, we can plot multiple densities onto the one graph:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">0</span>))
 
-<span class="kw">boxplot</span>(minTemp, 
-        <span class="dt">las=</span><span class="dv">2</span>, 
-        <span class="dt">main=</span><span class="st">&quot;Brisbane Airport minimum Temperatures&quot;</span>,
-        <span class="dt">xlab=</span><span class="st">&quot;Year&quot;</span>,
-        <span class="dt">ylab=</span><span class="st">&quot;Degrees celsius&quot;</span>)</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/unnamed-chunk-77-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>We will explain what each of the following lines mean during the workshop:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">years &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot;X&quot;</span>,<span class="st">&quot;&quot;</span>,<span class="kw">colnames</span>(minTemp))
-years[<span class="kw">seq</span>(<span class="dv">2</span>,<span class="kw">length</span>(years),<span class="dv">2</span>)] &lt;-<span class="st"> </span><span class="ot">NA</span>
-
-<span class="kw">boxplot</span>(minTemp,
-        <span class="dt">las=</span><span class="dv">2</span>,
-        <span class="dt">main=</span><span class="st">&quot;Brisbane Airport minimum Temperatures&quot;</span>,
-        <span class="dt">xlab=</span><span class="st">&quot;Year&quot;</span>,
-        <span class="dt">ylab=</span><span class="st">&quot;Degrees celsius&quot;</span>,
-        <span class="dt">cex.axis=</span><span class="fl">0.7</span>,
-        <span class="dt">cex.main=</span><span class="fl">0.8</span>,
-        <span class="dt">names=</span>years)
-<span class="kw">abline</span>(<span class="dt">h=</span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">25</span>,<span class="dv">5</span>),<span class="dt">lwd=</span><span class="dv">1</span>,<span class="dt">lty=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&#39;grey80&#39;</span>)</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/boxplot-minTemp-3-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Let’s see if there are any seasonal trend in the data by plotting the temperature per season. To make this easier we will create a new variable called <code>season</code> that match each row in our <code>minTemp</code> dataset. We will explain what each of the following line means during the workshop.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">months &lt;-<span class="st"> </span><span class="kw">rownames</span>(minTemp)
-months &lt;-<span class="st"> </span><span class="kw">substr</span>(months,<span class="dv">1</span>,<span class="dv">3</span>)
-months &lt;-<span class="st"> </span><span class="kw">factor</span>(months, <span class="dt">levels=</span><span class="kw">c</span>(<span class="st">&#39;Jan&#39;</span>,<span class="st">&#39;Feb&#39;</span>,<span class="st">&#39;Mar&#39;</span>,<span class="st">&#39;Apr&#39;</span>,<span class="st">&#39;May&#39;</span>,<span class="st">&#39;Jun&#39;</span>,
-                                  <span class="st">&#39;Jul&#39;</span>,<span class="st">&#39;Aug&#39;</span>,<span class="st">&#39;Sep&#39;</span>,<span class="st">&#39;Oct&#39;</span>,<span class="st">&#39;Nov&#39;</span>,<span class="st">&#39;Dec&#39;</span>))
-<span class="kw">levels</span>(months)</code></pre></div>
-<pre><code>##  [1] &quot;Jan&quot; &quot;Feb&quot; &quot;Mar&quot; &quot;Apr&quot; &quot;May&quot; &quot;Jun&quot; &quot;Jul&quot; &quot;Aug&quot; &quot;Sep&quot; &quot;Oct&quot; &quot;Nov&quot;
-## [12] &quot;Dec&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">seasons &lt;-<span class="st"> </span>months
-<span class="kw">levels</span>(seasons) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">rep</span>(<span class="st">&#39;Summer&#39;</span>,<span class="dv">2</span>), <span class="kw">rep</span>(<span class="st">&#39;Autumn&#39;</span>,<span class="dv">3</span>), 
-                     <span class="kw">rep</span>(<span class="st">&#39;Winter&#39;</span>,<span class="dv">3</span>), <span class="kw">rep</span>(<span class="st">&#39;Spring&#39;</span>,<span class="dv">3</span>), <span class="st">&#39;Summer&#39;</span>)
-<span class="kw">levels</span>(seasons)</code></pre></div>
-<pre><code>## [1] &quot;Summer&quot; &quot;Autumn&quot; &quot;Winter&quot; &quot;Spring&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(months,seasons)</code></pre></div>
-<pre><code>##       seasons
-## months Summer Autumn Winter Spring
-##    Jan     31      0      0      0
-##    Feb     29      0      0      0
-##    Mar      0     31      0      0
-##    Apr      0     30      0      0
-##    May      0     31      0      0
-##    Jun      0      0     30      0
-##    Jul      0      0     31      0
-##    Aug      0      0     31      0
-##    Sep      0      0      0     30
-##    Oct      0      0      0     31
-##    Nov      0      0      0     30
-##    Dec     31      0      0      0</code></pre>
-<p>We can use a for loop to create separate plots for each season. To have all plots appear on one use the <code>par(mfrow)</code> function to specify a canvas with 1 row and 3 columns.</p>
-<p>Other properties:</p>
-<ul>
-<li><code>mar=c(8,4,4,1)</code> - is to specify the margins surrounding the plot: (bottom,left,top,right)</li>
-<li><code>cex.main</code>, <code>cex.lab</code>, <code>cex.axis</code> - affects the font size</li>
-<li><code>title()</code> gives finer control for the <code>xlab</code>, <code>ylab</code>, <code>main</code>, using the <code>line</code> parameter, you can adjust the location of the labels close to or away from the borders of the plot</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">season.col &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">Summer=</span><span class="st">&#39;red&#39;</span>,<span class="dt">Autumn=</span><span class="st">&#39;orange&#39;</span>,<span class="dt">Winter=</span><span class="st">&#39;skyblue&#39;</span>,<span class="dt">Spring=</span><span class="st">&#39;green&#39;</span>)
-years[-<span class="kw">c</span>(<span class="dv">1</span>,<span class="kw">length</span>(years))] &lt;-<span class="st"> </span><span class="ot">NA</span>
-
-<span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>),<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))
+first.season &lt;-<span class="st"> </span><span class="kw">levels</span>(seasons)[<span class="dv">1</span>]
 for(season in <span class="kw">levels</span>(seasons)) {
   keep.rows &lt;-<span class="st"> </span>seasons ==<span class="st"> </span>season
-  season.temp &lt;-<span class="st"> </span>minTemp[keep.rows,]
-  <span class="kw">boxplot</span>(season.temp, <span class="dt">las=</span><span class="dv">2</span>, <span class="dt">col=</span>season.col[[season]],
-          <span class="dt">names=</span>years, <span class="dt">border=</span><span class="st">&#39;grey85&#39;</span>, <span class="dt">main=</span>season)
-}</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/boxplot-season-temp-1.png" width="768" style="display: block; margin: auto;" /></p>
-<p>The above plot show there is no particular seasonal trend in minimum temperature. This of course does not seem right logically. Closer attention will reveal that the y-axis are different for each plot, this can lead to mis-interpretation if the reader is not paying close attention. It is better to keep the y-axis the same across comparative figures. You can specify this using the <code>ylim</code> parameter.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>),<span class="dt">mar=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))
-for(season in <span class="kw">levels</span>(seasons)) {
-  keep.rows &lt;-<span class="st"> </span>seasons ==<span class="st"> </span>season
-  season.temp &lt;-<span class="st"> </span>minTemp[keep.rows,]
-  <span class="kw">boxplot</span>(season.temp, <span class="dt">las=</span><span class="dv">2</span>, <span class="dt">col=</span>season.col[[season]],
-          <span class="dt">names=</span>years, <span class="dt">border=</span><span class="st">&#39;grey85&#39;</span>, <span class="dt">main=</span>season, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30</span>))
-}</code></pre></div>
-<p><img src="intro-to-r_files/figure-html/boxplot-season-temp-2-1.png" width="768" style="display: block; margin: auto;" /></p>
-<p>Now it is clearer that there is differences in the sepal and petal length/widths across the different species.</p>
-<div class="rmdexercise">
-<p>
-<strong>Monthly trend</strong>
-</p>
-<p>
-If you are ahead, how about using the <code>months</code> variable to create monthly plots and see if there is any trend.
-</p>
-<p>
-<em>Hint</em>: use <code>par(mfrow=c(4,3))</code> to create a 4 by 3 matrix of plots.
-</p>
-</div>
-<p><strong>Expected output</strong></p>
-<p><img src="intro-to-r_files/figure-html/boxplot-month-1.png" width="576" style="display: block; margin: auto;" /></p>
-<div class="rmdtip">
-<p>
-For more information on other graphical parameters, look up <code>par</code> which will show you the list of parameters that can be set for plotting.
-</p>
-</div>
+  temp &lt;-<span class="st"> </span><span class="kw">as.matrix</span>(minTemp[keep.rows,])
+  
+  if (season ==<span class="st"> </span>first.season) {
+    <span class="kw">plot</span>(<span class="kw">density</span>(temp, <span class="dt">na.rm=</span>T),<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30</span>), <span class="dt">col=</span>season.col[[season]],
+         <span class="dt">main=</span><span class="st">&quot;Season densities&quot;</span>)
+  } else {
+    <span class="kw">lines</span>(<span class="kw">density</span>(temp, <span class="dt">na.rm=</span>T),<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">30</span>), <span class="dt">col=</span>season.col[[season]])
+  }
+}
+<span class="kw">legend</span>(<span class="st">&#39;topleft&#39;</span>,
+       <span class="dt">legend=</span><span class="kw">levels</span>(seasons),
+       <span class="dt">lty=</span><span class="dv">1</span>,
+       <span class="dt">cex=</span><span class="fl">0.8</span>,
+       <span class="dt">col=</span><span class="kw">as.character</span>(season.col))</code></pre></div>
+<p><img src="intro-to-r_files/figure-html/density-season-1.png" width="384" style="display: block; margin: auto;" /></p>
 <p></p>
 </div>
             </section>
@@ -311,8 +231,8 @@ For more information on other graphical parameters, look up <code>par</code> whi
           </div>
         </div>
       </div>
-<a href="visualising-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="histograms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histograms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="scatterplots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
