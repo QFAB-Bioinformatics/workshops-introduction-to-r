@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Introduction to R</title>
   <meta name="description" content="This is the complementary manual for QFAB’s Introduction to R workshop">
-  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Introduction to R" />
   <meta property="og:type" content="book" />
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="more-complex-data-analysis.html">
+<link rel="prev" href="more-data-analysis.html">
 <link rel="next" href="for-and-while-loops.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -108,63 +108,77 @@ code > span.in { color: #008000; } /* Information */
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-variables-objects-in-r.html"><a href="data-variables-objects-in-r.html"><i class="fa fa-check"></i><b>2</b> Data variables (objects) in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="declaring-variables.html"><a href="declaring-variables.html"><i class="fa fa-check"></i><b>2.1</b> Declaring variables</a></li>
-<li class="chapter" data-level="2.2" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.2</b> Data types</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.2.1</b> Numeric and Integer</a></li>
-<li class="chapter" data-level="2.2.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.2.2</b> Character</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.2.3</b> Logical</a></li>
+<li class="chapter" data-level="2.2" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.2</b> Best practise and variable naming conventions</a></li>
+<li class="chapter" data-level="2.3" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>2.3</b> Data types</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="data-types.html"><a href="data-types.html#numeric-and-integer"><i class="fa fa-check"></i><b>2.3.1</b> Numeric and Integer</a></li>
+<li class="chapter" data-level="2.3.2" data-path="data-types.html"><a href="data-types.html#character"><i class="fa fa-check"></i><b>2.3.2</b> Character</a></li>
+<li class="chapter" data-level="2.3.3" data-path="data-types.html"><a href="data-types.html#logical"><i class="fa fa-check"></i><b>2.3.3</b> Logical</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.3</b> Determining data type</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.3.1</b> Typecasting</a></li>
+<li class="chapter" data-level="2.4" data-path="determining-data-type.html"><a href="determining-data-type.html"><i class="fa fa-check"></i><b>2.4</b> Determining data type</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="determining-data-type.html"><a href="determining-data-type.html#typecasting"><i class="fa fa-check"></i><b>2.4.1</b> Typecasting</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.4</b> Functions</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.4.1</b> Nesting functions</a></li>
+<li class="chapter" data-level="2.5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.5</b> Functions</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="functions.html"><a href="functions.html#nesting-functions"><i class="fa fa-check"></i><b>2.5.1</b> Nesting functions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.5</b> Data structures</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.5.1</b> Vectors</a></li>
-<li class="chapter" data-level="2.5.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.5.2</b> Lists</a></li>
-<li class="chapter" data-level="2.5.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.5.3</b> Changing Vectors and Lists</a></li>
-<li class="chapter" data-level="2.5.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.5.4</b> Factors</a></li>
-<li class="chapter" data-level="2.5.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.5.5</b> Matrices</a></li>
-<li class="chapter" data-level="2.5.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.5.6</b> Data frame</a></li>
+<li class="chapter" data-level="2.6" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>2.6</b> Data structures</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>2.6.1</b> Vectors</a></li>
+<li class="chapter" data-level="2.6.2" data-path="data-structures.html"><a href="data-structures.html#lists"><i class="fa fa-check"></i><b>2.6.2</b> Lists</a></li>
+<li class="chapter" data-level="2.6.3" data-path="data-structures.html"><a href="data-structures.html#changing-vectors-and-lists"><i class="fa fa-check"></i><b>2.6.3</b> Changing Vectors and Lists</a></li>
+<li class="chapter" data-level="2.6.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>2.6.4</b> Factors</a></li>
+<li class="chapter" data-level="2.6.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>2.6.5</b> Matrices</a></li>
+<li class="chapter" data-level="2.6.6" data-path="data-structures.html"><a href="data-structures.html#data-frame"><i class="fa fa-check"></i><b>2.6.6</b> Data frame</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.6</b> Finding, describing and removing objects</a></li>
-<li class="chapter" data-level="2.7" data-path="best-practise-and-variable-naming-conventions.html"><a href="best-practise-and-variable-naming-conventions.html"><i class="fa fa-check"></i><b>2.7</b> Best practise and variable naming conventions</a></li>
+<li class="chapter" data-level="2.7" data-path="finding-describing-and-removing-objects.html"><a href="finding-describing-and-removing-objects.html"><i class="fa fa-check"></i><b>2.7</b> Finding, describing and removing objects</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Simple data analysis</a><ul>
-<li class="chapter" data-level="3.1" data-path="useful-operations.html"><a href="useful-operations.html"><i class="fa fa-check"></i><b>3.1</b> Useful operations</a></li>
-<li class="chapter" data-level="3.2" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>3.2</b> Vectorisation</a></li>
+<li class="chapter" data-level="3" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>3</b> File and data input/output (IO)</a><ul>
+<li class="chapter" data-level="3.1" data-path="saving-variable-data.html"><a href="saving-variable-data.html"><i class="fa fa-check"></i><b>3.1</b> Saving variable data</a></li>
+<li class="chapter" data-level="3.2" data-path="loading-variable-data.html"><a href="loading-variable-data.html"><i class="fa fa-check"></i><b>3.2</b> Loading variable data</a></li>
+<li class="chapter" data-level="3.3" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>3.3</b> Current working directory</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>3.3.1</b> File paths</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="file-and-data-inputoutput-io.html"><a href="file-and-data-inputoutput-io.html"><i class="fa fa-check"></i><b>4</b> File and data input/output (IO)</a><ul>
-<li class="chapter" data-level="4.1" data-path="saving-session-data.html"><a href="saving-session-data.html"><i class="fa fa-check"></i><b>4.1</b> Saving session data</a></li>
-<li class="chapter" data-level="4.2" data-path="current-working-directory.html"><a href="current-working-directory.html"><i class="fa fa-check"></i><b>4.2</b> Current working directory</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="current-working-directory.html"><a href="current-working-directory.html#file-paths"><i class="fa fa-check"></i><b>4.2.1</b> File paths</a></li>
+<li class="chapter" data-level="3.4" data-path="importing-from-text-files.html"><a href="importing-from-text-files.html"><i class="fa fa-check"></i><b>3.4</b> Importing from text files</a></li>
+<li class="chapter" data-level="3.5" data-path="writing-to-text-file.html"><a href="writing-to-text-file.html"><i class="fa fa-check"></i><b>3.5</b> Writing to text file</a></li>
+<li class="chapter" data-level="3.6" data-path="other-io-operations.html"><a href="other-io-operations.html"><i class="fa fa-check"></i><b>3.6</b> Other IO operations</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="other-io-operations.html"><a href="other-io-operations.html#interactive-input"><i class="fa fa-check"></i><b>3.6.1</b> Interactive input</a></li>
+<li class="chapter" data-level="3.6.2" data-path="other-io-operations.html"><a href="other-io-operations.html#reading-from-a-web-connection"><i class="fa fa-check"></i><b>3.6.2</b> Reading from a web connection</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="reading-and-writing-tabular-data.html"><a href="reading-and-writing-tabular-data.html"><i class="fa fa-check"></i><b>4.3</b> Reading and writing tabular data</a></li>
-<li class="chapter" data-level="4.4" data-path="scan.html"><a href="scan.html"><i class="fa fa-check"></i><b>4.4</b> Scan</a></li>
-<li class="chapter" data-level="4.5" data-path="reading-from-a-web-connection.html"><a href="reading-from-a-web-connection.html"><i class="fa fa-check"></i><b>4.5</b> Reading from a web connection</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="simple-data-analysis.html"><a href="simple-data-analysis.html"><i class="fa fa-check"></i><b>4</b> Simple data analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="simple-data-cleaning.html"><a href="simple-data-cleaning.html"><i class="fa fa-check"></i><b>4.1</b> Simple Data cleaning</a></li>
+<li class="chapter" data-level="4.2" data-path="summary-statistics.html"><a href="summary-statistics.html"><i class="fa fa-check"></i><b>4.2</b> Summary statistics</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="summary-statistics.html"><a href="summary-statistics.html#two-dimensional-datasets"><i class="fa fa-check"></i><b>4.2.1</b> Two-dimensional datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="vectorisation.html"><a href="vectorisation.html"><i class="fa fa-check"></i><b>4.3</b> Vectorisation</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="packages-and-functions.html"><a href="packages-and-functions.html"><i class="fa fa-check"></i><b>5</b> Packages and functions</a><ul>
 <li class="chapter" data-level="5.1" data-path="extending-r-with-packages.html"><a href="extending-r-with-packages.html"><i class="fa fa-check"></i><b>5.1</b> Extending R with packages</a></li>
 <li class="chapter" data-level="5.2" data-path="user-defined-functions.html"><a href="user-defined-functions.html"><i class="fa fa-check"></i><b>5.2</b> User defined functions</a></li>
+<li class="chapter" data-level="5.3" data-path="tips-for-functions.html"><a href="tips-for-functions.html"><i class="fa fa-check"></i><b>5.3</b> Tips for functions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="more-complex-data-analysis.html"><a href="more-complex-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More complex data analysis</a><ul>
+<li class="chapter" data-level="6" data-path="more-data-analysis.html"><a href="more-data-analysis.html"><i class="fa fa-check"></i><b>6</b> More data analysis</a><ul>
 <li class="chapter" data-level="6.1" data-path="apply.html"><a href="apply.html"><i class="fa fa-check"></i><b>6.1</b> apply()</a></li>
-<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a></li>
+<li class="chapter" data-level="6.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html"><i class="fa fa-check"></i><b>6.2</b> For and while loops</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html#for-loops"><i class="fa fa-check"></i><b>6.2.1</b> For loops</a></li>
+<li class="chapter" data-level="6.2.2" data-path="for-and-while-loops.html"><a href="for-and-while-loops.html#while-loop"><i class="fa fa-check"></i><b>6.2.2</b> While loop</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="visualising-data.html"><a href="visualising-data.html"><i class="fa fa-check"></i><b>7</b> Visualising data</a><ul>
 <li class="chapter" data-level="7.1" data-path="boxplots.html"><a href="boxplots.html"><i class="fa fa-check"></i><b>7.1</b> Boxplots</a></li>
 <li class="chapter" data-level="7.2" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>7.2</b> Histograms</a></li>
-<li class="chapter" data-level="7.3" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.3</b> Scatterplots</a></li>
-<li class="chapter" data-level="7.4" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.4</b> Bar charts</a></li>
+<li class="chapter" data-level="7.3" data-path="density-plots.html"><a href="density-plots.html"><i class="fa fa-check"></i><b>7.3</b> Density plots</a></li>
+<li class="chapter" data-level="7.4" data-path="scatterplots.html"><a href="scatterplots.html"><i class="fa fa-check"></i><b>7.4</b> Scatterplots</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="scatterplots.html"><a href="scatterplots.html#scatterplot-matrix"><i class="fa fa-check"></i><b>7.4.1</b> Scatterplot matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="bar-charts.html"><a href="bar-charts.html"><i class="fa fa-check"></i><b>7.5</b> Bar charts</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
 <li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
-<li class="chapter" data-level="7.5" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.5</b> Going further with R</a><ul>
-<li class="chapter" data-level="7.5.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.5.1</b> Vignettes</a></li>
-<li class="chapter" data-level="7.5.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.5.2</b> Citations</a></li>
-<li class="chapter" data-level="7.5.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.5.3</b> SessionInfo</a></li>
-<li class="chapter" data-level="7.5.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.5.4</b> Other ways of running R</a></li>
+<li class="chapter" data-level="7.6" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.6</b> Going further with R</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.6.1</b> Vignettes</a></li>
+<li class="chapter" data-level="7.6.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.6.2</b> Citations</a></li>
+<li class="chapter" data-level="7.6.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.6.3</b> SessionInfo</a></li>
+<li class="chapter" data-level="7.6.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.6.4</b> Other ways of running R</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -189,7 +203,7 @@ code > span.in { color: #008000; } /* Information */
             <section class="normal" id="section-">
 <div id="apply" class="section level2">
 <h2><span class="header-section-number">6.1</span> apply()</h2>
-<p>In Chapter <a href="simple-data-analysis.html#simple-data-analysis">3</a>, we considered the simplicity with which we could perform simple transformations on vectorised data. In these examples a discrete transformation was applied to each value.</p>
+<p>In Chapter <a href="simple-data-analysis.html#simple-data-analysis"><strong>??</strong></a>, we considered the simplicity with which we could perform simple transformations on vectorised data. In these examples a discrete transformation was applied to each value.</p>
 <p>If we consider our chunk of gene expression data in the <code>gene.atlas</code> variable, we can imagine a number of simple transformations that we might wish to perform such as log2 transformations. There are more cases when we might wish to perform an analysis by row or column within the data. While this could be managed using a for loop to iterate over the data there are a number of simpler ways to access the data. One way to do this is with <code>apply()</code>.</p>
 <p><code>apply()</code> takes at least three arguments:</p>
 <ul>
@@ -198,82 +212,96 @@ code > span.in { color: #008000; } /* Information */
 <li>the function to apply to the margin. The function can be a built in function or a user-defined function.</li>
 </ul>
 <p>This function can be one that is predefined in R (such as <code>mean</code> or <code>sd</code> in the exercise below) or one you have created yourself as per the previous function section. In the latter case remember that the function should expect a vector as input and return a single value (e.g. it receives a vector of numbers and returns their mean).</p>
-<p>The example below finds the standard deviation (<code>sd</code>) of the rows and columns of a randomly generated matrix with 1000 rows and 10 columns:</p>
+<p>The example below finds the standard deviation (<code>sd</code>) of the rows and columns of a randomly generated matrix with 1000 rows and 10 columns. <strong>Remember</strong> if you run this you will get different results because the numbers are randomly generated by using the <code>sample()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dataset &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">sample</span>(<span class="dv">10000</span>:<span class="dv">30000</span>, <span class="dv">10000</span>, <span class="dt">replace=</span>T), <span class="dt">ncol=</span><span class="dv">10</span>)
 
 <span class="co"># apply the standard deviation function on each row (MARGIN=1) of the matrix</span>
 rowSD &lt;-<span class="st"> </span><span class="kw">apply</span>(dataset, <span class="dt">MARGIN=</span><span class="dv">1</span>, sd)
 <span class="kw">head</span>(rowSD)                   <span class="co"># we only show the first 6 values using head()</span></code></pre></div>
-<pre><code>## [1] 6233.169 6850.962 6724.216 6159.894 5590.358 4678.343</code></pre>
+<pre><code>## [1] 6154.254 5221.133 4391.697 5450.684 4569.088 4208.252</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># apply the sd function on each column (MARGIN=2) of the matrix</span>
 colSD &lt;-<span class="st"> </span><span class="kw">apply</span>(dataset, <span class="dt">MARGIN=</span><span class="dv">2</span>, sd)  
 <span class="kw">head</span>(colSD)</code></pre></div>
-<pre><code>## [1] 5798.856 5844.310 5839.998 5705.502 5773.330 5773.929</code></pre>
+<pre><code>## [1] 5702.597 5744.731 5767.889 5913.901 5813.725 5798.188</code></pre>
 <p>You can also use other functions such as <code>range()</code> to find the minimum and maximum of each row/column of a matrix:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(dataset, <span class="dt">MARGIN=</span><span class="dv">2</span>, range)</code></pre></div>
 <pre><code>##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]  [,8]  [,9] [,10]
-## [1,] 10024 10053 10011 10009 10034 10014 10014 10000 10015 10010
-## [2,] 29968 29956 29994 29982 29992 29999 29998 29984 29977 29999</code></pre>
+## [1,] 10002 10031 10025 10013 10002 10012 10002 10003 10032 10027
+## [2,] 29885 29967 29987 29945 29990 29980 29995 29975 29996 29902</code></pre>
 <div class="rmdexercise">
 <p>
 <strong>Using apply</strong>
 </p>
+<p>
+Try the above examples using <code>apply()</code>, then repeat this on our <code>minTemp</code> dataset
+</p>
+<p>
+<em>Hint</em>:
+</p>
+<p>
+<code>daily.SD &lt;- apply(minTemp, MARGIN=1, sd, na.rm=T)</code>
+</p>
+<p>
+Remember we have missing values in our dataset, so we need to specify the <code>na.rm=T</code> parameter setting to remove NA values before calculating the standard deviation.
+</p>
+<p>
+For more information, read the help documentation for <code>apply</code> to find out more about the paremeter settings.
+</p>
+</div>
+<p><strong>Expected results</strong> only showing the first 6 elements</p>
+<pre><code>##    Jan-1    Jan-2    Jan-3    Jan-4    Jan-5    Jan-6 
+## 2.289750 2.301163 2.392509 2.512555 2.357019 2.487345</code></pre>
+<pre><code>##    X1949    X1950    X1951    X1952    X1953    X1954 
+## 5.864297 4.804218 5.564952 5.720759 5.796398 4.825505</code></pre>
+<div class="rmdexercise">
+<p>
+<strong>Optional exercises</strong>
+</p>
+<p>
+Try the following if you are ahead:
+</p>
 <ol style="list-style-type: decimal">
 <li>
-Try the above examples using apply, then use some of the other functions from Chapter <span class="citation">@ref</span>(simple-data-analysis), such as:
+<p>
+Which year had the highest standard deviation? <em>Hint</em> save the results from the previous exercise to a variable and use <code>which.max()</code>
+</p>
+</li>
+<li>
+<p>
+Which year had the lowest standard deviation?
+</p>
+</li>
+<li>
+<p>
+Which day had the highest standard deviation across the 69 years?
+</p>
+</li>
+<li>
+<p>
+Which day had the lowest standard deviation across the 69 years?
+</p>
 </li>
 </ol>
-<ul>
-<li>
-<code>sum</code>
-</li>
-<li>
-<code>mean</code>
-</li>
-<li>
-<code>prod</code> (product)
-</li>
-</ul>
 </div>
 <p>You can also use your own user-defined function in <code>apply()</code>. The comments in the following example explains each section:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Create a user-define function that expects numeric data</span>
 <span class="co"># calculates the mean temperature before converting it to fahrenheit</span>
 <span class="co"># returns the single mean temperature as fahrenheit</span>
 mean.celsius.to.fahrenheit &lt;-<span class="st"> </span>function(temp){
-  mean.temp &lt;-<span class="st"> </span><span class="kw">mean</span>(temp)
+  mean.temp &lt;-<span class="st"> </span><span class="kw">mean</span>(temp,<span class="dt">na.rm=</span>T)
   <span class="kw">return</span>((<span class="dv">9</span>/<span class="dv">5</span>)*mean.temp<span class="dv">+32</span>)
 }
 
-<span class="co"># Create a data.frame object called `temperatures` of 50 elements</span>
-<span class="co"># There are 10 rows and 5 columns</span>
-<span class="co"># Assign names to the columns (Days) and rows (Weeks)</span>
-temperatures &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">matrix</span>(<span class="kw">sample</span>(-<span class="dv">10</span>:<span class="dv">40</span>,<span class="dv">50</span>,<span class="dt">replace=</span>T),<span class="dt">ncol=</span><span class="dv">5</span>))
-<span class="kw">colnames</span>(temperatures) &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&#39;Day&#39;</span>,<span class="dv">1</span>:<span class="dv">5</span>)
-<span class="kw">rownames</span>(temperatures) &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&#39;Week&#39;</span>,<span class="dv">1</span>:<span class="kw">nrow</span>(temperatures))
-temperatures</code></pre></div>
-<pre><code>##         Day 1 Day 2 Day 3 Day 4 Day 5
-## Week 1     -8    25     9    38    -5
-## Week 2     17    15    37    22    36
-## Week 3     35    21    10    -1    39
-## Week 4     26     2    -2     6    13
-## Week 5     -7    29    -8    26    -7
-## Week 6     22    39   -10     6    -9
-## Week 7     32    -1    28    24    21
-## Week 8     12     2    37     5     9
-## Week 9     -7    30    24    -8     3
-## Week 10    -7    14    -6    -1    23</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Call the conversion function to return the </span>
+<span class="co"># Call the conversion function to return the </span>
 <span class="co"># mean tempature per week (MARGIN=1 is rows)</span>
-<span class="kw">apply</span>(temperatures, <span class="dt">MARGIN=</span><span class="dv">1</span>, mean.celsius.to.fahrenheit)</code></pre></div>
-<pre><code>##  Week 1  Week 2  Week 3  Week 4  Week 5  Week 6  Week 7  Week 8  Week 9 
-##   53.24   77.72   69.44   48.20   43.88   49.28   69.44   55.40   47.12 
-## Week 10 
-##   40.28</code></pre>
+<span class="kw">head</span>(<span class="kw">apply</span>(minTemp, <span class="dt">MARGIN=</span><span class="dv">1</span>, mean.celsius.to.fahrenheit))</code></pre></div>
+<pre><code>##    Jan-1    Jan-2    Jan-3    Jan-4    Jan-5    Jan-6 
+## 68.96618 69.17794 69.60412 69.42676 69.49294 69.31294</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Call the conversion function to return the</span>
 <span class="co"># mean temperature per day of the week (MARGIN=2 is cols)</span>
-<span class="kw">apply</span>(temperatures, <span class="dt">MARGIN=</span><span class="dv">2</span>, mean.celsius.to.fahrenheit)</code></pre></div>
-<pre><code>## Day 1 Day 2 Day 3 Day 4 Day 5 
-## 52.70 63.68 53.42 53.06 54.14</code></pre>
+<span class="kw">head</span>(<span class="kw">apply</span>(minTemp, <span class="dt">MARGIN=</span><span class="dv">2</span>, mean.celsius.to.fahrenheit))</code></pre></div>
+<pre><code>##    X1949    X1950    X1951    X1952    X1953    X1954 
+## 53.83009 59.63715 56.04122 59.61377 58.50044 60.48488</code></pre>
 <div class="rmdtip">
 <p>
 <strong>apply</strong>
@@ -302,7 +330,7 @@ There is also the <code>dplyr</code> package, which is even more powerful but is
           </div>
         </div>
       </div>
-<a href="more-complex-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="more-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="for-and-while-loops.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -314,7 +342,7 @@ There is also the <code>dplyr</code> package, which is even more powerful but is
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -356,4 +384,4 @@ gitbook.start({
 </script>
 </body>
 
-</html>
+<!-- </html> -->
