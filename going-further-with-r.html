@@ -174,11 +174,11 @@ code > span.in { color: #008000; } /* Information */
 <li class="chapter" data-level="" data-path="appendix-1.html"><a href="appendix-1.html"><i class="fa fa-check"></i>Appendix 1</a><ul>
 <li class="chapter" data-level="" data-path="summary-of-object-types.html"><a href="summary-of-object-types.html"><i class="fa fa-check"></i>Summary of Object Types</a></li>
 <li class="chapter" data-level="" data-path="more-information-on-r-and-bioconductor-for-genomics.html"><a href="more-information-on-r-and-bioconductor-for-genomics.html"><i class="fa fa-check"></i>More information on R and Bioconductor for Genomics</a></li>
-<li class="chapter" data-level="7.6" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i><b>7.6</b> Going further with R</a><ul>
-<li class="chapter" data-level="7.6.1" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i><b>7.6.1</b> Vignettes</a></li>
-<li class="chapter" data-level="7.6.2" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i><b>7.6.2</b> Citations</a></li>
-<li class="chapter" data-level="7.6.3" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i><b>7.6.3</b> SessionInfo</a></li>
-<li class="chapter" data-level="7.6.4" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i><b>7.6.4</b> Other ways of running R</a></li>
+<li class="chapter" data-level="" data-path="going-further-with-r.html"><a href="going-further-with-r.html"><i class="fa fa-check"></i>Going further with R</a><ul>
+<li class="chapter" data-level="" data-path="going-further-with-r.html"><a href="going-further-with-r.html#vignettes"><i class="fa fa-check"></i>Vignettes</a></li>
+<li class="chapter" data-level="" data-path="going-further-with-r.html"><a href="going-further-with-r.html#citations"><i class="fa fa-check"></i>Citations</a></li>
+<li class="chapter" data-level="" data-path="going-further-with-r.html"><a href="going-further-with-r.html#sessioninfo"><i class="fa fa-check"></i>SessionInfo</a></li>
+<li class="chapter" data-level="" data-path="going-further-with-r.html"><a href="going-further-with-r.html#other-ways-of-running-r"><i class="fa fa-check"></i>Other ways of running R</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -201,8 +201,8 @@ code > span.in { color: #008000; } /* Information */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="going-further-with-r" class="section level2">
-<h2><span class="header-section-number">7.6</span> Going further with R</h2>
+<div id="going-further-with-r" class="section level2 unnumbered">
+<h2>Going further with R</h2>
 <p>This section is a quick glance at the other features in R that will help you in your future data analysis. We will quickly look at:</p>
 <ul>
 <li><strong>Documentation</strong> with R</li>
@@ -210,8 +210,8 @@ code > span.in { color: #008000; } /* Information */
 <li><strong>SessionInfo</strong> information to reproduce your data analysis, and</li>
 <li><strong>Other ways to run R</strong></li>
 </ul>
-<div id="vignettes" class="section level3">
-<h3><span class="header-section-number">7.6.1</span> Vignettes</h3>
+<div id="vignettes" class="section level3 unnumbered">
+<h3>Vignettes</h3>
 <p>Just now, we explored some of the help functions built into R. As well as this builtin help, most R packages also come with their own, often extensive, documentation. This is normally in the form of a vignette, a document that provides a task-oriented description of package functionality. Vignettes contain executable examples and are intended to be used interactively. You can also download the vignette for a package that isn’t installed on your system by visiting the CRAN, Bioconductor project webpages, or via an internet search.</p>
 <div class="rmdexercise">
 <p>
@@ -250,14 +250,14 @@ To get the limma package vignette, use the command <code>vignette(“intro”, p
 </ol>
 </div>
 </div>
-<div id="citations" class="section level3">
-<h3><span class="header-section-number">7.6.2</span> Citations</h3>
+<div id="citations" class="section level3 unnumbered">
+<h3>Citations</h3>
 <p>The R core development team and the very active community of package authors have invested a lot of time and effort in creating R as it is today. Please give credit where credit is due and cite R and R packages when you use them for data analysis.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">citation</span>(<span class="st">&quot;VennDiagram&quot;</span>)
 <span class="kw">citation</span>(<span class="st">&quot;limma&quot;</span>)</code></pre></div>
 </div>
-<div id="sessioninfo" class="section level3">
-<h3><span class="header-section-number">7.6.3</span> SessionInfo</h3>
+<div id="sessioninfo" class="section level3 unnumbered">
+<h3>SessionInfo</h3>
 <p>Congratulations - you have now conquered the basics of R and you are ready to start breaking things! One of the most useful aspects of R is the rich ecosystem of supplementary packagess that can aid, facilitate and empower your research. The Bioconductor framework contains hundreds of packages of methods of relevance to biologists working with biological data (population genetics, SNPs, NGS reads, microarrays, mass spectrometry etc). As we discovered in the Vignette section, there are well documented tutorials and guides that will work us through the application of fabulous methods and workflows. You will come across some unexpected ’error’ messages.</p>
 <p>R packages are written by people like the QFAB bioinformaticians. Well intentioned, but busy. Code is crafted lovingly and tested in the scenarios that are implicit in our daily development. You are likely to be running R on a different computer with combinations of installed packages that are subtly different to those that we wrote the software with. If you identify a ”bug” in that the package gives a wrong result, fails with a hairy error message or misbehaves it is worthwhile to let the developer know that you are having a problem. Reproducibility of the error is critical - we would like to know which version of R is being used and all of the packages that are loaded in memory so that the developer can agree that yes, there is a problem and can help in the resolution.</p>
 <p>It is trivial to report the data on the R environment that you are working in - the SessionInfo function reports installed packages and their versions.</p>
@@ -294,18 +294,18 @@ To get the limma package vignette, use the command <code>vignette(“intro”, p
 ## [21] yaml_2.1.14      compiler_3.4.1   rvest_0.3.2      htmltools_0.3.6 
 ## [25] tibble_1.3.4</code></pre>
 </div>
-<div id="other-ways-of-running-r" class="section level3">
-<h3><span class="header-section-number">7.6.4</span> Other ways of running R</h3>
+<div id="other-ways-of-running-r" class="section level3 unnumbered">
+<h3>Other ways of running R</h3>
 <p>Today we are using RStudio, but R can be run in a number of different ways; for example, you could embed some R functionality in a computer program written in Python or Java. As discussed in sections <a href="rstudio-ide.html#rstudio-ide">1.2</a> and <a href="alternatives-to-rstudio.html#alternatives-to-rstudio">1.3</a>, both R and RStudio provide an interactive environment where you are prompted to enter a single command at the time. In this training course we are providing you with snippets of information that could be used within a data analysis workflow. These are intended to be run interactively.</p>
 <p>In a bioinformatics laboratory the scientists who use R craft a mixture of packages and workflow scripts into analytical pipelines. R may be even be called by other software environments. Bioinformaticians will typically use the R console for refining, tuning and modifying existing scripts that they have written. The workflow is run through master scripts. In this section we will look at a simple R script that will create a table of information and write it out to file. We will be having a more complete look at the process of writing data to file in a later section (Section <a href="#reading-and-writing-tabular-data"><strong>??</strong></a>).</p>
 <p>The advantage of running R scripts as a batch analysis is that larger and more complex analyses (such as the mapping of short DNA sequence reads) can be run overnight and each of the commands will run successively as prior commands complete.</p>
-<div id="preparing-an-r-script" class="section level4">
-<h4><span class="header-section-number">7.6.4.1</span> Preparing an R script</h4>
+<div id="preparing-an-r-script" class="section level4 unnumbered">
+<h4>Preparing an R script</h4>
 <p>An R script is a container for multiple R commands. It is intended to be run largely hands-off.</p>
 <p>The RStudio software provides us with a very convenient way to create an R script - in the file dialog there is the option to create file and an R Script is a primary file type. R scripts typically have the extension <code>.R</code>. The file is a plain text file and needs to know the packages that should be loaded, the objects that should be set and the working environment where we should be working.</p>
 </div>
-<div id="running-an-r-script" class="section level4">
-<h4><span class="header-section-number">7.6.4.2</span> Running an R script</h4>
+<div id="running-an-r-script" class="section level4 unnumbered">
+<h4>Running an R script</h4>
 <p>The following command is how you run an R script from a terminal window. This is outside of RStudio.</p>
 <pre><code>R CMD BATCH [options] my_script.R [outfile]
 R.exe&quot; CMD BATCH
